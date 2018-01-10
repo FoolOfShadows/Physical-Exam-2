@@ -9,9 +9,11 @@
 import Cocoa
 
 protocol StructsWithDescriptionOutput {
-    
     func getOutputFor(_ id:Int) -> String?
-    
+}
+
+protocol PopulateComboBoxProtocol {
+	func matchValuesFrom(_ id:Int) -> [String]?
 }
 
 func getDescriptionOfItem(_ items:[(Int, String?)], fromStruct theStruct:StructsWithDescriptionOutput) -> [String]? {
@@ -56,6 +58,30 @@ extension NSView {
         }
     clearChecksTextfields(theView: self)
     }
+	
+	//Populates the choices of the comboboxes and popup buttons in a view based on matching
+	//the items tag with a switching function in the selected struct
+	func populateSelectionsInViewUsing(_ theStruct: PopulateComboBoxProtocol) {
+		for item in self.subviews {
+			if let isCombobox = item as? NSComboBox {
+				if let selections = theStruct.matchValuesFrom(isCombobox.tag) {
+					isCombobox.removeAllItems()
+					isCombobox.addItems(withObjectValues: selections)
+					isCombobox.selectItem(at: 0)
+					isCombobox.completes = true
+				}
+			} else if let isPopup = item as? NSPopUpButton {
+				if let selections = theStruct.matchValuesFrom(isPopup.tag) {
+					isPopup.removeAllItems()
+					isPopup.addItems(withTitles: selections)
+					isPopup.selectItem(at: 0)
+				}
+			} else {
+				item.populateSelectionsInViewUsing(theStruct)
+			}
+		}
+		
+	}
 }
 
 extension NSComboBox {
@@ -63,6 +89,7 @@ extension NSComboBox {
         self.removeAllItems()
         self.addItems(withObjectValues: menuItems)
         self.selectItem(at: 0)
+		self.completes = true
     }
 }
 
@@ -135,10 +162,10 @@ func getActiveButtonInfoIn(view: NSView) -> [(Int, String?)]{
                         results.append((isButton.tag, (isButton as! NSPopUpButton).titleOfSelectedItem))
                     }
                 default:
-                    results.append((item.tag, nil))
+                    results.append((isButton.tag, isButton.title))
                 }
             } else if isButton.state == .mixed {
-                results.append((item.tag + 20, nil))
+                results.append((isButton.tag + 20, isButton.title))
             }
             //If we don't check tags here we end up with an entry for the NSBox and it's title
         } else if item is NSTextField && item.tag > 0 {
@@ -151,7 +178,6 @@ func getActiveButtonInfoIn(view: NSView) -> [(Int, String?)]{
     }
     return results.sorted(by: {$0.0 < $1.0})
 }
-
 
 func getStringsForButtonsIn(view: NSView) -> [String]{
     var results = [String]()
@@ -174,7 +200,7 @@ func getStringsForButtonsIn(view: NSView) -> [String]{
             if (item as! NSTextField).stringValue != "" {
                 results.append((item as! NSTextField).stringValue)
             }
-        } else if item is NSView {
+        } else {
             results += getStringsForButtonsIn(view: item)
         }
     }
@@ -185,6 +211,17 @@ func processAndContinue() {
 	let apps = NSRunningApplication.runningApplications(withBundleIdentifier: "com.apple.TextEdit")
 	if let mainAPP = apps.first {
 		mainAPP.activate(options: .activateIgnoringOtherApps)
+	}
+}
+
+func turnButtons(_ buttons:[NSButton], InRange range:[Int], ToState state:NSButton.StateValue) {
+	guard let min = range.min() else { return }
+	guard let max = range.max() else { return }
+	for button in buttons {
+		switch button.tag {
+		case min...max: button.state = state
+		default: continue
+		}
 	}
 }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MSKAssessment {
+struct MSK {
 	let generalAreas = ["Head & Spine", "Shoulders & Arms", "Hands", "Hips & Legs", "Feet"]
 	let headSelections = ["head", "neck", "paraspinal", "traps", "ribs", "T-spine", "L-spine", "pelvis", "sacral", "sciatic"]
 	let shoulderSelections = ["shoulder", "deltoid", "bicep", "tricep", "elbow", "forearm", "wrist"]
@@ -34,4 +34,27 @@ struct MSKAssessment {
 	let theToneList = ["", "normal" , "atrophic", "fasciculations", "flaccid", "tense", "stiff", "spastic", "ratcheting cog wheel rigidity", "ligament laxity", "subluxation"]
 	let effList = ["", "effusion", "swelling"]
 	
+	
+	func processSectionFrom(_ data: [(Int, String?)]) -> String {
+		var results = String()
+		var resultArray = [String]()
+		
+		
+		for item in data {
+			switch item.0 {
+			case 1: resultArray.append("normal range of motion")
+			case 2: resultArray.append("normal strength")
+			case 3: resultArray.append("nontender")
+			case 4: resultArray.append("normal tone")
+			case 15: resultArray.append(item.1!)
+			default: continue
+			}
+		}
+		
+		if !resultArray.isEmpty {
+			results = "MSK: \(resultArray.joined(separator: ", "))"
+		}
+		
+		return results
+	}
 }
