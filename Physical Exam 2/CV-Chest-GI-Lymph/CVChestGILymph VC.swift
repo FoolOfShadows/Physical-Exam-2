@@ -10,7 +10,6 @@ import Cocoa
 
 class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate {
 
-	@IBOutlet var cvChestGILymphTabView: NSView!
 	@IBOutlet weak var cvBox: NSBox!
 	@IBOutlet weak var chestBox: NSBox!
 	@IBOutlet weak var giBox: NSBox!
@@ -41,7 +40,7 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate {
 	}
 	
 	func clearCV() {
-		cvChestGILymphTabView.clearControllers()
+		self.view.clearControllers()
 		cvBox.populateSelectionsInViewUsing(Cardiovascular())
 		chestBox.populateSelectionsInViewUsing(Chest())
 		giBox.populateSelectionsInViewUsing(GI())

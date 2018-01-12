@@ -84,6 +84,16 @@ extension NSView {
 	}
 }
 
+extension NSTextView {
+	func addToViewsExistingText(_ text:String) {
+		if !self.string.isEmpty {
+			self.string += "\n\(text)"
+		} else {
+			self.string = text
+		}
+	}
+}
+
 extension NSComboBox {
     func clearComboBox(menuItems: [String]) {
         self.removeAllItems()
@@ -165,7 +175,7 @@ func getActiveButtonInfoIn(view: NSView) -> [(Int, String?)]{
                     results.append((isButton.tag, isButton.title))
                 }
             } else if isButton.state == .mixed {
-                results.append((isButton.tag + 20, isButton.title))
+                results.append((isButton.tag + 30, isButton.title))
             }
             //If we don't check tags here we end up with an entry for the NSBox and it's title
         } else if item is NSTextField && item.tag > 0 {
@@ -215,12 +225,9 @@ func processAndContinue() {
 }
 
 func turnButtons(_ buttons:[NSButton], InRange range:[Int], ToState state:NSButton.StateValue) {
-	guard let min = range.min() else { return }
-	guard let max = range.max() else { return }
 	for button in buttons {
-		switch button.tag {
-		case min...max: button.state = state
-		default: continue
+		if range.contains(button.tag) {
+			button.state = state
 		}
 	}
 }

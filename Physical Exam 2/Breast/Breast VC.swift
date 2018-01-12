@@ -10,25 +10,27 @@ import Cocoa
 
 class Breast_VC: NSViewController {
 
-    override func viewDidLoad() {
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        clearBreast()
     }
 	
-	@IBAction func processSkinTab(_ sender: Any) {
+	@IBAction func processBreastTab(_ sender: Any) {
 		var resultArray = [String]()
-		
+		resultArray.append(Breast().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
 		print(results)
 	}
 	
 	
-	@IBAction func clearSkinTab(_ sender: Any) {
+	@IBAction func clearBreastTab(_ sender: Any) {
 		clearBreast()
 	}
 	
 	func clearBreast() {
-		//breastView.clearControllers()
+		self.view.clearControllers()
+		self.view.populateSelectionsInViewUsing(Breast())
 	}
 	
 	@IBAction func selectNorms(_ sender: NSButton) {

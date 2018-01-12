@@ -10,7 +10,6 @@ import Cocoa
 
 class GenPsychHEENTNeck_VC: NSViewController {
 
-	@IBOutlet var genTabView: NSView!
 	@IBOutlet weak var genBox: NSBox!
 	@IBOutlet weak var psychBox: NSBox!
 	@IBOutlet weak var headEyeBox: NSBox!
@@ -28,7 +27,7 @@ class GenPsychHEENTNeck_VC: NSViewController {
 		resultArray.append(General().processSectionFrom(getActiveButtonInfoIn(view: genBox)))
 		resultArray.append(Psychological().processSectionFrom(getActiveButtonInfoIn(view: psychBox)))
 		resultArray.append(HeadEye().processSectionFrom(getActiveButtonInfoIn(view: headEyeBox)))
-		
+		resultArray.append(ENT().processSectionFrom(getActiveButtonInfoIn(view: entBox)))
 		resultArray.append(Neck().processSectionFrom(getActiveButtonInfoIn(view: neckBox)))
 		
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
@@ -41,7 +40,7 @@ class GenPsychHEENTNeck_VC: NSViewController {
 	}
 	
 	func clearGen() {
-		genTabView.clearControllers()
+		self.view.clearControllers()
 	}
 	
 	@IBAction func selectNorms(_ sender: NSButton) {
@@ -49,10 +48,12 @@ class GenPsychHEENTNeck_VC: NSViewController {
 			switch section {
 			case "gen", "psy":
 				return [Int](1...4)
-			case "head/eye", "ent":
+			case "head/eye":
 				return [Int](1...5)
 			case "neck":
 				return [Int](1...6)
+			case "ent":
+				return [1,2,40,41,20]
 			default:
 				return [Int]()
 			}

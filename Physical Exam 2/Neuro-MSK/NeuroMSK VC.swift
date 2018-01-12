@@ -10,7 +10,6 @@ import Cocoa
 
 class NeuroMSK_VC: NSViewController {
 
-	@IBOutlet var mskAssessmentView: NSView!
 	@IBOutlet weak var neuroBox: NSBox!
 	@IBOutlet weak var mskBox: NSBox!
 	
@@ -172,7 +171,7 @@ class NeuroMSK_VC: NSViewController {
 	}
 	
 	func clearMSKTab() {
-		mskAssessmentView.clearControllers()
+		self.view.clearControllers()
 		mskAreaPopup.clearPopUpButton(menuItems: MSK().generalAreas)
 		setMSKSelections(mskAreaPopup)
 		setMSKSidesAndROM(mskSelectionsPopup)

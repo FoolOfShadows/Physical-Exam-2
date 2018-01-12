@@ -10,8 +10,7 @@ import Cocoa
 
 class SkinGynGUDRE_VC: NSViewController {
 	
-	
-	@IBOutlet var skinView: NSView!
+
 	@IBOutlet weak var skinBox: NSBox!
 	@IBOutlet weak var guBox: NSBox!
 	@IBOutlet weak var gynBox: NSBox!
@@ -39,7 +38,7 @@ class SkinGynGUDRE_VC: NSViewController {
 	}
 	
 	func clearSkin() {
-		skinView.clearControllers()
+		self.view.clearControllers()
 		gynBox.populateSelectionsInViewUsing(Gyn())
 	}
 	
