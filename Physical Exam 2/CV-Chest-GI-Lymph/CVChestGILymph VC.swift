@@ -31,6 +31,7 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate {
 		resultArray.append(GI().processSectionFrom(getActiveButtonInfoIn(view: giBox)))
 		resultArray.append(Lymph().processSectionFrom(getActiveButtonInfoIn(view: lymphBox)))
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
+		results.copyToPasteboard()
 		print(results)
 	}
 	

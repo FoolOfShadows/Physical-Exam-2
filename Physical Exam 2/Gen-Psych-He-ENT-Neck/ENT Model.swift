@@ -62,8 +62,10 @@ struct ENT {
 		}
 		
 		let other = data.filter {$0.0 == 60}
-		if let otherText = other[0].1 {
-			resultArray.append(otherText)
+		if !other.isEmpty {
+			if let otherText = other[0].1 {
+				resultArray.append(otherText)
+			}
 		}
 		
 		if !resultArray.isEmpty {

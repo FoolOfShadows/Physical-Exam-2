@@ -32,6 +32,7 @@ class GenPsychHEENTNeck_VC: NSViewController {
 		
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
 		print(results)
+		results.copyToPasteboard()
 	}
 	
 	

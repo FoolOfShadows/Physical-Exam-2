@@ -167,6 +167,7 @@ class NeuroMSK_VC: NSViewController {
 		resultArray.append(MSK().processSectionFrom(getActiveButtonInfoIn(view: mskBox)))
 		
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
+		results.copyToPasteboard()
 		print(results)
 	}
 	

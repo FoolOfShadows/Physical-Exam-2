@@ -51,6 +51,11 @@ extension NSView {
                 } else if item is NSMatrix {
                     let matrix = item as? NSMatrix
                     matrix?.deselectAllCells()
+				} else if item is NSTextView {
+					let textView = item as? NSTextView
+					if (textView?.isEditable)! {
+						textView?.string = ""
+					}
                 } else {
                     clearChecksTextfields(theView: item)
                 }

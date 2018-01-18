@@ -38,7 +38,9 @@ struct GI:PopulateComboBoxProtocol {
 			case 16: resultArray.append("splenoMegaly: \(item.1!)")
 			case 27: resultArray.append("tender: \(item.1!)")
 			case 28: resultArray.append("mass: \(item.1!)")
-			case 19: resultArray.append("BS: \(item.1!)")
+			case 30: resultArray.append("BS: \(item.1!.lowercased())")
+			case 31: resultArray.append("BS: \(item.1!.lowercased())")
+			case 32: resultArray.append("BS: \(item.1!.lowercased())")
 			case 20: resultArray.append(item.1!)
 			default: continue
 			}

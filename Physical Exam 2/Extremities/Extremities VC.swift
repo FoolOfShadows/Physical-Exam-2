@@ -16,6 +16,11 @@ class Extremities_VC: NSViewController {
 	@IBOutlet var pulsesTextView: NSTextView!
 	@IBOutlet weak var digitAssessmentView: NSView!
 	@IBOutlet var digitAssessmentTextView: NSTextView!
+	@IBOutlet weak var limbAssessmentView: NSView!
+	@IBOutlet weak var limbAssessmentTextView: NSTextView!
+	@IBOutlet weak var bunionView: NSStackView!
+	
+	var digitAssessment = DigitAssessment()
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +33,21 @@ class Extremities_VC: NSViewController {
 	
 	@IBAction func processExtremitiesTab(_ sender: Any) {
 		var resultArray = [String]()
-		
+		resultArray.append(edemaTextView.string)
+		resultArray.append(pulsesTextView.string)
+	resultArray.append(CapillaryRefill().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
+		resultArray.append(Bunions().processSectionFrom(getActiveButtonInfoIn(view: bunionView)))
+		resultArray.append(digitAssessmentTextView.string)
+		resultArray.append(limbAssessmentTextView.string)
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
+		results.copyToPasteboard()
 		print(results)
 	}
 	
 	func clearExtremitiesTab() {
 		self.view.clearControllers()
 		self.view.populateSelectionsInViewUsing(Extremities())
+		digitAssessment = DigitAssessment()
 	}
 	
 	@IBAction func selectOnlyOne(_ sender: NSButton) {
@@ -68,10 +80,10 @@ class Extremities_VC: NSViewController {
 	
 	@IBAction func processSectionsToTextViews(_ sender: NSButton) {
 		switch sender.tag {
-		case 1000: edemaTextView.addToViewsExistingText(Extremities().processSectionFrom(getActiveButtonInfoIn(view: edemaView)))
-		case 1001: pulsesTextView.addToViewsExistingText(Extremities().processSectionFrom(getActiveButtonInfoIn(view: pulsesView)))
-		case 1002:
-			digitAssessmentTextView.addToViewsExistingText(Extremities().processSectionFrom(getActiveButtonInfoIn(view: digitAssessmentView)))
+		case 1000: edemaTextView.addToViewsExistingText(Edema().processSectionFrom(getActiveButtonInfoIn(view: edemaView)))
+		case 1001: pulsesTextView.addToViewsExistingText(Pulses().processSectionFrom(getActiveButtonInfoIn(view: pulsesView)))
+		case 1002: digitAssessmentTextView.string = (digitAssessment.processSectionFrom(getActiveButtonInfoIn(view: digitAssessmentView)))
+		case 1003: limbAssessmentTextView.addToViewsExistingText(Extremities().processSectionFrom(getActiveButtonInfoIn(view: limbAssessmentView)))
 		default: return
 		}
 		sender.superview?.clearControllers()

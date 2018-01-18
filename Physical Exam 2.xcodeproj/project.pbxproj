@@ -28,6 +28,8 @@
 		795FBEC91FEACB700095B05D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795FBEC81FEACB700095B05D /* ViewController.swift */; };
 		795FBECB1FEACB700095B05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795FBECA1FEACB700095B05D /* Assets.xcassets */; };
 		795FBECE1FEACB700095B05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 795FBECC1FEACB700095B05D /* Main.storyboard */; };
+		79AC68A3201106F40055FAB3 /* DigitAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC68A2201106F40055FAB3 /* DigitAssessment.swift */; };
+		79AC68A5201107440055FAB3 /* LimbAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC68A4201107440055FAB3 /* LimbAssessment.swift */; };
 		79E2A45B200669B200678D6B /* SkinGynGUDRE VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2A45A200669B200678D6B /* SkinGynGUDRE VC.swift */; };
 		79E2A45D200669E100678D6B /* Skin Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2A45C200669E100678D6B /* Skin Model.swift */; };
 		79E2A45F2006706800678D6B /* GU Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2A45E2006706800678D6B /* GU Model.swift */; };
@@ -63,6 +65,8 @@
 		795FBECD1FEACB700095B05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		795FBECF1FEACB700095B05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795FBED01FEACB700095B05D /* Physical_Exam_2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Physical_Exam_2.entitlements; sourceTree = "<group>"; };
+		79AC68A2201106F40055FAB3 /* DigitAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitAssessment.swift; sourceTree = "<group>"; };
+		79AC68A4201107440055FAB3 /* LimbAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimbAssessment.swift; sourceTree = "<group>"; };
 		79E2A45A200669B200678D6B /* SkinGynGUDRE VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkinGynGUDRE VC.swift"; sourceTree = "<group>"; };
 		79E2A45C200669E100678D6B /* Skin Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Skin Model.swift"; sourceTree = "<group>"; };
 		79E2A45E2006706800678D6B /* GU Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GU Model.swift"; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			children = (
 				7955508420053BEC00DBC4DB /* Extremities VC.swift */,
 				79E2A46420067B4C00678D6B /* Extremties Model.swift */,
+				79AC68A2201106F40055FAB3 /* DigitAssessment.swift */,
+				79AC68A4201107440055FAB3 /* LimbAssessment.swift */,
 			);
 			path = Extremities;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				79369EE11FFFEC96005FDE4A /* GenPsychHEENTNeck VC.swift in Sources */,
 				79E2A45B200669B200678D6B /* SkinGynGUDRE VC.swift in Sources */,
 				79E2A4612006712100678D6B /* Gyn Model.swift in Sources */,
+				79AC68A3201106F40055FAB3 /* DigitAssessment.swift in Sources */,
 				7955508320051ABE00DBC4DB /* Lymph Model.swift in Sources */,
 				79E2A45D200669E100678D6B /* Skin Model.swift in Sources */,
 				790A83AF2003FAE1006712CF /* CVChestGILymph VC.swift in Sources */,
@@ -282,6 +289,7 @@
 				790A83AD2003F567006712CF /* ENT Model.swift in Sources */,
 				79E2A46920067B9900678D6B /* Breast Model.swift in Sources */,
 				79E2A46520067B4C00678D6B /* Extremties Model.swift in Sources */,
+				79AC68A5201107440055FAB3 /* LimbAssessment.swift in Sources */,
 				79E2A46720067B8900678D6B /* Breast VC.swift in Sources */,
 				790A83A72003E56F006712CF /* Psychological Model.swift in Sources */,
 			);

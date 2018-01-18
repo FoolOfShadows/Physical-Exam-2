@@ -20,6 +20,7 @@ class Breast_VC: NSViewController {
 		var resultArray = [String]()
 		resultArray.append(Breast().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
+		results.copyToPasteboard()
 		print(results)
 	}
 	

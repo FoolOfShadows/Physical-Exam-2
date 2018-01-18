@@ -29,6 +29,7 @@ class SkinGynGUDRE_VC: NSViewController {
 		resultArray.append(GU().processSectionFrom(getActiveButtonInfoIn(view: guBox)))
 		resultArray.append(DRE().processSectionFrom(getActiveButtonInfoIn(view: dreBox)))
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
+		results.copyToPasteboard()
 		print(results)
 	}
 	
