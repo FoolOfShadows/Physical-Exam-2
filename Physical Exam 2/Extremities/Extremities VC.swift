@@ -19,6 +19,7 @@ class Extremities_VC: NSViewController {
 	@IBOutlet weak var limbAssessmentView: NSView!
 	@IBOutlet weak var limbAssessmentTextView: NSTextView!
 	@IBOutlet weak var bunionView: NSStackView!
+	@IBOutlet weak var callusView: NSStackView!
 	
 	var digitAssessment = DigitAssessment()
 	
@@ -37,6 +38,7 @@ class Extremities_VC: NSViewController {
 		resultArray.append(pulsesTextView.string)
 	resultArray.append(CapillaryRefill().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
 		resultArray.append(Bunions().processSectionFrom(getActiveButtonInfoIn(view: bunionView)))
+		resultArray.append(Callus().processSectionFrom(getActiveButtonInfoIn(view: callusView)))
 		resultArray.append(digitAssessmentTextView.string)
 		resultArray.append(limbAssessmentTextView.string)
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")

@@ -23,7 +23,9 @@ class NeuroMSK_VC: NSViewController {
 	@IBOutlet weak var mskRangeDegreesPopup: NSPopUpButton!
 	@IBOutlet weak var mskTonePopup: NSPopUpButton!
 	
-	@IBOutlet weak var mskResultsTextView: NSTextField!
+	let mskAssessmentSection = MSK()
+	
+	@IBOutlet weak var mskResultsTextView: NSTextView!
 	override func viewDidLoad() {
         super.viewDidLoad()
 		clearMSKTab()
@@ -32,15 +34,15 @@ class NeuroMSK_VC: NSViewController {
 	@IBAction func setMSKSelections(_ sender: NSPopUpButton) {
 		switch sender.title {
 		case "Head & Spine":
-			mskSelectionsPopup.clearPopUpButton(menuItems: MSK().headSelections)
+			mskSelectionsPopup.clearPopUpButton(menuItems: mskAssessmentSection.headSelections)
 		case "Shoulders & Arms":
-			mskSelectionsPopup.clearPopUpButton(menuItems: MSK().shoulderSelections)
+			mskSelectionsPopup.clearPopUpButton(menuItems: mskAssessmentSection.shoulderSelections)
 		case "Hands":
-			mskSelectionsPopup.clearPopUpButton(menuItems: MSK().handSelections)
+			mskSelectionsPopup.clearPopUpButton(menuItems: mskAssessmentSection.handSelections)
 		case "Hips & Legs":
-			mskSelectionsPopup.clearPopUpButton(menuItems: MSK().hipSelections)
+			mskSelectionsPopup.clearPopUpButton(menuItems: mskAssessmentSection.hipSelections)
 		case "Feet":
-			mskSelectionsPopup.clearPopUpButton(menuItems: MSK().feetSelections)
+			mskSelectionsPopup.clearPopUpButton(menuItems: mskAssessmentSection.feetSelections)
 		default:
 			mskSelectionsPopup.clearPopUpButton(menuItems: ["Selected area not recognized"])
 		}
@@ -48,7 +50,7 @@ class NeuroMSK_VC: NSViewController {
 	}
 	
 	@IBAction func setMSKSidesAndROM(_ sender: NSPopUpButton) {
-		let sidesRLB = {self.mskSidesPopup.clearPopUpButton(menuItems: MSK().sides);
+		let sidesRLB = {self.mskSidesPopup.clearPopUpButton(menuItems: self.mskAssessmentSection.sides);
 			self.mskSidesPopup.isEnabled = true;
 			self.mskStrengthPopup.isEnabled = true;
 			self.mskRangeDirectionPopup.isEnabled = true;
@@ -60,9 +62,9 @@ class NeuroMSK_VC: NSViewController {
 		case "head":
 			mskSidesPopup.isEnabled = false
 			mskTonePopup.isEnabled = false
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().theRomDirListGen)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.theRomDirListGen)
 		case "neck":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().neckROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.neckROMDirList)
 			mskSidesPopup.isEnabled = false
 		case "paraspinal":
 			mskStrengthPopup.isEnabled = false
@@ -70,7 +72,7 @@ class NeuroMSK_VC: NSViewController {
 			mskRangeDegreesPopup.isEnabled = false
 			mskTonePopup.isEnabled = false
 		case "L-spine":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().lspineROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.lspineROMDirList)
 			sidesRLB()
 		case "sacral":
 			mskSidesPopup.isEnabled = false
@@ -79,28 +81,28 @@ class NeuroMSK_VC: NSViewController {
 			mskRangeDegreesPopup.isEnabled = false
 			mskTonePopup.isEnabled = false
 		case "shoulder":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().shoulderROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.shoulderROMDirList)
 			sidesRLB()
 		case "elbow":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().elbowROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.elbowROMDirList)
 			sidesRLB()
 		case "forearm":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().forearmROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.forearmROMDirList)
 			sidesRLB()
 		case "wrist":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().wristROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.wristROMDirList)
 			sidesRLB()
 		case "hip":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().hipROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.hipROMDirList)
 			sidesRLB()
 		case "knee":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().kneeROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.kneeROMDirList)
 			sidesRLB()
 		case "ankle":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().ankleROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.ankleROMDirList)
 			sidesRLB()
 		case "foot":
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().footROMDirList)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.footROMDirList)
 			sidesRLB()
 		case "heel":
 			mskStrengthPopup.isEnabled = false
@@ -108,7 +110,7 @@ class NeuroMSK_VC: NSViewController {
 			mskRangeDegreesPopup.isEnabled = false
 			mskTonePopup.isEnabled = false
 		default:
-			mskRangeDirectionPopup.clearPopUpButton(menuItems: MSK().theRomDirListGen)
+			mskRangeDirectionPopup.clearPopUpButton(menuItems: mskAssessmentSection.theRomDirListGen)
 			sidesRLB()
 		}
 		
@@ -149,12 +151,12 @@ class NeuroMSK_VC: NSViewController {
 		}
 		
 		
-		var existingAssessment = mskResultsTextView.stringValue
+		var existingAssessment = mskResultsTextView.string
 		if !existingAssessment.isEmpty {
 			existingAssessment = existingAssessment + "\n"
 		}
 		
-		mskResultsTextView.stringValue = "\(existingAssessment)\(site): \(resultArray.joined(separator: ", "))."
+		mskResultsTextView.string = "\(existingAssessment)\(site): \(resultArray.joined(separator: ", "))."
 	}
 	
 	@IBAction func clearMSKAssessmentTab(_ sender: Any) {
@@ -162,9 +164,11 @@ class NeuroMSK_VC: NSViewController {
 	}
 	
 	@IBAction func processNeuroMSKTab(_ sender: Any) {
+		
+		mskAssessmentSection.mskAbnormalResults = mskResultsTextView.string
 		var resultArray = [String]()
 		resultArray.append(Neuro().processSectionFrom(getActiveButtonInfoIn(view: neuroBox)))
-		resultArray.append(MSK().processSectionFrom(getActiveButtonInfoIn(view: mskBox)))
+		resultArray.append(mskAssessmentSection.processSectionFrom(getActiveButtonInfoIn(view: mskBox)))
 		
 		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
 		results.copyToPasteboard()
@@ -173,13 +177,13 @@ class NeuroMSK_VC: NSViewController {
 	
 	func clearMSKTab() {
 		self.view.clearControllers()
-		mskAreaPopup.clearPopUpButton(menuItems: MSK().generalAreas)
+		mskAreaPopup.clearPopUpButton(menuItems: mskAssessmentSection.generalAreas)
 		setMSKSelections(mskAreaPopup)
 		setMSKSidesAndROM(mskSelectionsPopup)
-		mskSwellingPopup.clearPopUpButton(menuItems: MSK().theSwlLocListGen)
-		mskStrengthPopup.clearPopUpButton(menuItems: MSK().theStrengthList)
-		mskRangeDegreesPopup.clearPopUpButton(menuItems: MSK().theRomList)
-		mskTonePopup.clearPopUpButton(menuItems: MSK().theToneList)
+		mskSwellingPopup.clearPopUpButton(menuItems: mskAssessmentSection.theSwlLocListGen)
+		mskStrengthPopup.clearPopUpButton(menuItems: mskAssessmentSection.theStrengthList)
+		mskRangeDegreesPopup.clearPopUpButton(menuItems: mskAssessmentSection.theRomList)
+		mskTonePopup.clearPopUpButton(menuItems: mskAssessmentSection.theToneList)
 		neuroBox.populateSelectionsInViewUsing(Neuro())
 	}
 	
@@ -200,4 +204,13 @@ class NeuroMSK_VC: NSViewController {
 		turnButtons(getButtonsInView(sender.superview!), InRange: normalButtonRangesForSection(name.lowercased()), ToState: sender.state)
 	}
 	
+	@IBAction func selectOnlyOne(_ sender: NSButton) {
+		if let buttons = sender.superview?.subviews as? [NSButton] {
+			for button in buttons {
+				if button.title != sender.title {
+					button.state = .off
+				}
+			}
+		}
+	}
 }

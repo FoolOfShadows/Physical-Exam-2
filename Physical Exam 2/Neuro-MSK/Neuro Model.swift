@@ -13,8 +13,8 @@ struct Neuro:PopulateComboBoxProtocol {
 	
 	func matchValuesFrom(_ id: Int) -> [String]? {
 		switch id {
-		case 16, 17: return cbSTL.reversed()
-		case 18, 19: return cbDTR
+		case 10, 11: return cbSTL.reversed()
+		case 19, 20: return cbDTR
 		default: return ["No matching values found."]
 		}
 	}
@@ -22,7 +22,16 @@ struct Neuro:PopulateComboBoxProtocol {
 	func processSectionFrom(_ data: [(Int, String?)]) -> String {
 		var results = String()
 		var resultArray = [String]()
+		var dtrLocation = String()
+		var gaitArray = [String]()
+		var postureArray = [String]()
 		
+		for item in data {
+			switch item.0 {
+			case 15...18: dtrLocation = item.1!
+			default: continue
+			}
+		}
 		
 		for item in data {
 			switch item.0 {
@@ -33,13 +42,22 @@ struct Neuro:PopulateComboBoxProtocol {
 			case 5: resultArray.append("normal posture")
 			case 6: resultArray.append("nonfocal findings")
 			
-			case 16: resultArray.append("straight leg raising right leg \(item.1!) degrees")
-			case 17: resultArray.append("straight leg raising left leg \(item.1!) degrees")
-			case 18: resultArray.append("right deep tendon reflexes \(item.1!)")
-			case 19: resultArray.append("left deep tendon reflexes \(item.1!)")
-			case 20: resultArray.append(item.1!)
+			case 10: resultArray.append("straight leg raising right leg \(item.1!) degrees")
+			case 11: resultArray.append("straight leg raising left leg \(item.1!) degrees")
+			case 19: resultArray.append("\(dtrLocation) right deep tendon reflexes \(item.1!)")
+			case 20: resultArray.append("\(dtrLocation) left deep tendon reflexes \(item.1!)")
+			case 25...29: gaitArray.append(item.1!)
+			case 35, 36: postureArray.append(item.1!)
+			case 40: resultArray.append(item.1!)
 			default: continue
 			}
+		}
+		
+		if !gaitArray.isEmpty {
+			resultArray.append("Gait: \(gaitArray.joined(separator: ", "))")
+		}
+		if !postureArray.isEmpty {
+			resultArray.append("Gait: \(postureArray.joined(separator: ", "))")
 		}
 		
 		if !resultArray.isEmpty {

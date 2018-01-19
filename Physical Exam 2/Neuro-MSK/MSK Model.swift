@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct MSK {
+class MSK {
+	
+	var mskAbnormalResults = String()
+	
 	let generalAreas = ["Head & Spine", "Shoulders & Arms", "Hands", "Hips & Legs", "Feet"]
 	let headSelections = ["head", "neck", "paraspinal", "traps", "ribs", "T-spine", "L-spine", "pelvis", "sacral", "sciatic"]
 	let shoulderSelections = ["shoulder", "deltoid", "bicep", "tricep", "elbow", "forearm", "wrist"]
@@ -49,6 +52,10 @@ struct MSK {
 			case 15: resultArray.append(item.1!)
 			default: continue
 			}
+		}
+		
+		if !mskAbnormalResults.isEmpty {
+			resultArray.append(mskAbnormalResults)
 		}
 		
 		if !resultArray.isEmpty {

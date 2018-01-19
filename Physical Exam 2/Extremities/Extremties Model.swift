@@ -179,12 +179,14 @@ struct Bunions {
 	func processSectionFrom(_ data: [(Int, String?)]) -> String {
 		var results = String()
 		
-		let theItem = data[0]
-		if let title = theItem.1 {
-			switch title {
-			case "Right", "Left": results = "Bunion: \(title.lowercased()) foot."
-			case "Bilateral": results = "Bunions: both feet."
-			default: break
+		if data.count > 0 {
+			let theItem = data[0]
+			if let title = theItem.1 {
+				switch title {
+				case "Right", "Left": results = "Bunion: \(title.lowercased()) foot."
+				case "Bilateral": results = "Bunions: both feet."
+				default: break
+				}
 			}
 		}
 		
@@ -192,6 +194,24 @@ struct Bunions {
 	}
 }
 
+struct Callus {
+	func processSectionFrom(_ data: [(Int, String?)]) -> String {
+		var results = String()
+		
+		if data.count > 0 {
+			let theItem = data[0]
+			if let title = theItem.1 {
+				switch title {
+				case "Right", "Left": results = "Callus: \(title.lowercased()) foot."
+				case "Bilateral": results = "Calluses: both feet."
+				default: break
+				}
+			}
+		}
+		
+		return results
+	}
+}
 
 
 

@@ -8,7 +8,7 @@
 
 import Foundation
 struct GI:PopulateComboBoxProtocol {
-	let cbTTPMass = ["", "diffusely", "midepigastic", "periumbilical", "right upper quadrant", "left upper quadrant", "bilateral upper quadrants", "right lower quadrant", "left lower quadrant", "bilateral lower quadrants", "pelvic"]
+	let cbTTPMass = ["", "diffusely", "midepigastic", "periumbilical", "RUQ", "LUQ", "BUQ", "RLQ", "LLQ", "BLQ", "pelvic"]
 	
 	func matchValuesFrom(_ id: Int) -> [String]? {
 		switch id {
