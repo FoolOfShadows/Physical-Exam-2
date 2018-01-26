@@ -1003,7 +1003,7 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <size key="minSize" width="685" height="110"/>
-                                                        <size key="maxSize" width="690" height="10000000"/>
+                                                        <size key="maxSize" width="702" height="10000000"/>
                                                         <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </textView>
                                                 </subviews>
@@ -4391,6 +4391,9 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="selectOnlyOne:" target="S0H-kb-rFd" id="Fb2-1X-I3c"/>
+                                                </connections>
                                             </button>
                                             <button tag="96" translatesAutoresizingMaskIntoConstraints="NO" id="iIy-Ub-Id2">
                                                 <rect key="frame" x="90" y="-2" width="65" height="18"/>
@@ -4398,6 +4401,9 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="selectOnlyOne:" target="S0H-kb-rFd" id="YFB-Ka-L8T"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <visibilityPriorities>
@@ -4466,7 +4472,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="selectOnlyOne:" target="S0H-kb-rFd" id="wEt-sj-cxI"/>
+                                                    <action selector="setPropertiesOfRelatedButtons:" target="S0H-kb-rFd" id="so6-EB-Mkh"/>
                                                 </connections>
                                             </button>
                                             <button tag="81" translatesAutoresizingMaskIntoConstraints="NO" id="ycR-bl-6Dy">
@@ -4476,7 +4482,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="selectOnlyOne:" target="S0H-kb-rFd" id="QkZ-va-juJ"/>
+                                                    <action selector="setPropertiesOfRelatedButtons:" target="S0H-kb-rFd" id="5wg-sI-Frt"/>
                                                 </connections>
                                             </button>
                                             <button tag="82" translatesAutoresizingMaskIntoConstraints="NO" id="ur9-uM-dc3">
@@ -4486,7 +4492,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="selectOnlyOne:" target="S0H-kb-rFd" id="X6M-g7-sis"/>
+                                                    <action selector="setPropertiesOfRelatedButtons:" target="S0H-kb-rFd" id="eNA-Ty-boT"/>
                                                 </connections>
                                             </button>
                                             <button tag="83" translatesAutoresizingMaskIntoConstraints="NO" id="Jnl-fK-LPP">
@@ -4496,7 +4502,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="selectOnlyOne:" target="S0H-kb-rFd" id="44j-Q1-Q42"/>
+                                                    <action selector="setPropertiesOfRelatedButtons:" target="S0H-kb-rFd" id="0yZ-Cf-Tz5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -4864,8 +4870,12 @@
                         <outlet property="edemaView" destination="ux5-Dt-1y9" id="EAS-2Y-1T9"/>
                         <outlet property="limbAssessmentTextView" destination="ack-cQ-F9x" id="c9z-hP-dLX"/>
                         <outlet property="limbAssessmentView" destination="FpN-Gz-wOd" id="7Ws-Iq-ePX"/>
+                        <outlet property="limbDecAbView" destination="CeW-he-Ib9" id="6et-2s-fgq"/>
+                        <outlet property="limbSideView" destination="iKl-Ok-heW" id="jfR-3S-dVJ"/>
+                        <outlet property="limbView" destination="pIb-xB-BZm" id="weh-Xf-QAP"/>
                         <outlet property="pulsesTextView" destination="JDN-YR-Eip" id="ddv-23-dxR"/>
                         <outlet property="pulsesView" destination="wez-kg-7gk" id="JaR-HQ-1GF"/>
+                        <outlet property="sideView" destination="iKl-Ok-heW" id="bdU-Mp-gP0"/>
                     </connections>
                 </viewController>
                 <customObject id="npM-zU-0sw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

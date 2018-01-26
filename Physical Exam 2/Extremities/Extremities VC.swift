@@ -20,6 +20,9 @@ class Extremities_VC: NSViewController {
 	@IBOutlet weak var limbAssessmentTextView: NSTextView!
 	@IBOutlet weak var bunionView: NSStackView!
 	@IBOutlet weak var callusView: NSStackView!
+	@IBOutlet weak var limbView: NSView!
+	@IBOutlet weak var limbSideView: NSStackView!
+	@IBOutlet weak var limbDecAbView: NSStackView!
 	
 	var digitAssessment = DigitAssessment()
 	
@@ -51,6 +54,8 @@ class Extremities_VC: NSViewController {
 		self.view.populateSelectionsInViewUsing(Extremities())
 		digitAssessment = DigitAssessment()
 	}
+	
+
 	
 	@IBAction func selectOnlyOne(_ sender: NSButton) {
 		if let buttons = sender.superview?.subviews as? [NSButton] {
@@ -92,4 +97,40 @@ class Extremities_VC: NSViewController {
 		sender.superview?.populateSelectionsInViewUsing(Extremities())
 	}
 	
+	@IBAction func setPropertiesOfRelatedButtons(_ sender:NSButton) {
+		setPropertiesOfButtonsBasedOnTag(sender.tag)
+	}
+	
+	func setPropertiesOfButtonsBasedOnTag(_ tag:Int) {
+		
+		func makeLimbsExclusive() {
+			for subview in limbView.subviews {
+				if let button = subview as? NSButton {
+					button.action = #selector(selectOnlyOne(_:))
+					button.state = .off
+				}
+			}
+		}
+		func makeLimbsNonexclusive() {
+			for subview in limbView.subviews {
+				if let button = subview as? NSButton {
+					button.action = nil
+					button.state = .off
+				}
+			}
+		}
+		switch tag {
+		case 80:
+			makeLimbsExclusive()
+			limbDecAbView.makeButtonsInViewActive()
+		case 81:
+			makeLimbsExclusive()
+			limbDecAbView.makeButtonsInViewInactive()
+		case 82, 83:
+			makeLimbsNonexclusive()
+			limbDecAbView.makeButtonsInViewInactive()
+		default: return
+		}
+	}
+
 }

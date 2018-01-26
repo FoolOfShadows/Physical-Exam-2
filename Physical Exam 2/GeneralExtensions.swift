@@ -87,6 +87,27 @@ extension NSView {
 		}
 		
 	}
+	
+	func makeButtonsInViewInactive() {
+		for item in self.subviews {
+			if let isButton = item as? NSButton {
+				isButton.state = .off
+				isButton.isEnabled = false
+			} else {
+				item.makeButtonsInViewInactive()
+			}
+		}
+	}
+	
+	func makeButtonsInViewActive() {
+		for item in self.subviews {
+			if let isButton = item as? NSButton {
+				isButton.isEnabled = true
+			} else {
+				item.makeButtonsInViewActive()
+			}
+		}
+	}
 }
 
 extension NSTextView {
