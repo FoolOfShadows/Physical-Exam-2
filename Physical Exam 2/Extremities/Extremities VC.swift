@@ -24,6 +24,12 @@ class Extremities_VC: NSViewController {
 	@IBOutlet weak var limbSideView: NSStackView!
 	@IBOutlet weak var limbDecAbView: NSStackView!
 	@IBOutlet weak var clubbingView: NSStackView!
+	@IBOutlet weak var lQtyPulsesPopup: NSPopUpButton!
+	@IBOutlet weak var rQtyPulsesPopup: NSPopUpButton!
+	@IBOutlet weak var lAreaPulsesCombo: NSComboBox!
+	@IBOutlet weak var rAreaPulsesCombo: NSComboBox!
+	@IBOutlet weak var lCRCombo: NSComboBox!
+	@IBOutlet weak var rCRCombo: NSComboBox!
 	
 	var digitAssessment = DigitAssessment()
 	var limbAssessment = LimbAssessment()
@@ -49,6 +55,7 @@ class Extremities_VC: NSViewController {
 		resultArray.append(digitAssessmentTextView.string)
 		resultArray.append(limbAssessmentTextView.string)
 		
+		resultArray = resultArray.filter {!$0.isEmpty}
 		if !resultArray.isEmpty {
 			let results = "EXTREMITIES: \(resultArray.filter {$0 != ""}.joined(separator: "\n"))"
 			results.copyToPasteboard()
@@ -137,19 +144,17 @@ class Extremities_VC: NSViewController {
 		}
 	}
 	
-	@IBAction func fillRight(_ sender:NSButton) {
-		let buttons = pulsesView.getButtonsInView()
-		let comboBoxes = pulsesView.getComboBoxesInView()
-		
-		print(buttons)
-		for button in buttons {
-			print(button.tag)
-			if button.tag == 50 && button.title != "" {
-				if let fillButton = buttons.first(where: {$0.tag == button.tag + 2}) {
-					fillButton.title = button.title
-				}
-				
-			}
+	@IBAction func copyPulsesRight(_ sender: NSButton) {
+		if !lAreaPulsesCombo.stringValue.isEmpty {
+			rAreaPulsesCombo.stringValue = lAreaPulsesCombo.stringValue
+		}
+		if !lQtyPulsesPopup.title.isEmpty {
+			rQtyPulsesPopup.title = lQtyPulsesPopup.title
+		}
+	}
+	@IBAction func copyCRRight(_ sender: NSButton) {
+		if !lCRCombo.stringValue.isEmpty {
+			rCRCombo.stringValue = lCRCombo.stringValue
 		}
 	}
 

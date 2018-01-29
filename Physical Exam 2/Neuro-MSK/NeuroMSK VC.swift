@@ -22,6 +22,10 @@ class NeuroMSK_VC: NSViewController {
 	@IBOutlet weak var mskRangeDirectionPopup: NSPopUpButton!
 	@IBOutlet weak var mskRangeDegreesPopup: NSPopUpButton!
 	@IBOutlet weak var mskTonePopup: NSPopUpButton!
+	@IBOutlet weak var rSLRCombo: NSComboBox!
+	@IBOutlet weak var lSLRCombo: NSComboBox!
+	@IBOutlet weak var rDTRCombo: NSComboBox!
+	@IBOutlet weak var lDTRCombo: NSComboBox!
 	
 	let mskAssessmentSection = MSK()
 	
@@ -211,6 +215,17 @@ class NeuroMSK_VC: NSViewController {
 					button.state = .off
 				}
 			}
+		}
+	}
+	
+	@IBAction func copySLRRight(_ sender: NSButton) {
+		if !rSLRCombo.stringValue.isEmpty {
+			lSLRCombo.stringValue = rSLRCombo.stringValue
+		}
+	}
+	@IBAction func copyDTRRight(_ sender: NSButton) {
+		if !rDTRCombo.stringValue.isEmpty {
+			lDTRCombo.stringValue = rDTRCombo.stringValue
 		}
 	}
 }
