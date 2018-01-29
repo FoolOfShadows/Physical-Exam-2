@@ -23,8 +23,10 @@ class Extremities_VC: NSViewController {
 	@IBOutlet weak var limbView: NSView!
 	@IBOutlet weak var limbSideView: NSStackView!
 	@IBOutlet weak var limbDecAbView: NSStackView!
+	@IBOutlet weak var clubbingView: NSStackView!
 	
 	var digitAssessment = DigitAssessment()
+	var limbAssessment = LimbAssessment()
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,16 +39,21 @@ class Extremities_VC: NSViewController {
 	
 	@IBAction func processExtremitiesTab(_ sender: Any) {
 		var resultArray = [String]()
+		resultArray.append(Extremities().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
 		resultArray.append(edemaTextView.string)
 		resultArray.append(pulsesTextView.string)
-	resultArray.append(CapillaryRefill().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
+		resultArray.append(CapillaryRefill().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
+		resultArray.append(Clubbing().processSectionFrom(getActiveButtonInfoIn(view: clubbingView)))
 		resultArray.append(Bunions().processSectionFrom(getActiveButtonInfoIn(view: bunionView)))
 		resultArray.append(Callus().processSectionFrom(getActiveButtonInfoIn(view: callusView)))
 		resultArray.append(digitAssessmentTextView.string)
 		resultArray.append(limbAssessmentTextView.string)
-		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
-		results.copyToPasteboard()
-		print(results)
+		
+		if !resultArray.isEmpty {
+			let results = "EXTREMITIES: \(resultArray.filter {$0 != ""}.joined(separator: "\n"))"
+			results.copyToPasteboard()
+			print(results)
+		}
 	}
 	
 	func clearExtremitiesTab() {
@@ -90,7 +97,7 @@ class Extremities_VC: NSViewController {
 		case 1000: edemaTextView.addToViewsExistingText(Edema().processSectionFrom(getActiveButtonInfoIn(view: edemaView)))
 		case 1001: pulsesTextView.addToViewsExistingText(Pulses().processSectionFrom(getActiveButtonInfoIn(view: pulsesView)))
 		case 1002: digitAssessmentTextView.string = (digitAssessment.processSectionFrom(getActiveButtonInfoIn(view: digitAssessmentView)))
-		case 1003: limbAssessmentTextView.addToViewsExistingText(Extremities().processSectionFrom(getActiveButtonInfoIn(view: limbAssessmentView)))
+		case 1003: limbAssessmentTextView.addToViewsExistingText(limbAssessment.processSectionFrom(getActiveButtonInfoIn(view: limbAssessmentView)))
 		default: return
 		}
 		sender.superview?.clearControllers()
@@ -120,16 +127,29 @@ class Extremities_VC: NSViewController {
 			}
 		}
 		switch tag {
-		case 80:
+		case 80, 81:
 			makeLimbsExclusive()
 			limbDecAbView.makeButtonsInViewActive()
-		case 81:
-			makeLimbsExclusive()
-			limbDecAbView.makeButtonsInViewInactive()
 		case 82, 83:
 			makeLimbsNonexclusive()
 			limbDecAbView.makeButtonsInViewInactive()
 		default: return
+		}
+	}
+	
+	@IBAction func fillRight(_ sender:NSButton) {
+		let buttons = pulsesView.getButtonsInView()
+		let comboBoxes = pulsesView.getComboBoxesInView()
+		
+		print(buttons)
+		for button in buttons {
+			print(button.tag)
+			if button.tag == 50 && button.title != "" {
+				if let fillButton = buttons.first(where: {$0.tag == button.tag + 2}) {
+					fillButton.title = button.title
+				}
+				
+			}
 		}
 	}
 

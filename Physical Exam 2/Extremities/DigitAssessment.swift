@@ -22,8 +22,10 @@ class DigitAssessment {
 		
 		for item in data {
 			switch item.0 {
-			case 54, 55, 56: sectionHeading = item.1!
-			//case 56: sectionHeading = "Hammer toe(s) on:"
+			case 54, 55: sectionHeading = item.1!
+			case 56:
+				sectionHeading = item.1!
+				appendage = "toe(s)"
 			case 57: appendage = "toe(s)"
 			case 58: appendage = "finger(s)"
 			default: continue

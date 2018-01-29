@@ -108,6 +108,30 @@ extension NSView {
 			}
 		}
 	}
+	
+	func getButtonsInView() -> [NSButton] {
+		var results = [NSButton]()
+		for item in self.subviews {
+			if let button = item as? NSButton {
+				results.append(button)
+			} else {
+				results += item.getButtonsInView()
+			}
+		}
+		return results
+	}
+	
+	func getComboBoxesInView() -> [NSComboBox] {
+		var results = [NSComboBox]()
+		for item in self.subviews {
+			if let box = item as? NSComboBox {
+				results.append(box)
+			} else {
+				results += item.getComboBoxesInView()
+			}
+		}
+		return results
+	}
 }
 
 extension NSTextView {

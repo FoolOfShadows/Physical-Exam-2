@@ -18,24 +18,41 @@ class LimbAssessment {
 		var results = String()
 		var resultArray = [String]()
 		var sectionHeading = String()
-		var appendage = String()
+		var appendage = [String]()
 		var side = String()
-		var sense = String()
+		var senseState = String()
+		
+		var processToRun: (()->String)?
+		
+		
+		
+		func processVibeSense() -> String {
+			return "\(senseState) \(sectionHeading) \(side) \(appendage.joined())"
+		}
+		
+		func processSpiderVericose() -> String {
+			return "\(sectionHeading) \(side) \(appendage.joined(separator: ", "))"
+		}
 		
 		for item in data {
 			switch item.0 {
-			case 80...83: sectionHeading = item.1!
-			case 84...90: appendage = item.1!.lowercased()
-			case 91: appendage = "abdomen"
-			case 92...94: side = item.1!.lowercased()
-			case 95, 96: sense = item.1!.lowercased()
+			case 80: sectionHeading = "vibration sense"; processToRun = processVibeSense
+			case 81: sectionHeading = "monofilament sensation"; processToRun = processVibeSense
+			case 82: sectionHeading = "spider veins"; processToRun = processSpiderVericose
+			case 83: sectionHeading = "varicose veins"; processToRun = processSpiderVericose
+			case 84...90: appendage.append(item.1!.lowercased())
+			case 91: appendage.append("abdomen")
+			case 92, 93, 94: side = item.1!.lowercased()
+			case 95, 96: senseState = item.1!.lowercased()
 			default: continue
 			}
 		}
 		
 		
-		if !resultArray.isEmpty {
-			results = resultArray.joined(separator: "\n")
+		if let selectedProcess = processToRun {
+			results = selectedProcess()
+		} else if !resultArray.isEmpty {
+			results = resultArray.joined(separator: ", ")
 		}
 		
 		return results

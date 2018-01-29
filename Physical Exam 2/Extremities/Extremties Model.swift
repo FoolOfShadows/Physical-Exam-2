@@ -33,25 +33,6 @@ struct Extremities:PopulateComboBoxProtocol {
 		var results = String()
 		var resultArray = [String]()
 		
-		//sub sections
-		var side = String()
-		var appendage = [String]()
-		var senseState = String()
-		var sectionHeading = String()
-		
-		var processToRun: (()->String)?
-		
-		
-		
-		func processVibeSense() -> String {
-			return "\(senseState) \(sectionHeading) \(side) \(appendage.joined(separator: ", "))"
-		}
-		
-		func processSpiderVericose() -> String {
-			return "\(senseState) \(sectionHeading) \(side) \(appendage.joined(separator: ", "))"
-		}
-		
-		
 		for item in data {
 			switch item.0 {
 			case 1: resultArray.append("no cyanosis")
@@ -61,25 +42,11 @@ struct Extremities:PopulateComboBoxProtocol {
 			case 5: resultArray.append("normal capillary refill")
 			case 6: resultArray.append("normal vibration sense")
 			case 7: resultArray.append("normal monofilament sensation")
-			case 24: resultArray.append("normal monofilament sensation")
-			case 25: resultArray.append("normal monofilament sensation")
-
-			case 80: sectionHeading = "vibration sense"; processToRun = processVibeSense
-			case 81: sectionHeading = "monofilament sensation"; processToRun = processVibeSense
-			case 82: sectionHeading = "spider veins"; processToRun = processSpiderVericose
-			case 83: sectionHeading = "varicose veins"; processToRun = processSpiderVericose
-			case 84...90: appendage.append(item.1!.lowercased())
-			case 91: appendage.append("abdomen")
-			case 92, 93, 94: side = item.1!.lowercased()
-			case 95, 96: senseState = item.1!.lowercased()
 			default: continue
 			}
 		}
 		
-		print(resultArray)
-		if let selectedProcess = processToRun {
-			results = selectedProcess()
-		} else if !resultArray.isEmpty {
+		if !resultArray.isEmpty {
 			results = resultArray.joined(separator: ", ")
 		}
 		
@@ -172,22 +139,41 @@ struct CapillaryRefill {
 }
 
 struct Clubbing {
-	
+	func processSectionFrom(_ data: [(Int, String?)]) -> String {
+		var results = String()
+		var resultArray = [String]()
+		
+		for item in data {
+			switch item.0 {
+			case 105, 106, 107: resultArray.append("\(item.1!.lowercased()) toes")
+			case 108, 109, 110: resultArray.append("\(item.1!.lowercased()) fingers")
+			default: continue
+			}
+		}
+		
+		if !resultArray.isEmpty {
+			results = "Clubbing present on \(resultArray.joined(separator: ", "))"
+		}
+		
+		return results
+	}
 }
 
 struct Bunions {
 	func processSectionFrom(_ data: [(Int, String?)]) -> String {
 		var results = String()
+		var resultArray = [String]()
 		
-		if data.count > 0 {
-			let theItem = data[0]
-			if let title = theItem.1 {
-				switch title {
-				case "Right", "Left": results = "Bunion: \(title.lowercased()) foot."
-				case "Bilateral": results = "Bunions: both feet."
-				default: break
-				}
+		for item in data {
+			switch item.0 {
+			case 115, 116, 117: resultArray.append("\(item.1!.lowercased()) medial")
+			case 118, 119, 120: resultArray.append("\(item.1!.lowercased()) lateral")
+			default: continue
 			}
+		}
+		
+		if !resultArray.isEmpty {
+			results = "Bunions: \(resultArray.joined(separator: ", "))"
 		}
 		
 		return results
