@@ -11,45 +11,43 @@ struct HeadEye {
 	func processSectionFrom(_ data: [(Int, String?)]) -> String {
 		var results = String()
 		var resultArray = [String]()
+		var eyeArray = [String]()
+		var leftEyeArray = [String]()
+		var rightEyeArray = [String]()
+		var headArray = [String]()
 		
 		for item in data {
 			switch item.0 {
-			case 1: resultArray.append("hd normocephalic atraumatic, no lesions")
-			case 2: resultArray.append("pupils equal round, reactive to light and accomodation")
-			case 3: resultArray.append("extraocular muscles intact")
-			case 4: resultArray.append("no icterus")
-			case 5: resultArray.append("conjunctivae clear")
-			case 6: resultArray.append("le sclera red")
-			case 7: resultArray.append("le muddy")
-			case 8: resultArray.append("le icteric")
-			case 9: resultArray.append("le arcus sinilus")
-			case 10: resultArray.append("le esotropia")
-			case 11: resultArray.append("re sclera red")
-			case 12: resultArray.append("re muddy")
-			case 13: resultArray.append("re icteric")
-			case 14: resultArray.append("re arcus sinilus")
-			case 15: resultArray.append("re esotropia")
-			case 20: resultArray.append("hd \(item.1!)")
-			case 21: resultArray.append(item.1!)
+			case 1: headArray.append("normocephalic atraumatic, no lesions")
+			case 2: eyeArray.append("pupils equal round, reactive to light and accommodation")
+			case 3: eyeArray.append("extra-ocular muscles intact")
+			case 4: eyeArray.append("no icterus")
+			case 5: eyeArray.append("conjunctivae clear")
+			case 6: leftEyeArray.append("sclera red")
+			case 7: leftEyeArray.append("muddy")
+			case 8: leftEyeArray.append("icteric")
+			case 9: leftEyeArray.append("arcus sinilus")
+			case 10: leftEyeArray.append("esotropia")
+			case 11: rightEyeArray.append("sclera red")
+			case 12: rightEyeArray.append("muddy")
+			case 13: rightEyeArray.append("icteric")
+			case 14: rightEyeArray.append("arcus sinilus")
+			case 15: rightEyeArray.append("esotropia")
+			case 20: headArray.append("\(item.1!)")
+			case 21: eyeArray.append(item.1!)
 			default: continue
 			}
 		}
 		
-		let leftEye = resultArray.filter {$0.contains("le ")}
-		let rightEye = resultArray.filter {$0.contains("re ")}
-		
-		let headArray = resultArray.filter {$0.contains("hd ")}
-		var eyeArray = resultArray.filter {!$0.contains("le ") && !$0.contains("re ") && !$0.contains("hd ")}
-		
-		if !rightEye.isEmpty {
-			eyeArray.insert("Right eye: " + (rightEye.joined(separator: ", ")).replacingOccurrences(of: "re ", with: ""), at:0)
+		if !rightEyeArray.isEmpty {
+			eyeArray.insert("Right eye: \(rightEyeArray.joined(separator: ", "))", at: 0)
 		}
-		if !leftEye.isEmpty {
-			eyeArray.insert("Left eye: " + (leftEye.joined(separator: ", ")).replacingOccurrences(of: "le ", with: ""), at:0)
+		if !leftEyeArray.isEmpty {
+			eyeArray.insert("Left eye: " + (leftEyeArray.joined(separator: ", ")), at: 0)
 		}
 		
 		if !headArray.isEmpty {
-			resultArray.append("HEAD: \(headArray.joined(separator: ", ").replacingOccurrences(of: "hd ", with: ""))")
+			resultArray.append("HEAD: \(headArray.joined(separator: ", "))")
 		}
 		if !eyeArray.isEmpty {
 			resultArray.append("EYE: \(eyeArray.joined(separator: ", "))")

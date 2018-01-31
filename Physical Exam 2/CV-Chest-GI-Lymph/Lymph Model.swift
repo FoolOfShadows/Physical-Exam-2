@@ -25,7 +25,7 @@ struct Lymph {
 			case 16, 17, 18: resultArray.append("\(item.1!.lowercased()) supraclavicular lymphadenopathy")
 			case 19, 20, 21: resultArray.append("\(item.1!.lowercased()) submandibular lymphadenopathy")
 			case 22, 23, 24: resultArray.append("\(item.1!.lowercased()) anterior cervical lymphadenopathy")
-			case 15, 26, 27: resultArray.append("\(item.1!.lowercased()) posterior cervical lymphadenopathy")
+			case 25, 26, 27: resultArray.append("\(item.1!.lowercased()) posterior cervical lymphadenopathy")
 			case 30: resultArray.append(item.1!)
 			default: continue
 			}
