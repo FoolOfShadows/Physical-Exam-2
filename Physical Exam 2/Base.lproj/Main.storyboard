@@ -4994,7 +4994,6 @@
                         <outlet property="rAreaPulsesCombo" destination="yS3-bG-3GJ" id="AsT-4k-dCo"/>
                         <outlet property="rCRCombo" destination="ssJ-AM-7jN" id="h8U-rj-FzJ"/>
                         <outlet property="rQtyPulsesPopup" destination="WZb-Ie-NIM" id="Up8-mc-MUq"/>
-                        <outlet property="sideView" destination="iKl-Ok-heW" id="bdU-Mp-gP0"/>
                     </connections>
                 </viewController>
                 <customObject id="npM-zU-0sw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
