@@ -38,6 +38,7 @@
 		79E2A46520067B4C00678D6B /* Extremties Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2A46420067B4C00678D6B /* Extremties Model.swift */; };
 		79E2A46720067B8900678D6B /* Breast VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2A46620067B8900678D6B /* Breast VC.swift */; };
 		79E2A46920067B9900678D6B /* Breast Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E2A46820067B9900678D6B /* Breast Model.swift */; };
+		79E806CF20237460008C9C75 /* GlobalControlls VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E806CE20237460008C9C75 /* GlobalControlls VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		79E2A46420067B4C00678D6B /* Extremties Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extremties Model.swift"; sourceTree = "<group>"; };
 		79E2A46620067B8900678D6B /* Breast VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breast VC.swift"; sourceTree = "<group>"; };
 		79E2A46820067B9900678D6B /* Breast Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breast Model.swift"; sourceTree = "<group>"; };
+		79E806CE20237460008C9C75 /* GlobalControlls VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalControlls VC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				795FBED01FEACB700095B05D /* Physical_Exam_2.entitlements */,
 				7908FF3D1FEBFE1600B852A7 /* GeneralExtensions.swift */,
 				7908FF3F1FEBFE1C00B852A7 /* StringExtensions.swift */,
+				79E806CE20237460008C9C75 /* GlobalControlls VC.swift */,
 			);
 			path = "Physical Exam 2";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				7955508520053BEC00DBC4DB /* Extremities VC.swift in Sources */,
 				790A83A92003EA5C006712CF /* HeadEye Model.swift in Sources */,
 				7908FF401FEBFE1C00B852A7 /* StringExtensions.swift in Sources */,
+				79E806CF20237460008C9C75 /* GlobalControlls VC.swift in Sources */,
 				7908FF3E1FEBFE1600B852A7 /* GeneralExtensions.swift in Sources */,
 				79E2A4632006790D00678D6B /* DRE Model.swift in Sources */,
 				795FBEC91FEACB700095B05D /* ViewController.swift in Sources */,
@@ -415,7 +419,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;

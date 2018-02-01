@@ -8,24 +8,28 @@
 
 import Cocoa
 
-class Breast_VC: NSViewController {
+class Breast_VC: NSViewController, ProcessTabProtocol {
 
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		loadedViewControllers.append(self)
         clearBreast()
     }
 	
 	@IBAction func processBreastTab(_ sender: Any) {
-		var resultArray = [String]()
-		resultArray.append(Breast().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
-		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
+		let results = processTab()
 		results.copyToPasteboard()
 		print(results)
 	}
 	
+	func processTab() -> String {
+		var resultArray = [String]()
+		resultArray.append(Breast().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
+		return resultArray.filter {$0 != ""}.joined(separator: "\n")
+	}
 	
-	@IBAction func clearBreastTab(_ sender: Any) {
+	@IBAction func clearTab(_ sender: Any) {
 		clearBreast()
 	}
 	
@@ -38,15 +42,14 @@ class Breast_VC: NSViewController {
 		func normalButtonRangesForSection(_ section:String) -> [Int] {
 			switch section {
 			case "breast":
-				return [Int](1...5)
+				return [Int](1...4)
 			default:
 				return [Int]()
 			}
 		}
 		
 		guard let view = sender.superview else { return }
-		guard let name = (view.superview as? NSBox)?.title else { return }
-		turnButtons(getButtonsInView(sender.superview!), InRange: normalButtonRangesForSection(name.lowercased()), ToState: sender.state)
+		turnButtons(getButtonsInView(view), InRange: normalButtonRangesForSection("breast"), ToState: sender.state)
 	}
     
 }

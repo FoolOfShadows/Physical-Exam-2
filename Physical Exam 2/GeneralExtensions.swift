@@ -16,6 +16,11 @@ protocol PopulateComboBoxProtocol {
 	func matchValuesFrom(_ id:Int) -> [String]?
 }
 
+protocol ProcessTabProtocol {
+	func processTab() -> String
+	func clearTab(_ sender: Any)
+}
+
 func getDescriptionOfItem(_ items:[(Int, String?)], fromStruct theStruct:StructsWithDescriptionOutput) -> [String]? {
     var resultsArray = [String]()
     

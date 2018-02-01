@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate {
+class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtocol {
 
 	@IBOutlet weak var cvBox: NSBox!
 	@IBOutlet weak var chestBox: NSBox!
@@ -21,22 +21,29 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		loadedViewControllers.append(self)
         clearCV()
     }
 	
+	
 	@IBAction func processCVTab(_ sender: Any) {
+		let results = processTab()
+		results.copyToPasteboard()
+		print(results)
+	}
+	
+	func processTab() -> String {
 		var resultArray = [String]()
 		resultArray.append(Cardiovascular().processSectionFrom(getActiveButtonInfoIn(view: cvBox)))
 		resultArray.append(Chest().processSectionFrom(getActiveButtonInfoIn(view: chestBox)))
 		resultArray.append(GI().processSectionFrom(getActiveButtonInfoIn(view: giBox)))
 		resultArray.append(Lymph().processSectionFrom(getActiveButtonInfoIn(view: lymphBox)))
-		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
-		results.copyToPasteboard()
-		print(results)
+		return resultArray.filter {$0 != ""}.joined(separator: "\n")
+		
 	}
 	
 	
-	@IBAction func clearCVTab(_ sender: Any) {
+	@IBAction func clearTab(_ sender: Any) {
 		clearCV()
 	}
 	

@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class SkinGynGUDRE_VC: NSViewController {
+class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
 	
 
 	@IBOutlet weak var skinBox: NSBox!
@@ -18,23 +18,27 @@ class SkinGynGUDRE_VC: NSViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		loadedViewControllers.append(self)
         clearSkin()
     }
 	
 	@IBAction func processSkinTab(_ sender: Any) {
+		let results = processTab()
+		results.copyToPasteboard()
+		print(results)
+	}
+	
+	func processTab() -> String {
 		var resultArray = [String]()
 		
 		resultArray.append(Skin().processSectionFrom(getActiveButtonInfoIn(view: skinBox)))
 		resultArray.append(Gyn().processSectionFrom(getActiveButtonInfoIn(view: gynBox)))
 		resultArray.append(GU().processSectionFrom(getActiveButtonInfoIn(view: guBox)))
 		resultArray.append(DRE().processSectionFrom(getActiveButtonInfoIn(view: dreBox)))
-		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
-		results.copyToPasteboard()
-		print(results)
+		return resultArray.filter {$0 != ""}.joined(separator: "\n")
 	}
 	
-	
-	@IBAction func clearSkinTab(_ sender: Any) {
+	@IBAction func clearTab(_ sender: Any) {
 		clearSkin()
 	}
 	

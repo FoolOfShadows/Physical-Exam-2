@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class NeuroMSK_VC: NSViewController {
+class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 
 	@IBOutlet weak var neuroBox: NSBox!
 	@IBOutlet weak var mskBox: NSBox!
@@ -32,6 +32,7 @@ class NeuroMSK_VC: NSViewController {
 	@IBOutlet weak var mskResultsTextView: NSTextView!
 	override func viewDidLoad() {
         super.viewDidLoad()
+		loadedViewControllers.append(self)
 		clearMSKTab()
     }
     
@@ -163,20 +164,23 @@ class NeuroMSK_VC: NSViewController {
 		mskResultsTextView.string = "\(existingAssessment)\(site): \(resultArray.joined(separator: ", "))."
 	}
 	
-	@IBAction func clearMSKAssessmentTab(_ sender: Any) {
+	@IBAction func clearTab(_ sender: Any) {
 		clearMSKTab()
 	}
 	
 	@IBAction func processNeuroMSKTab(_ sender: Any) {
-		
+		let results = processTab()
+		results.copyToPasteboard()
+		print(results)
+	}
+	
+	func processTab() -> String {
 		mskAssessmentSection.mskAbnormalResults = mskResultsTextView.string
 		var resultArray = [String]()
 		resultArray.append(Neuro().processSectionFrom(getActiveButtonInfoIn(view: neuroBox)))
 		resultArray.append(mskAssessmentSection.processSectionFrom(getActiveButtonInfoIn(view: mskBox)))
 		
-		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
-		results.copyToPasteboard()
-		print(results)
+		return resultArray.filter {$0 != ""}.joined(separator: "\n")
 	}
 	
 	func clearMSKTab() {

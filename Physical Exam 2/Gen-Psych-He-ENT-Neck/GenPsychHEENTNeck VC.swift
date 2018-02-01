@@ -8,7 +8,8 @@
 
 import Cocoa
 
-class GenPsychHEENTNeck_VC: NSViewController {
+class GenPsychHEENTNeck_VC: NSViewController, ProcessTabProtocol {
+	
 
 	@IBOutlet weak var genBox: NSBox!
 	@IBOutlet weak var psychBox: NSBox!
@@ -19,9 +20,16 @@ class GenPsychHEENTNeck_VC: NSViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+		loadedViewControllers.append(self)
     }
 	
 	@IBAction func processGenTab(_ sender: Any) {
+		let results = processTab()
+		print(results)
+		results.copyToPasteboard()
+	}
+	
+	func processTab() -> String {
 		var resultArray = [String]()
 		
 		resultArray.append(General().processSectionFrom(getActiveButtonInfoIn(view: genBox)))
@@ -30,13 +38,12 @@ class GenPsychHEENTNeck_VC: NSViewController {
 		resultArray.append(ENT().processSectionFrom(getActiveButtonInfoIn(view: entBox)))
 		resultArray.append(Neck().processSectionFrom(getActiveButtonInfoIn(view: neckBox)))
 		
-		let results = resultArray.filter {$0 != ""}.joined(separator: "\n")
-		print(results)
-		results.copyToPasteboard()
+		return resultArray.filter {$0 != ""}.joined(separator: "\n")
+		
 	}
 	
 	
-	@IBAction func clearGenTab(_ sender: Any) {
+	@IBAction func clearTab(_ sender: Any) {
 		clearGen()
 	}
 	

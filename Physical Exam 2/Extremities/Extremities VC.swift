@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Extremities_VC: NSViewController {
+class Extremities_VC: NSViewController, ProcessTabProtocol {
 
 	@IBOutlet weak var edemaView: NSView!
 	@IBOutlet var edemaTextView: NSTextView!
@@ -36,14 +36,22 @@ class Extremities_VC: NSViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		loadedViewControllers.append(self)
         clearExtremitiesTab()
     }
+
 	
-	@IBAction func clearExtremitiesTab(_ sender: Any) {
+	@IBAction func clearTab(_ sender: Any) {
 		clearExtremitiesTab()
 	}
 	
 	@IBAction func processExtremitiesTab(_ sender: Any) {
+		let results = processTab()
+		results.copyToPasteboard()
+		print(results)
+	}
+	
+	func processTab() -> String {
 		var resultArray = [String]()
 		resultArray.append(Extremities().processSectionFrom(getActiveButtonInfoIn(view: self.view)))
 		resultArray.append(edemaTextView.string)
@@ -57,10 +65,10 @@ class Extremities_VC: NSViewController {
 		
 		resultArray = resultArray.filter {!$0.isEmpty}
 		if !resultArray.isEmpty {
-			let results = "EXTREMITIES: \(resultArray.filter {$0 != ""}.joined(separator: "\n"))"
-			results.copyToPasteboard()
-			print(results)
+			return "EXTREMITIES: \(resultArray.filter {$0 != ""}.joined(separator: "\n"))"
+			
 		}
+		return ""
 	}
 	
 	func clearExtremitiesTab() {
