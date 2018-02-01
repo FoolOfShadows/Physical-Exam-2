@@ -71,7 +71,6 @@ class DigitAssessment {
 			case ("Hammer Toes", "toe(s)"): hammerResults.rightToes = [item]
 			default: ""
 				}
-			default: ""
 			}
 		}
 		
