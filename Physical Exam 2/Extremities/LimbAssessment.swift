@@ -36,10 +36,10 @@ class LimbAssessment {
 		
 		for item in data {
 			switch item.0 {
-			case 80: sectionHeading = "vibration sense"; processToRun = processVibeSense
-			case 81: sectionHeading = "monofilament sensation"; processToRun = processVibeSense
-			case 82: sectionHeading = "spider veins"; processToRun = processSpiderVericose
-			case 83: sectionHeading = "varicose veins"; processToRun = processSpiderVericose
+			case 80: sectionHeading = "Vibration sense"; processToRun = processVibeSense
+			case 81: sectionHeading = "Monofilament sensation"; processToRun = processVibeSense
+			case 82: sectionHeading = "Spider veins"; processToRun = processSpiderVericose
+			case 83: sectionHeading = "Varicose veins"; processToRun = processSpiderVericose
 			case 84...90: appendage.append(item.1!.lowercased())
 			case 91: appendage.append("abdomen")
 			case 92, 93, 94: side = item.1!.lowercased()

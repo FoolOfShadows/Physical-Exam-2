@@ -73,6 +73,16 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 		turnButtons(getButtonsInView(sender.superview!), InRange: normalButtonRangesForSection(name.lowercased()), ToState: sender.state)
 	}
 	
+	@IBAction func selectOnlyOne(_ sender: NSButton) {
+		if let buttons = sender.superview?.subviews as? [NSButton] {
+			for button in buttons {
+				if button.title != sender.title {
+					button.state = .off
+				}
+			}
+		}
+	}
+	
 	@IBAction func giTakeTTP(_ sender: NSComboBox) {
 		let currentView = giTTPView.stringValue
 		if sender.stringValue != "" {

@@ -72,6 +72,15 @@ class GenPsychHEENTNeck_VC: NSViewController, ProcessTabProtocol {
 		turnButtons(getButtonsInView(sender.superview!), InRange: normalButtonRangesForSection(name.lowercased()), ToState: sender.state)
 	}
 
+	@IBAction func selectOnlyOne(_ sender: NSButton) {
+		if let buttons = sender.superview?.subviews as? [NSButton] {
+			for button in buttons {
+				if button.title != sender.title {
+					button.state = .off
+				}
+			}
+		}
+	}
 
 }
 

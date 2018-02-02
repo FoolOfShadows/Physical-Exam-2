@@ -16,11 +16,11 @@ struct GU {
 		
 		for item in data {
 			switch item.0 {
-			case 1: resultArray.append("normal uncirc phallus, no penile discharge, no lesions")
-			case 2: resultArray.append("normal circ phallus, no penile discharge, no lesions")
+			case 1: resultArray.append("normal uncircumcised phallus, no penile discharge, no lesions")
+			case 2: resultArray.append("normal circumcised phallus, no penile discharge, no lesions")
 			case 3: resultArray.append("testes normal size, no masses, no hernias, no inguinal lymphadenopathy")
 			case 4: resultArray.append("no hernias")
-			case 5: resultArray.append("DRE: prostate nontender, no masses, normal size, no rectal masses, ext/int rhoids, stool brown, heme negative.")
+			case 5: resultArray.append("DRE: prostate nontender, no masses, normal size, no rectal masses, ext/int rhoids, stool brown, heme negative")
 			case 6: resultArray.append("asymmetric")
 			case 7: resultArray.append("domed")
 			case 8: resultArray.append("lumpy")

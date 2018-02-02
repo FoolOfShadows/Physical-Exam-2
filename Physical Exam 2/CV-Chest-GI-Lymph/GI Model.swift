@@ -41,7 +41,7 @@ struct GI:PopulateComboBoxProtocol {
 			case 30: resultArray.append("BS: \(item.1!.lowercased())")
 			case 31: resultArray.append("BS: \(item.1!.lowercased())")
 			case 32: resultArray.append("BS: \(item.1!.lowercased())")
-			case 20: resultArray.append(item.1!)
+			case 40: resultArray.append(item.1!)
 			default: continue
 			}
 		}
