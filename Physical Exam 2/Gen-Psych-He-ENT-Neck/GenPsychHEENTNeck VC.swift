@@ -17,10 +17,13 @@ class GenPsychHEENTNeck_VC: NSViewController, ProcessTabProtocol {
 	@IBOutlet weak var entBox: NSBox!
 	@IBOutlet weak var neckBox: NSBox!
 	
+	var selfView = NSView()
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
 		loadedViewControllers.append(self)
+		selfView = self.view
     }
 	
 	@IBAction func processGenTab(_ sender: Any) {
@@ -71,6 +74,7 @@ class GenPsychHEENTNeck_VC: NSViewController, ProcessTabProtocol {
 		guard let name = (view.superview as? NSBox)?.title else { return }
 		turnButtons(getButtonsInView(sender.superview!), InRange: normalButtonRangesForSection(name.lowercased()), ToState: sender.state)
 	}
+	
 
 	@IBAction func selectOnlyOne(_ sender: NSButton) {
 		if let buttons = sender.superview?.subviews as? [NSButton] {

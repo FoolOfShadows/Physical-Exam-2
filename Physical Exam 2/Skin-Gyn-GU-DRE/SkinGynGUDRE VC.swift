@@ -9,6 +9,8 @@
 import Cocoa
 
 class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
+	var selfView = NSView()
+	
 	
 
 	@IBOutlet weak var skinBox: NSBox!
@@ -19,6 +21,7 @@ class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 		loadedViewControllers.append(self)
+		selfView = self.view
         clearSkin()
     }
 	

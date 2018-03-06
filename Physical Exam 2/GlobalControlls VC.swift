@@ -36,6 +36,15 @@ class GlobalControlls_VC: NSViewController {
 			}
 		}
 	}
+	
+	@IBAction func setAllToNorm(_ sender: NSButton) {
+		for vc in loadedViewControllers {
+			if let vcMeetsProtocol = vc as? ProcessTabProtocol {
+				
+			}
+		}
+	}
+	
 }
 
 

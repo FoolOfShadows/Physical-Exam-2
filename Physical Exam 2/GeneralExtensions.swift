@@ -17,8 +17,10 @@ protocol PopulateComboBoxProtocol {
 }
 
 protocol ProcessTabProtocol {
+	var selfView:NSView { get set }
 	func processTab() -> String
 	func clearTab(_ sender: Any)
+	func selectNorms(_ sender: NSButton)
 }
 
 func getDescriptionOfItem(_ items:[(Int, String?)], fromStruct theStruct:StructsWithDescriptionOutput) -> [String]? {

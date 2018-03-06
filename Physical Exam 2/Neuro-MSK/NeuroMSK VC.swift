@@ -9,6 +9,8 @@
 import Cocoa
 
 class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
+	var selfView = NSView()
+	
 
 	@IBOutlet weak var neuroBox: NSBox!
 	@IBOutlet weak var mskBox: NSBox!
@@ -33,6 +35,7 @@ class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		loadedViewControllers.append(self)
+		selfView = self.view
 		clearMSKTab()
     }
     

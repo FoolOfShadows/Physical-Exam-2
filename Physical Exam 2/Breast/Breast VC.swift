@@ -9,11 +9,14 @@
 import Cocoa
 
 class Breast_VC: NSViewController, ProcessTabProtocol {
+	var selfView = NSView()
+	
 
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		loadedViewControllers.append(self)
+		selfView = self.view
         clearBreast()
     }
 	

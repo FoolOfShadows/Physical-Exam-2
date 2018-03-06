@@ -9,6 +9,8 @@
 import Cocoa
 
 class Extremities_VC: NSViewController, ProcessTabProtocol {
+	var selfView = NSView()
+	
 
 	@IBOutlet weak var edemaView: NSView!
 	@IBOutlet var edemaTextView: NSTextView!
@@ -37,6 +39,7 @@ class Extremities_VC: NSViewController, ProcessTabProtocol {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		loadedViewControllers.append(self)
+		selfView = self.view
         clearExtremitiesTab()
     }
 

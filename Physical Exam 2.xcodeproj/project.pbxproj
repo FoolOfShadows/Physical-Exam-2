@@ -111,6 +111,7 @@
 			children = (
 				795FBECC1FEACB700095B05D /* Main.storyboard */,
 				795FBEC61FEACB700095B05D /* AppDelegate.swift */,
+				79E806CE20237460008C9C75 /* GlobalControlls VC.swift */,
 				795FBEC81FEACB700095B05D /* ViewController.swift */,
 				79E2A46A20069CB500678D6B /* Gen-Psych-He-ENT-Neck */,
 				79E2A46B20069CD800678D6B /* CV-Chest-GI-Lymph */,
@@ -123,7 +124,6 @@
 				795FBED01FEACB700095B05D /* Physical_Exam_2.entitlements */,
 				7908FF3D1FEBFE1600B852A7 /* GeneralExtensions.swift */,
 				7908FF3F1FEBFE1C00B852A7 /* StringExtensions.swift */,
-				79E806CE20237460008C9C75 /* GlobalControlls VC.swift */,
 			);
 			path = "Physical Exam 2";
 			sourceTree = "<group>";

@@ -9,6 +9,8 @@
 import Cocoa
 
 class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtocol {
+	var selfView = NSView()
+	
 
 	@IBOutlet weak var cvBox: NSBox!
 	@IBOutlet weak var chestBox: NSBox!
@@ -22,6 +24,7 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 	override func viewDidLoad() {
         super.viewDidLoad()
 		loadedViewControllers.append(self)
+		selfView = self.view
         clearCV()
     }
 	
