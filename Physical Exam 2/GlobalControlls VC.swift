@@ -24,7 +24,7 @@ class GlobalControlls_VC: NSViewController {
 				outputArray.append(vc.processTab())
 			}
 		}
-		print(loadedViewControllers)
+		//print(loadedViewControllers)
 		let results = outputArray.filter {!$0.isEmpty}
 		results.joined(separator: "\n").copyToPasteboard()
 	}

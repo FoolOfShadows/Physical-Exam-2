@@ -174,7 +174,7 @@ class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 	@IBAction func processNeuroMSKTab(_ sender: Any) {
 		let results = processTab()
 		results.copyToPasteboard()
-		print(results)
+		//print(results)
 	}
 	
 	func processTab() -> String {

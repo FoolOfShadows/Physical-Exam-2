@@ -28,7 +28,7 @@ class GenPsychHEENTNeck_VC: NSViewController, ProcessTabProtocol {
 	
 	@IBAction func processGenTab(_ sender: Any) {
 		let results = processTab()
-		print(results)
+		//print(results)
 		results.copyToPasteboard()
 	}
 	

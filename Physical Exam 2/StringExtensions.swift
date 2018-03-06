@@ -32,7 +32,7 @@ extension String {
 		let startStripped = start.removeRegexCharactersFromString()
 		let endStripped = end.removeRegexCharactersFromString()
 		if self.contains(startStripped) && self.contains(endStripped) {
-			print("Starting text: \(start), Ending text: \(end)")
+			//print("Starting text: \(start), Ending text: \(end)")
 			guard let startRegex = try? NSRegularExpression(pattern: start, options: []) else { return nil }
 			guard let endRegex = try? NSRegularExpression(pattern: end, options: []) else {return nil }
 			

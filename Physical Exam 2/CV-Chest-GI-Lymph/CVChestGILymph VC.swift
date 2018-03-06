@@ -32,7 +32,7 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 	@IBAction func processCVTab(_ sender: Any) {
 		let results = processTab()
 		results.copyToPasteboard()
-		print(results)
+		//print(results)
 	}
 	
 	func processTab() -> String {

@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Extremities_VC: NSViewController, ProcessTabProtocol {
+class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDelegate {
 	var selfView = NSView()
 	
 
@@ -35,12 +35,24 @@ class Extremities_VC: NSViewController, ProcessTabProtocol {
 	
 	var digitAssessment = DigitAssessment()
 	var limbAssessment = LimbAssessment()
+    
+    let recognizer = NSSpeechRecognizer()!
+    let commands = ["callus right", "callus left", "callus bilateral"]
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		loadedViewControllers.append(self)
 		selfView = self.view
         clearExtremitiesTab()
+        recognizer.delegate = self
+        recognizer.commands = commands
+        if self.view.isHidden {
+            print("You can't see my Extremeties!p")
+        }
+    }
+    
+    override func viewDidAppear() {
+        recognizer.startListening()
     }
 
 	
@@ -51,7 +63,7 @@ class Extremities_VC: NSViewController, ProcessTabProtocol {
 	@IBAction func processExtremitiesTab(_ sender: Any) {
 		let results = processTab()
 		results.copyToPasteboard()
-		print(results)
+		//print(results)
 	}
 	
 	func processTab() -> String {
@@ -168,5 +180,32 @@ class Extremities_VC: NSViewController, ProcessTabProtocol {
 			rCRCombo.stringValue = lCRCombo.stringValue
 		}
 	}
+    
+    func speechRecognizer(_ sender: NSSpeechRecognizer, didRecognizeCommand command: String) {
+        let callusViews = callusView.subviews
+        switch command {
+        case "callus right":
+            if let right = callusViews[0] as? NSButton {
+                right.state = .on
+            }
+            //print("Heard: \(command) as callus right")
+        case "callus left":
+            if let left = callusViews[1] as? NSButton {
+                left.state = .on
+            }
+            //print("Heard: \(command) as callus left")
+        case "callus bilateral":
+            if let bilateral = callusViews[2] as? NSButton {
+                bilateral.state = .on
+            }
+            //print("Heard: \(command) as callus bilateral")
+        default:
+            return
+        }
+    }
+    
+    override func viewDidDisappear() {
+        recognizer.stopListening()
+    }
 
 }

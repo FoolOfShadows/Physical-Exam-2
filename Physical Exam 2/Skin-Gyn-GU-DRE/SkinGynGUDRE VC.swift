@@ -28,7 +28,7 @@ class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
 	@IBAction func processSkinTab(_ sender: Any) {
 		let results = processTab()
 		results.copyToPasteboard()
-		print(results)
+		//print(results)
 	}
 	
 	func processTab() -> String {

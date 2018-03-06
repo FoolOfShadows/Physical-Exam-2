@@ -23,7 +23,7 @@ class Breast_VC: NSViewController, ProcessTabProtocol {
 	@IBAction func processBreastTab(_ sender: Any) {
 		let results = processTab()
 		results.copyToPasteboard()
-		print(results)
+		//print(results)
 	}
 	
 	func processTab() -> String {
