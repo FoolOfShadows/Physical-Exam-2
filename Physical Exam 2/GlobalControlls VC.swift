@@ -12,6 +12,8 @@ var loadedViewControllers = [NSViewController]()
 
 class GlobalControlls_VC: NSViewController {
 
+    let nc = NotificationCenter.default
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -38,13 +40,9 @@ class GlobalControlls_VC: NSViewController {
 	}
 	
 	@IBAction func setAllToNorm(_ sender: NSButton) {
-		for vc in loadedViewControllers {
-			if let vcMeetsProtocol = vc as? ProcessTabProtocol {
-				
-			}
-		}
+        print("Set norms message sending")
+        nc.post(name: Notification.Name("SetAllToNorm"), object: nil)
 	}
 	
 }
-
 

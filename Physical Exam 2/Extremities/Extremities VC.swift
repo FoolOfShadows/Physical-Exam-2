@@ -44,11 +44,16 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
 		loadedViewControllers.append(self)
 		selfView = self.view
         clearExtremitiesTab()
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
+        
         recognizer.delegate = self
         recognizer.commands = commands
         if self.view.isHidden {
             print("You can't see my Extremeties!p")
         }
+        
     }
     
     override func viewDidAppear() {
@@ -201,6 +206,14 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
             //print("Heard: \(command) as callus bilateral")
         default:
             return
+        }
+    }
+    
+    @objc func selectAllNormsInView() {
+        let normButtons = self.view.getNormalButtonsInView()
+        for button in normButtons {
+            button.state = .on
+            selectNorms(button)
         }
     }
     

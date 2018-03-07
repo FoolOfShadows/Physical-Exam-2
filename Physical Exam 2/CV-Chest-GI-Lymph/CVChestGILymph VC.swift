@@ -26,6 +26,8 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 		loadedViewControllers.append(self)
 		selfView = self.view
         clearCV()
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
     }
 	
 	
@@ -109,4 +111,12 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 			sender.selectItem(at: 0)
 		}
 	}
+    
+    @objc func selectAllNormsInView() {
+        let normButtons = self.view.getNormalButtonsInView()
+        for button in normButtons {
+            button.state = .on
+            selectNorms(button)
+        }
+    }
 }

@@ -770,7 +770,7 @@
                                     <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="setAllToNorm:" target="6nG-Xr-eQZ" id="MeP-WB-iF5"/>
+                                    <action selector="setAllToNorm:" target="6nG-Xr-eQZ" id="1p9-6E-Tao"/>
                                 </connections>
                             </button>
                         </subviews>

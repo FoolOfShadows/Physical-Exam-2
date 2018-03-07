@@ -23,6 +23,8 @@ class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
 		loadedViewControllers.append(self)
 		selfView = self.view
         clearSkin()
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
     }
 	
 	@IBAction func processSkinTab(_ sender: Any) {
@@ -76,5 +78,13 @@ class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
 			}
 		}
 	}
+    
+    @objc func selectAllNormsInView() {
+        let normButtons = self.view.getNormalButtonsInView()
+        for button in normButtons {
+            button.state = .on
+            selectNorms(button)
+        }
+    }
     
 }

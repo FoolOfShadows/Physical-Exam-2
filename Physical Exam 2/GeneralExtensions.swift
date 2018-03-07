@@ -127,6 +127,19 @@ extension NSView {
 		}
 		return results
 	}
+    
+    func getNormalButtonsInView() -> [NSButton] {
+        var results = [NSButton]()
+        for item in self.subviews {
+            if let button = item as? NSButton, button.title == "N:"{
+                results.append(item as! NSButton)
+            } else {
+                results += item.getNormalButtonsInView()
+            }
+        }
+        return results
+    }
+
 	
 	func getComboBoxesInView() -> [NSComboBox] {
 		var results = [NSComboBox]()
@@ -288,4 +301,5 @@ func turnButtons(_ buttons:[NSButton], InRange range:[Int], ToState state:NSButt
 		}
 	}
 }
+
 

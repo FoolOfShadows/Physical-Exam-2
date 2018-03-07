@@ -37,6 +37,8 @@ class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 		loadedViewControllers.append(self)
 		selfView = self.view
 		clearMSKTab()
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
     }
     
 	@IBAction func setMSKSelections(_ sender: NSPopUpButton) {
@@ -235,4 +237,12 @@ class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 			lDTRCombo.stringValue = rDTRCombo.stringValue
 		}
 	}
+    
+    @objc func selectAllNormsInView() {
+        let normButtons = self.view.getNormalButtonsInView()
+        for button in normButtons {
+            button.state = .on
+            selectNorms(button)
+        }
+    }
 }

@@ -18,6 +18,8 @@ class Breast_VC: NSViewController, ProcessTabProtocol {
 		loadedViewControllers.append(self)
 		selfView = self.view
         clearBreast()
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
     }
 	
 	@IBAction func processBreastTab(_ sender: Any) {
@@ -54,5 +56,13 @@ class Breast_VC: NSViewController, ProcessTabProtocol {
 		guard let view = sender.superview else { return }
 		turnButtons(getButtonsInView(view), InRange: normalButtonRangesForSection("breast"), ToState: sender.state)
 	}
+    
+    @objc func selectAllNormsInView() {
+        let normButtons = self.view.getNormalButtonsInView()
+        for button in normButtons {
+            button.state = .on
+            selectNorms(button)
+        }
+    }
     
 }

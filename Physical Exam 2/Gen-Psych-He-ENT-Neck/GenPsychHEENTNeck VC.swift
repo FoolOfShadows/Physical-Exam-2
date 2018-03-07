@@ -24,6 +24,8 @@ class GenPsychHEENTNeck_VC: NSViewController, ProcessTabProtocol {
         // Do view setup here.
 		loadedViewControllers.append(self)
 		selfView = self.view
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
     }
 	
 	@IBAction func processGenTab(_ sender: Any) {
@@ -85,6 +87,14 @@ class GenPsychHEENTNeck_VC: NSViewController, ProcessTabProtocol {
 			}
 		}
 	}
+    
+    @objc func selectAllNormsInView() {
+        let normButtons = self.view.getNormalButtonsInView()
+        for button in normButtons {
+            button.state = .on
+            selectNorms(button)
+        }
+    }
 
 }
 

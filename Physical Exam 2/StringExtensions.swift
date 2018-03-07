@@ -56,11 +56,33 @@ extension String {
 		}
 		
 	}
+    
+    //A basic regular expression search function
+    func simpleRegExMatch(_ theExpression: String) -> String {
+        var theResult = ""
+        let regEx = try! NSRegularExpression(pattern: theExpression, options: [])
+        let length = self.count
+        
+        if let match = regEx.firstMatch(in: self, options: [], range: NSRange(location: 0, length: length)) {
+            theResult = (self as NSString).substring(with: match.range)
+        }
+        return theResult
+    }
 	
 	
 	func removeWhiteSpace() -> String {
 		return self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
 	}
+    
+    //Clean extraneous text from the sections
+    func cleanTheTextOf(_ badBits:[String]) -> String {
+        var cleanedText = self.removeWhiteSpace()
+        for theBit in badBits {
+            cleanedText = cleanedText.replacingOccurrences(of: theBit, with: "")
+        }
+        cleanedText = cleanedText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        return cleanedText
+    }
 	
 	func removeRegexCharactersFromString() -> String {
 		let regexCharacters:Set<Character> = Set("\\*")
