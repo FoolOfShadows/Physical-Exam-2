@@ -20,6 +20,12 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 	@IBOutlet var giTTPView: NSTextField!
 	@IBOutlet weak var giMassCombo: NSComboBox!
 	@IBOutlet var giMassView: NSTextField!
+    @IBOutlet weak var cracklesCombo: NSComboBox!
+    
+    @IBOutlet weak var wheezingCombo: NSComboBox!
+    
+    
+    //let commands = ["wheezing rule", "wheezing lull", "wheezing bull", "wheezing armel", "wheezing ell"]
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +34,9 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
         clearCV()
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
+        
+//        GlobalControlls_VC.recognizer.delegate = self
+//        GlobalControlls_VC.recognizer.commands = commands
     }
 	
 	
@@ -119,4 +128,16 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
             selectNorms(button)
         }
     }
+    
+//    func speechRecognizer(_ sender: NSSpeechRecognizer, didRecognizeCommand command: String) {
+//        switch command {
+//        case "wheezing rule": wheezingCombo.stringValue = "RUL"
+//        case  "wheezing lull": wheezingCombo.stringValue = "LUL"
+//        case "wheezing bull": wheezingCombo.stringValue = "BUL"
+//        case "wheezing armel": wheezingCombo.stringValue = "RML"
+//        case "wheezing ell": wheezingCombo.stringValue = "LLL"
+//        //case "callus right": wheezingCombo.stringValue = "Callus Right"
+//        default: return
+//        }
+//    }
 }

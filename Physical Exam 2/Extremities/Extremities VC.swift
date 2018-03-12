@@ -49,7 +49,7 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
         nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
         
         recognizer.delegate = self
-        recognizer.commands = commands
+       recognizer.commands = commands
         if self.view.isHidden {
             print("You can't see my Extremeties!p")
         }
@@ -192,18 +192,21 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
         case "callus right":
             if let right = callusViews[0] as? NSButton {
                 right.state = .on
+                selectOnlyOne(right)
             }
-            //print("Heard: \(command) as callus right")
+            print("Heard: \(command) as callus right")
         case "callus left":
             if let left = callusViews[1] as? NSButton {
                 left.state = .on
+                selectOnlyOne(left)
             }
-            //print("Heard: \(command) as callus left")
+            print("Heard: \(command) as callus left")
         case "callus bilateral":
             if let bilateral = callusViews[2] as? NSButton {
                 bilateral.state = .on
+                selectOnlyOne(bilateral)
             }
-            //print("Heard: \(command) as callus bilateral")
+            print("Heard: \(command) as callus bilateral")
         default:
             return
         }

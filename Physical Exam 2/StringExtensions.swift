@@ -20,7 +20,7 @@ extension String {
 			let endRange = endMatch[0].range
 			
 			let r = self.index(self.startIndex, offsetBy: startRange.location) ..< self.index(self.startIndex, offsetBy: endRange.location + endRange.length)
-			
+            
 			return String(self[r])
 		} else {
 			return ""
@@ -29,32 +29,32 @@ extension String {
 	
 	
 	func findRegexMatchBetween(_ start: String, and end: String) -> String? {
-		let startStripped = start.removeRegexCharactersFromString()
-		let endStripped = end.removeRegexCharactersFromString()
-		if self.contains(startStripped) && self.contains(endStripped) {
-			//print("Starting text: \(start), Ending text: \(end)")
-			guard let startRegex = try? NSRegularExpression(pattern: start, options: []) else { return nil }
-			guard let endRegex = try? NSRegularExpression(pattern: end, options: []) else {return nil }
-			
-			let startMatch = startRegex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
-			let endMatch = endRegex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
-			
-			let startRange = startMatch[0].range
-			let endRange = endMatch[0].range
-			
-			//print("Start range is \(startRange.location), and the end range is \(endRange.location)")
-			
-			if startRange.location > endRange.location {
-				return "Range for this section is out of bounds"
-			} else {
-			let r = self.index(self.startIndex, offsetBy: startRange.location + startRange.length) ..< self.index(self.startIndex, offsetBy: endRange.location)
-			
-			return String(self[r])
-			}
-		} else {
-			return ""
-		}
-		
+        let startStripped = start.removeRegexCharactersFromString()
+        let endStripped = end.removeRegexCharactersFromString()
+        //print("Stripped start is: \(startStripped)\nand stripped end is: \(endStripped)")
+        if self.contains(startStripped) && self.contains(endStripped) {
+            //print("Starting text: \(start), Ending text: \(end)")
+            guard let startRegex = try? NSRegularExpression(pattern: start, options: []) else { return nil }
+            guard let endRegex = try? NSRegularExpression(pattern: end, options: []) else {return nil }
+            
+            let startMatch = startRegex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
+            let endMatch = endRegex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
+            
+            let startRange = startMatch[0].range
+            let endRange = endMatch[0].range
+            
+            //print("Start range is \(startRange.location), and the end range is \(endRange.location)")
+            
+            if startRange.location > endRange.location {
+                return "Range for this section is out of bounds"
+            } else {
+                let r = self.index(self.startIndex, offsetBy: startRange.location + startRange.length) ..< self.index(self.startIndex, offsetBy: endRange.location)
+                
+                return String(self[r])
+            }
+        } else {
+            return ""
+        }
 	}
     
     //A basic regular expression search function
@@ -108,6 +108,17 @@ extension String {
 		myPasteboard.clearContents()
 		myPasteboard.setString(self, forType: NSPasteboard.PasteboardType.string)
 	}
+    
+    //A cribbed extension allowing for the extraction of blocks of text.  I don't yet understand how it works.
+    func ranges(of string: String, options: CompareOptions = .literal) -> [Range<Index>] {
+        var result: [Range<Index>] = []
+        var start = startIndex
+        while let range = range(of: string, options: options, range: start..<endIndex) {
+            result.append(range)
+            start = range.lowerBound < range.upperBound ? range.upperBound : index(range.lowerBound, offsetBy: 1, limitedBy: endIndex) ?? endIndex
+        }
+        return result
+    }
 }
 
 //extension NSView {

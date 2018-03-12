@@ -10,9 +10,11 @@ import Cocoa
 
 var loadedViewControllers = [NSViewController]()
 
-class GlobalControlls_VC: NSViewController {
+class GlobalControlls_VC: NSViewController, NSSpeechRecognizerDelegate {
 
     let nc = NotificationCenter.default
+    //static let recognizer = NSSpeechRecognizer()!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +42,24 @@ class GlobalControlls_VC: NSViewController {
 	}
 	
 	@IBAction func setAllToNorm(_ sender: NSButton) {
-        print("Set norms message sending")
         nc.post(name: Notification.Name("SetAllToNorm"), object: nil)
 	}
 	
+    @IBAction func toggleListening(_ sender: NSButton) {
+        switch sender.state {
+        case .on:
+            //GlobalControlls_VC.recognizer.startListening()
+            print("I'm listening")
+            sender.title = "Listening On"
+        default:
+            //GlobalControlls_VC.recognizer.stopListening()
+            print("I don't care what you say anymore")
+            sender.title = "Listening Off"
+        }
+    }
+    
+    func speechRecognizer(_ sender: NSSpeechRecognizer, didRecognizeCommand command: String) {
+        print("I heard you say \(command)")
+    }
 }
 

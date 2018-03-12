@@ -773,6 +773,17 @@
                                     <action selector="setAllToNorm:" target="6nG-Xr-eQZ" id="1p9-6E-Tao"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P1H-Yh-ICr">
+                                <rect key="frame" x="618" y="2" width="117" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Listening Off" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="W6f-Go-kAa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleListening:" target="6nG-Xr-eQZ" id="Biy-32-gnP"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                 </viewController>
@@ -3990,6 +4001,7 @@
                     </view>
                     <connections>
                         <outlet property="chestBox" destination="PF3-Df-WTV" id="xle-Hy-iRV"/>
+                        <outlet property="cracklesCombo" destination="n0a-ot-5mo" id="gcx-vF-gVf"/>
                         <outlet property="cvBox" destination="nO4-KH-i7Q" id="mfa-Sa-qxZ"/>
                         <outlet property="giBox" destination="pNl-2G-Usa" id="WS8-J4-85K"/>
                         <outlet property="giMassCombo" destination="3id-Fp-zhH" id="Yda-jH-n6u"/>
@@ -3997,6 +4009,7 @@
                         <outlet property="giTTPCombo" destination="qxn-im-dOr" id="N5Y-8o-NAs"/>
                         <outlet property="giTTPView" destination="dNE-41-ede" id="I9Y-87-FWv"/>
                         <outlet property="lymphBox" destination="kwQ-OA-fHd" id="6hE-jn-TP2"/>
+                        <outlet property="wheezingCombo" destination="Tw9-X4-MSO" id="Pas-7o-8uh"/>
                     </connections>
                 </viewController>
                 <customObject id="3yH-Z8-Sw6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
