@@ -66,6 +66,9 @@ extension String {
         if let match = regEx.firstMatch(in: self, options: [], range: NSRange(location: 0, length: length)) {
             theResult = (self as NSString).substring(with: match.range)
         }
+        if theExpression.contains("Diagnoses") {
+            print("Dx Results:\(theResult)\nWith Regex Length of \(length)")
+        }
         return theResult
     }
 	
@@ -80,7 +83,8 @@ extension String {
         for theBit in badBits {
             cleanedText = cleanedText.replacingOccurrences(of: theBit, with: "")
         }
-        cleanedText = cleanedText.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let cleanedArray = cleanedText.components(separatedBy: "\n").filter {!$0.ranges(of: "[a-zA-Z0-9]", options: .regularExpression).isEmpty}
+        cleanedText = cleanedArray.joined(separator: "\n").trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         return cleanedText
     }
 	
@@ -102,6 +106,16 @@ extension String {
 		}
 		return self
 	}
+    
+    func addCharacterToBeginningOfEachLine(_ theCharacter:String) -> String {
+        var newTextArray = [String]()
+        let textArray = self.components(separatedBy: "\n")
+        for line in textArray {
+            newTextArray.append("- \(line)")
+        }
+        
+        return newTextArray.joined(separator: "\n")
+    }
 	
 	func copyToPasteboard() {
 		let myPasteboard = NSPasteboard.general
