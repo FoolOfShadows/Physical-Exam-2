@@ -66,9 +66,6 @@ extension String {
         if let match = regEx.firstMatch(in: self, options: [], range: NSRange(location: 0, length: length)) {
             theResult = (self as NSString).substring(with: match.range)
         }
-        if theExpression.contains("Diagnoses") {
-            print("Dx Results:\(theResult)\nWith Regex Length of \(length)")
-        }
         return theResult
     }
 	
@@ -81,7 +78,8 @@ extension String {
     func cleanTheTextOf(_ badBits:[String]) -> String {
         var cleanedText = self.removeWhiteSpace()
         for theBit in badBits {
-            cleanedText = cleanedText.replacingOccurrences(of: theBit, with: "")
+            //cleanedText = cleanedText.replacingOccurrences(of: theBit, with: "")
+            cleanedText = cleanedText.replacingOccurrences(of: theBit, with: "", options: .regularExpression, range: nil)
         }
         let cleanedArray = cleanedText.components(separatedBy: "\n").filter {!$0.ranges(of: "[a-zA-Z0-9]", options: .regularExpression).isEmpty}
         cleanedText = cleanedArray.joined(separator: "\n").trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
