@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDelegate {
+class Extremities_VC: NSViewController, ProcessTabProtocol/*, NSSpeechRecognizerDelegate*/ {
 	var selfView = NSView()
 	
 
@@ -36,8 +36,10 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
 	var digitAssessment = DigitAssessment()
 	var limbAssessment = LimbAssessment()
     
-    let recognizer = NSSpeechRecognizer()!
-    let commands = ["callus right", "callus left", "callus bilateral"]
+    
+    
+    //let recognizer = NSSpeechRecognizer()!
+    //let commands = ["callus right", "callus left", "callus bilateral"]
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,9 +49,12 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
         
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
+        nc.addObserver(self, selector: #selector(heardCommand), name: NSNotification.Name(rawValue: "callus right"), object: nil)
         
-        recognizer.delegate = self
-       recognizer.commands = commands
+       //recognizer.delegate = self
+       //recognizer.commands = commands
+        print(self)
+        
         if self.view.isHidden {
             print("You can't see my Extremeties!p")
         }
@@ -57,7 +62,7 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
     }
     
     override func viewDidAppear() {
-        recognizer.startListening()
+        //recognizer.startListening()
     }
 
 	
@@ -186,30 +191,30 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
 		}
 	}
     
-    func speechRecognizer(_ sender: NSSpeechRecognizer, didRecognizeCommand command: String) {
+    @objc func heardCommand() {
         let callusViews = callusView.subviews
-        switch command {
-        case "callus right":
+//        switch command {
+//        case "callus right":
             if let right = callusViews[0] as? NSButton {
                 right.state = .on
                 selectOnlyOne(right)
             }
-            print("Heard: \(command) as callus right")
-        case "callus left":
-            if let left = callusViews[1] as? NSButton {
-                left.state = .on
-                selectOnlyOne(left)
-            }
-            print("Heard: \(command) as callus left")
-        case "callus bilateral":
-            if let bilateral = callusViews[2] as? NSButton {
-                bilateral.state = .on
-                selectOnlyOne(bilateral)
-            }
-            print("Heard: \(command) as callus bilateral")
-        default:
-            return
-        }
+//            print("Heard: \(command) as callus right")
+//        case "callus left":
+//            if let left = callusViews[1] as? NSButton {
+//                left.state = .on
+//                selectOnlyOne(left)
+//            }
+//            print("Heard: \(command) as callus left")
+//        case "callus bilateral":
+//            if let bilateral = callusViews[2] as? NSButton {
+//                bilateral.state = .on
+//                selectOnlyOne(bilateral)
+//            }
+//            print("Heard: \(command) as callus bilateral")
+//        default:
+//            return
+//        }
     }
     
     @objc func selectAllNormsInView() {
@@ -221,7 +226,7 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSSpeechRecognizerDe
     }
     
     override func viewDidDisappear() {
-        recognizer.stopListening()
+        //recognizer.stopListening()
     }
 
 }

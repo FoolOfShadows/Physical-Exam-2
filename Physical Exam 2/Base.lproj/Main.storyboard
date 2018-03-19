@@ -794,14 +794,16 @@
         <!--Tab View Controller-->
         <scene sceneID="TFk-KH-b8V">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="iOE-i1-XZA" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="2" id="iOE-i1-XZA" customClass="TabViewController" customModule="Physical_Exam_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem identifier="" id="ePw-G9-AdE"/>
-                        <tabViewItem id="f4O-9R-Kd1"/>
-                        <tabViewItem id="cwQ-zg-afK"/>
-                        <tabViewItem label="Neuro-MSK" identifier="" id="sjM-e7-LMm"/>
-                        <tabViewItem id="Rhd-Fj-2R5"/>
-                        <tabViewItem id="Skb-xX-IS0"/>
+                        <tabViewItem identifier="" id="ePw-G9-AdE" userLabel="General"/>
+                        <tabViewItem id="f4O-9R-Kd1" userLabel="CV"/>
+                        <tabViewItem identifier="ExtraTreme" id="cwQ-zg-afK" userLabel="Extremities">
+                            <nil key="label"/>
+                        </tabViewItem>
+                        <tabViewItem label="Neuro-MSK" identifier="" id="sjM-e7-LMm" userLabel="Neuro"/>
+                        <tabViewItem id="Rhd-Fj-2R5" userLabel="Skin"/>
+                        <tabViewItem id="Skb-xX-IS0" userLabel="Breast"/>
                     </tabViewItems>
                     <tabView key="tabView" identifier="MyTablessTabView" type="noTabsNoBorder" id="8kF-B7-Cr8">
                         <rect key="frame" x="0.0" y="0.0" width="870" height="654"/>

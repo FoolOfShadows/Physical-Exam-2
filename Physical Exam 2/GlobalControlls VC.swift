@@ -12,13 +12,26 @@ var loadedViewControllers = [NSViewController]()
 
 class GlobalControlls_VC: NSViewController, NSSpeechRecognizerDelegate {
 
+    let recognizer = NSSpeechRecognizer()!
+    
+    var commands = [
+        //Extremities
+        "callus right", "callus left", "callus bilateral",
+        "Hi there", "Good morning", "Hello"
+    ]
+    let extremitiesCommands = ["callus right", "callus left", "callus bilateral"]
+    
     let nc = NotificationCenter.default
-    //static let recognizer = NSSpeechRecognizer()!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        recognizer.commands = commands
+        recognizer.delegate = self
+    }
+    
+    override func viewDidAppear() {
+        recognizer.startListening()
     }
     
 	@IBAction func processAll(_ sender: Any) {
@@ -60,6 +73,11 @@ class GlobalControlls_VC: NSViewController, NSSpeechRecognizerDelegate {
     
     func speechRecognizer(_ sender: NSSpeechRecognizer, didRecognizeCommand command: String) {
         print("I heard you say \(command)")
+        nc.post(name: Notification.Name(command), object: extremitiesCommands)
+    }
+    
+    override func viewWillDisappear() {
+        recognizer.stopListening()
     }
 }
 

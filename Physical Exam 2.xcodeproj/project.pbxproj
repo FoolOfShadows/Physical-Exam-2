@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7903A182205C1B0100394E76 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903A181205C1B0100394E76 /* TabViewController.swift */; };
 		7908FF3A1FEBFA6A00B852A7 /* NeuroMSK VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908FF391FEBFA6A00B852A7 /* NeuroMSK VC.swift */; };
 		7908FF3C1FEBFA7D00B852A7 /* MSK Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908FF3B1FEBFA7D00B852A7 /* MSK Model.swift */; };
 		7908FF3E1FEBFE1600B852A7 /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908FF3D1FEBFE1600B852A7 /* GeneralExtensions.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7903A181205C1B0100394E76 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		7908FF391FEBFA6A00B852A7 /* NeuroMSK VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeuroMSK VC.swift"; sourceTree = "<group>"; };
 		7908FF3B1FEBFA7D00B852A7 /* MSK Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSK Model.swift"; sourceTree = "<group>"; };
 		7908FF3D1FEBFE1600B852A7 /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				795FBECC1FEACB700095B05D /* Main.storyboard */,
 				795FBEC61FEACB700095B05D /* AppDelegate.swift */,
+				7903A181205C1B0100394E76 /* TabViewController.swift */,
 				79E806CE20237460008C9C75 /* GlobalControlls VC.swift */,
 				795FBEC81FEACB700095B05D /* ViewController.swift */,
 				79E2A46A20069CB500678D6B /* Gen-Psych-He-ENT-Neck */,
@@ -281,6 +284,7 @@
 				790A83AB2003F41A006712CF /* Neck Model.swift in Sources */,
 				79369EE11FFFEC96005FDE4A /* GenPsychHEENTNeck VC.swift in Sources */,
 				79E2A45B200669B200678D6B /* SkinGynGUDRE VC.swift in Sources */,
+				7903A182205C1B0100394E76 /* TabViewController.swift in Sources */,
 				79E2A4612006712100678D6B /* Gyn Model.swift in Sources */,
 				79AC68A3201106F40055FAB3 /* DigitAssessment.swift in Sources */,
 				7955508320051ABE00DBC4DB /* Lymph Model.swift in Sources */,
