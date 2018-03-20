@@ -53,11 +53,7 @@ class Extremities_VC: NSViewController, ProcessTabProtocol/*, NSSpeechRecognizer
         
        //recognizer.delegate = self
        //recognizer.commands = commands
-        print(self)
-        
-        if self.view.isHidden {
-            print("You can't see my Extremeties!p")
-        }
+    
         
     }
     
