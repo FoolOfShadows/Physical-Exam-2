@@ -302,4 +302,13 @@ func turnButtons(_ buttons:[NSButton], InRange range:[Int], ToState state:NSButt
 	}
 }
 
+extension Date {
+    func addingDays(_ daysToAdd: Int) -> Date? {
+        var components = DateComponents()
+        components.setValue(daysToAdd, for: .day)
+        let newDate = Calendar.current.date(byAdding: components, to: self)
+        return newDate
+    }
+}
+
 
