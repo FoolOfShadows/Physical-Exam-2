@@ -70,9 +70,9 @@ extension String {
     }
 	
 	
-	func removeWhiteSpace() -> String {
-		return self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
-	}
+    func removeWhiteSpace() -> String {
+        return self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+    }
     
     //Clean extraneous text from the sections
     func cleanTheTextOf(_ badBits:[String]) -> String {
@@ -81,7 +81,8 @@ extension String {
             //cleanedText = cleanedText.replacingOccurrences(of: theBit, with: "")
             cleanedText = cleanedText.replacingOccurrences(of: theBit, with: "", options: .regularExpression, range: nil)
         }
-        let cleanedArray = cleanedText.components(separatedBy: "\n").filter {!$0.ranges(of: "[a-zA-Z0-9]", options: .regularExpression).isEmpty}
+        let cleanedArray = cleanedText.components(separatedBy: "\n").filter {!$0.allRegexMatchesFor("[a-zA-Z0-9]").isEmpty}
+        //let cleanedArray = cleanedText.components(separatedBy: "\n").filter {!$0.ranges(of: "[a-zA-Z0-9]", options: .regularExpression).isEmpty}
         cleanedText = cleanedArray.joined(separator: "\n").trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         return cleanedText
     }
@@ -120,6 +121,19 @@ extension String {
 		myPasteboard.clearContents()
 		myPasteboard.setString(self, forType: NSPasteboard.PasteboardType.string)
 	}
+    
+    //This method returns an array of all substrings in a string which match the regex passed in
+    func allRegexMatchesFor(_ regex: String) -> [String] {
+        //If the string passed in can't be converted to a regex, return an empty array
+        guard let regex = try? NSRegularExpression(pattern: regex) else { return [] }
+        //Get an array textcheckingresults (ranges) of matches for the regex in the
+        //calling string
+        let results = regex.matches(in: self,
+                                    range: NSRange(self.startIndex..., in: self))
+        //Convert the textcheckingresults into an array of strings using map()
+        //and return the results
+        return results.map { (self as NSString).substring(with: $0.range) }
+    }
     
     //A cribbed extension allowing for the extraction of blocks of text.  I don't yet understand how it works.
     func ranges(of string: String, options: CompareOptions = .literal) -> [Range<Index>] {
