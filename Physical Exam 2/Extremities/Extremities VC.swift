@@ -108,7 +108,30 @@ class Extremities_VC: NSViewController, ProcessTabProtocol/*, NSSpeechRecognizer
 				}
 			}
 		}
+        switchNormOff(sender)
 	}
+    
+    @IBAction func switchNormOff(_ sender: NSButton) {
+        let theButtons = selfView.getButtonsInView()
+        
+        if sender.state != .off {
+            switch sender.tag {
+            case 40:
+                theButtons.filter ({$0.tag == 3})[0].state = .off
+            case 50, 52:
+                theButtons.filter ({$0.tag == 4})[0].state = .off
+            case 105...110:
+                theButtons.filter ({$0.tag == 2})[0].state = .off
+            case 55:
+                theButtons.filter ({$0.tag == 1})[0].state = .off
+            case 80:
+                theButtons.filter ({$0.tag == 6})[0].state = .off
+            case 81:
+                theButtons.filter ({$0.tag == 7})[0].state = .off
+            default: return
+            }
+        }
+    }
 	
 	@IBAction func selectNorms(_ sender: NSButton) {
 		func normalButtonRangesForSection(_ section:String) -> [Int] {

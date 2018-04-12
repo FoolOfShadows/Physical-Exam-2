@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14101" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14101"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
@@ -794,7 +794,7 @@
         <!--Tab View Controller-->
         <scene sceneID="TFk-KH-b8V">
             <objects>
-                <tabViewController selectedTabViewItemIndex="2" id="iOE-i1-XZA" customClass="TabViewController" customModule="Physical_Exam_2" customModuleProvider="target" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="3" id="iOE-i1-XZA" customClass="TabViewController" customModule="Physical_Exam_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="ePw-G9-AdE" userLabel="General"/>
                         <tabViewItem id="f4O-9R-Kd1" userLabel="CV"/>
@@ -1042,6 +1042,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="rTb-kY-zxd"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="25" translatesAutoresizingMaskIntoConstraints="NO" id="T6J-11-npH">
                                             <rect key="frame" x="427" y="81" width="60" height="18"/>
@@ -1050,6 +1053,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="3Dr-en-2cW"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="28" translatesAutoresizingMaskIntoConstraints="NO" id="gbl-BY-sMP">
                                             <rect key="frame" x="511" y="81" width="79" height="18"/>
@@ -1058,6 +1064,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="6Ny-7V-fsx"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="29" translatesAutoresizingMaskIntoConstraints="NO" id="Z7D-e2-tFk">
                                             <rect key="frame" x="511" y="61" width="48" height="18"/>
@@ -1066,6 +1075,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="Hb5-ao-uzu"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="27" translatesAutoresizingMaskIntoConstraints="NO" id="FY0-Ml-zti">
                                             <rect key="frame" x="427" y="40" width="70" height="18"/>
@@ -1074,6 +1086,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="aiT-JV-mcd"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vXx-0E-Vgw">
                                             <rect key="frame" x="427" y="105" width="29" height="17"/>
@@ -1091,6 +1106,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="Ayv-OJ-Lem"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="35" translatesAutoresizingMaskIntoConstraints="NO" id="NrN-qm-3ad">
                                             <rect key="frame" x="608" y="81" width="77" height="18"/>
@@ -1099,6 +1117,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="37E-7h-n1Z"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vq7-UT-zrv">
                                             <rect key="frame" x="608" y="105" width="51" height="17"/>
@@ -1235,13 +1256,16 @@
                                                 <action selector="addSelectionToResults:" target="pzh-2p-fmV" id="Jjf-ID-UPj"/>
                                             </connections>
                                         </button>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZbR-GW-gFa">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="ZbR-GW-gFa">
                                             <rect key="frame" x="18" y="142" width="47" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="TTP" bezelStyle="regularSquare" imagePosition="left" inset="2" id="RU0-22-KYe">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="y5x-eN-ze8"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWc-qS-ycL">
                                             <rect key="frame" x="412" y="169" width="87" height="17"/>
@@ -1261,14 +1285,17 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKW-s5-QCi">
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="102" translatesAutoresizingMaskIntoConstraints="NO" id="bKW-s5-QCi">
                                             <rect key="frame" x="507" y="137" width="182" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="TZb-It-7vm">
+                                            <popUpButtonCell key="cell" type="push" alternateTitle="Tone" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="TZb-It-7vm">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="menu"/>
                                                 <menu key="menu" id="p36-Bn-tUc"/>
                                             </popUpButtonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pzh-2p-fmV" id="G21-s4-zZJ"/>
+                                            </connections>
                                         </popUpButton>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5F-xA-rDs">
                                             <rect key="frame" x="85" y="169" width="55" height="17"/>
@@ -1517,6 +1544,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="f8J-UP-rab"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="QLk-v4-Zbh">
                                             <rect key="frame" x="44" y="87" width="51" height="18"/>
@@ -1592,6 +1622,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="Nbk-qy-nbP"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="2N5-W9-uBj">
                                             <rect key="frame" x="126" y="42" width="52" height="18"/>
@@ -1600,6 +1633,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="mib-Gt-Ia5"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="nML-18-cq5">
                                             <rect key="frame" x="242" y="42" width="64" height="18"/>
@@ -1608,6 +1644,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="7OW-pn-qIY"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqh-UB-2o7">
                                             <rect key="frame" x="20" y="67" width="17" height="17"/>
@@ -1681,6 +1720,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="s94-HM-Tb2"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZa-db-z39">
                                             <rect key="frame" x="22" y="101" width="17" height="17"/>
@@ -1747,6 +1789,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="LC8-39-Yj1"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="l1K-6P-NOp">
                                             <rect key="frame" x="198" y="75" width="38" height="18"/>
@@ -1755,6 +1800,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="MeC-dg-gcf"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-4B-7TR">
                                             <rect key="frame" x="144" y="100" width="50" height="18"/>
@@ -1763,6 +1811,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="84p-BZ-QUp"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="v6a-sM-mIK">
                                             <rect key="frame" x="240" y="75" width="49" height="18"/>
@@ -1788,6 +1839,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="dWF-O3-3v9"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="FCQ-Dv-p7O">
                                             <rect key="frame" x="93" y="100" width="47" height="18"/>
@@ -1796,6 +1850,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="rGt-bx-xAB"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xzc-yr-V9y">
                                             <rect key="frame" x="311" y="125" width="70" height="18"/>
@@ -1896,6 +1953,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="switchNormOff:" target="A7W-5X-bXF" id="bjt-Fv-XZE"/>
+                                                    </connections>
                                                 </button>
                                                 <button tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="mzH-T5-TUQ">
                                                     <rect key="frame" x="49" y="-2" width="45" height="18"/>
@@ -1903,6 +1963,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="switchNormOff:" target="A7W-5X-bXF" id="fOM-Ss-dMx"/>
+                                                    </connections>
                                                 </button>
                                                 <button tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="1q0-ED-36J">
                                                     <rect key="frame" x="98" y="-2" width="45" height="18"/>
@@ -1910,6 +1973,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="switchNormOff:" target="A7W-5X-bXF" id="KEa-aY-NLn"/>
+                                                    </connections>
                                                 </button>
                                                 <button tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="VKv-Ia-0h9">
                                                     <rect key="frame" x="147" y="-2" width="45" height="18"/>
@@ -1917,6 +1983,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="switchNormOff:" target="A7W-5X-bXF" id="FXv-kH-YUr"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <visibilityPriorities>
@@ -2055,6 +2124,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="switchNormOff:" target="A7W-5X-bXF" id="2tH-5B-uFZ"/>
+                                                    </connections>
                                                 </button>
                                                 <button tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="VZC-8s-vBS">
                                                     <rect key="frame" x="49" y="-2" width="45" height="18"/>
@@ -2062,6 +2134,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="switchNormOff:" target="A7W-5X-bXF" id="yIH-Uu-keH"/>
+                                                    </connections>
                                                 </button>
                                                 <button tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="G7e-8p-pdn">
                                                     <rect key="frame" x="98" y="-2" width="45" height="18"/>
@@ -2069,6 +2144,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="switchNormOff:" target="A7W-5X-bXF" id="CYB-Qg-QvS"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <visibilityPriorities>
@@ -2185,6 +2263,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="0Jk-9t-aFR"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4E-XM-hob">
                                             <rect key="frame" x="48" y="23" width="43" height="17"/>
@@ -2202,6 +2283,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="akJ-oK-BNc"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="FrL-ae-Y2S">
                                             <rect key="frame" x="47" y="68" width="100" height="18"/>
@@ -2210,6 +2294,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="vO0-Lf-jEF"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="sYO-Tf-6uZ">
                                             <rect key="frame" x="338" y="93" width="45" height="18"/>
@@ -2226,6 +2313,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="ov7-u5-zcp"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="ca5-f8-oJ8">
                                             <rect key="frame" x="233" y="93" width="48" height="18"/>
@@ -2259,6 +2349,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="A0H-3s-tig"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="R2o-8E-nHa">
                                             <rect key="frame" x="151" y="68" width="43" height="18"/>
@@ -2267,6 +2360,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="B32-9G-pcP"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="eCt-o7-iib">
                                             <rect key="frame" x="285" y="93" width="49" height="18"/>
@@ -2283,6 +2379,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="lcj-Wp-GUH"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nK4-wU-O6O">
                                             <rect key="frame" x="22" y="69" width="17" height="17"/>
@@ -2300,6 +2399,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="5Gx-zh-VnK"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="0tU-eZ-7m8">
                                             <rect key="frame" x="170" y="93" width="59" height="18"/>
@@ -2362,6 +2464,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="QFJ-yL-UTw"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWT-fm-UP8">
                                             <rect key="frame" x="56" y="150" width="33" height="17"/>
@@ -2379,6 +2484,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="DIZ-Wi-2dw"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDR-zS-Eg1">
                                             <rect key="frame" x="157" y="150" width="59" height="18"/>
@@ -2387,6 +2495,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="tZv-Fo-fef"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fR9-gU-2Yh">
                                             <rect key="frame" x="55" y="200" width="36" height="17"/>
@@ -2404,6 +2515,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="zeO-fw-sqq"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="jYL-sG-ezb">
                                             <rect key="frame" x="145" y="200" width="46" height="18"/>
@@ -2412,6 +2526,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="C9J-E8-f5B"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="ygi-GF-aa7">
                                             <rect key="frame" x="195" y="200" width="50" height="18"/>
@@ -2420,6 +2537,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="LFH-Hz-Q2m"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xm-JF-Drt">
                                             <rect key="frame" x="49" y="249" width="87" height="17"/>
@@ -2535,6 +2655,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="4LD-Nq-jWt"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="45" translatesAutoresizingMaskIntoConstraints="NO" id="SLI-5L-1RG">
                                             <rect key="frame" x="299" y="50" width="55" height="18"/>
@@ -2543,6 +2666,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="qc8-eQ-ya9"/>
+                                            </connections>
                                         </button>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" tag="60" translatesAutoresizingMaskIntoConstraints="NO" id="fF6-ek-zCX">
                                             <rect key="frame" x="98" y="20" width="264" height="22"/>
@@ -2569,6 +2695,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="0iO-5G-wyL"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="yY9-q5-e5Q">
                                             <rect key="frame" x="144" y="175" width="46" height="18"/>
@@ -2577,6 +2706,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="3gV-jg-Xgc"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ivp-1j-TYx">
                                             <rect key="frame" x="194" y="175" width="50" height="18"/>
@@ -2585,6 +2717,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="CEs-1l-liO"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6y-1T-KKc">
                                             <rect key="frame" x="42" y="224" width="48" height="17"/>
@@ -2717,6 +2852,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="tr4-rS-Qvo"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="32" translatesAutoresizingMaskIntoConstraints="NO" id="9tK-L6-kXw">
                                             <rect key="frame" x="144" y="100" width="44" height="18"/>
@@ -2725,6 +2863,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="U7U-8A-yll"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="33" translatesAutoresizingMaskIntoConstraints="NO" id="0HX-8C-8oU">
                                             <rect key="frame" x="192" y="100" width="46" height="18"/>
@@ -2733,6 +2874,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="78u-qp-c0v"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="34" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-IA-tLY">
                                             <rect key="frame" x="242" y="100" width="48" height="18"/>
@@ -2741,6 +2885,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="wVl-8v-JoB"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="35" translatesAutoresizingMaskIntoConstraints="NO" id="gsm-SF-z7O">
                                             <rect key="frame" x="294" y="100" width="44" height="18"/>
@@ -2749,6 +2896,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="BHB-0B-XIm"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2I-ji-shy">
                                             <rect key="frame" x="49" y="125" width="42" height="17"/>
@@ -2766,6 +2916,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="drp-ec-7Ab"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="27" translatesAutoresizingMaskIntoConstraints="NO" id="MmA-mr-Eqm">
                                             <rect key="frame" x="145" y="125" width="44" height="18"/>
@@ -2774,6 +2927,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="a05-SO-G6o"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="28" translatesAutoresizingMaskIntoConstraints="NO" id="MEZ-KI-e6c">
                                             <rect key="frame" x="193" y="125" width="46" height="18"/>
@@ -2782,6 +2938,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="gil-4b-QGV"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="29" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-ax-6Ko">
                                             <rect key="frame" x="243" y="125" width="48" height="18"/>
@@ -2790,6 +2949,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="tBc-FR-dFs"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="30" translatesAutoresizingMaskIntoConstraints="NO" id="8J4-Hb-ZdZ">
                                             <rect key="frame" x="295" y="125" width="44" height="18"/>
@@ -2798,6 +2960,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="CIn-aJ-cwz"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1o-9K-83d">
                                             <rect key="frame" x="64" y="75" width="26" height="17"/>
@@ -2815,6 +2980,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="uEq-Rg-CHF"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="51" translatesAutoresizingMaskIntoConstraints="NO" id="xBK-Cm-asA">
                                             <rect key="frame" x="145" y="75" width="46" height="18"/>
@@ -2823,6 +2991,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="FMU-gA-MT9"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="52" translatesAutoresizingMaskIntoConstraints="NO" id="1Ry-8S-5Dd">
                                             <rect key="frame" x="195" y="75" width="46" height="18"/>
@@ -2831,6 +3002,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="xnW-kO-EED"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="53" translatesAutoresizingMaskIntoConstraints="NO" id="h2F-Dc-sqY">
                                             <rect key="frame" x="245" y="75" width="44" height="18"/>
@@ -2839,6 +3013,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="edf-aQ-Kja"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="54" translatesAutoresizingMaskIntoConstraints="NO" id="DTh-Dc-Hba">
                                             <rect key="frame" x="293" y="75" width="56" height="18"/>
@@ -2847,6 +3024,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="A7W-5X-bXF" id="i9B-g8-VdI"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -2909,6 +3089,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pbw-BM-arC" id="xoN-q7-6AE"/>
+                                            </connections>
                                         </button>
                                         <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="20" translatesAutoresizingMaskIntoConstraints="NO" id="zWd-Ie-GlA">
                                             <rect key="frame" x="130" y="46" width="43" height="26"/>
@@ -2935,6 +3118,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pbw-BM-arC" id="q0I-G1-WWR"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="Ylm-qk-Zxi">
                                             <rect key="frame" x="193" y="79" width="58" height="18"/>
@@ -2943,6 +3129,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pbw-BM-arC" id="WgD-dT-tnF"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="aWX-cv-WXb">
                                             <rect key="frame" x="46" y="79" width="52" height="18"/>
@@ -2976,6 +3165,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pbw-BM-arC" id="fps-nc-o1u"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="Ayc-g0-kam">
                                             <rect key="frame" x="46" y="50" width="37" height="18"/>
@@ -2984,6 +3176,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pbw-BM-arC" id="7DS-K8-Hnj"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8t-Fo-Lfp">
                                             <rect key="frame" x="46" y="23" width="43" height="17"/>
@@ -3001,6 +3196,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pbw-BM-arC" id="7XA-EL-rTF"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="I6s-4f-Vdq">
                                             <rect key="frame" x="103" y="105" width="49" height="18"/>
@@ -3036,7 +3234,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="21" translatesAutoresizingMaskIntoConstraints="NO" id="Yhe-sQ-pRD">
-                                            <rect key="frame" x="193" y="47" width="68" height="26"/>
+                                            <rect key="frame" x="193" y="47" width="94" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="i9w-bh-Xcm" id="PnD-Zw-WtX">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -3047,16 +3245,10 @@
                                                     </items>
                                                 </menu>
                                             </popUpButtonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pbw-BM-arC" id="2ZQ-iO-PmY"/>
+                                            </connections>
                                         </popUpButton>
-                                        <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="22" translatesAutoresizingMaskIntoConstraints="NO" id="fyt-Yw-zr1">
-                                            <rect key="frame" x="266" y="46" width="114" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="20" id="EQd-xu-a0h">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </comboBoxCell>
-                                        </comboBox>
                                         <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="VdK-f4-kc2">
                                             <rect key="frame" x="351" y="105" width="37" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -3092,6 +3284,15 @@
                                                 <action selector="selectNorms:" target="pbw-BM-arC" id="xOM-yo-MnD"/>
                                             </connections>
                                         </button>
+                                        <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="22" translatesAutoresizingMaskIntoConstraints="NO" id="fyt-Yw-zr1">
+                                            <rect key="frame" x="292" y="47" width="100" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="20" id="EQd-xu-a0h">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </comboBoxCell>
+                                        </comboBox>
                                     </subviews>
                                 </view>
                             </box>
@@ -3333,6 +3534,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="pbw-BM-arC" id="KMi-NA-n11"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLG-xW-J3e">
                                             <rect key="frame" x="138" y="261" width="37" height="17"/>
@@ -3372,7 +3576,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="AWG-kl-yL1"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="zYM-wx-Get"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="31" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-Qm-hkF">
@@ -3382,17 +3586,17 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="WIy-IW-m8K"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="442-lL-vEM"/>
                                                     </connections>
                                                 </button>
-                                                <button tag="31" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-Xy-vI4">
+                                                <button tag="32" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-Xy-vI4">
                                                     <rect key="frame" x="206" y="-2" width="65" height="18"/>
                                                     <buttonCell key="cell" type="check" title="Absent" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Gzz-VX-e8I">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="qBL-Tf-sEu"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="2xw-Ut-tEp"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3607,7 +3811,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="ktn-v5-jhy"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="hQo-US-27U"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="lya-fT-JKw">
@@ -3617,7 +3821,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="Lvs-rw-RTW"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="zc3-Kl-RwW"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="NWc-OA-vtm">
@@ -3627,7 +3831,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="t95-Md-Bxh"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="ynU-YF-gQ1"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3697,7 +3901,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="oVZ-Ef-g3D"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="0ng-qc-qAq"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="26" translatesAutoresizingMaskIntoConstraints="NO" id="vGQ-TX-gKy">
@@ -3707,7 +3911,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="GNF-J5-7jx"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="Fdu-Bc-RdN"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="27" translatesAutoresizingMaskIntoConstraints="NO" id="W1f-P9-wYe">
@@ -3717,7 +3921,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="M32-sf-liL"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="81s-lf-gOL"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3743,7 +3947,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="Tsg-CT-p8u"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="Lpl-fe-cwA"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="20" translatesAutoresizingMaskIntoConstraints="NO" id="LKh-F2-zbn">
@@ -3753,7 +3957,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="Rm2-kJ-1Mf"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="yCI-q4-nwJ"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="21" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-At-GYw">
@@ -3763,7 +3967,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="lKK-I8-5h1"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="o1y-0R-XnG"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3807,7 +4011,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="nlB-dO-UkN"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="gly-LO-5eE"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="23" translatesAutoresizingMaskIntoConstraints="NO" id="SP2-Xu-CPq">
@@ -3817,7 +4021,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="zuh-oO-Rac"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="DXb-pT-dtW"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="24" translatesAutoresizingMaskIntoConstraints="NO" id="Ik2-EN-yND">
@@ -3827,7 +4031,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="zaT-6j-nZN"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="R6h-cG-cwe"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3881,7 +4085,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="bNA-C0-M7c"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="ahS-lZ-Fgg"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVH-uZ-BEc">
@@ -3891,7 +4095,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="aqi-6O-F7O"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="EQF-Bo-0f7"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="18" translatesAutoresizingMaskIntoConstraints="NO" id="nwZ-wO-BU5">
@@ -3901,7 +4105,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="y3b-DN-0Ib"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="2cx-tz-dJW"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3953,7 +4157,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="DZk-aW-Yca"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="HSc-Jf-FPK"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="Pbr-pJ-v1F">
@@ -3963,7 +4167,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="eon-Af-nEF"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="7F0-9x-vtz"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="tHa-H2-ax0">
@@ -3973,7 +4177,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="jMu-TT-ddi"/>
+                                                        <action selector="selectOnlyOne:" target="pbw-BM-arC" id="WbJ-CA-jPR"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -4102,30 +4306,8 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-Tw-HBP">
-                                <rect key="frame" x="767" y="34" width="89" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Process" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Th9-6H-czb">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="processExtremitiesTab:" target="S0H-kb-rFd" id="QGf-Tf-1tb"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-fG-AcX">
-                                <rect key="frame" x="662" y="34" width="72" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Usk-mx-Ofw">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="clearTab:" target="S0H-kb-rFd" id="6Hn-gZ-VwD"/>
-                                </connections>
-                            </button>
                             <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrT-yO-e5o">
-                                <rect key="frame" x="465" y="354" width="383" height="135"/>
+                                <rect key="frame" x="465" y="347" width="383" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="YWq-MY-jbX">
                                     <rect key="frame" x="1" y="1" width="366" height="133"/>
@@ -4152,7 +4334,7 @@
                                 </scroller>
                             </scrollView>
                             <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRO-Nd-OoO">
-                                <rect key="frame" x="465" y="111" width="383" height="135"/>
+                                <rect key="frame" x="465" y="101" width="383" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="lyL-8u-wsl">
                                     <rect key="frame" x="1" y="1" width="366" height="133"/>
@@ -4179,7 +4361,7 @@
                                 </scroller>
                             </scrollView>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1x-US-x7u">
-                                <rect key="frame" x="512" y="81" width="336" height="22"/>
+                                <rect key="frame" x="512" y="71" width="336" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OT2-nA-wXg">
                                     <font key="font" metaFont="system"/>
@@ -4188,7 +4370,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5zh-Ip-bWT">
-                                <rect key="frame" x="463" y="84" width="43" height="17"/>
+                                <rect key="frame" x="463" y="74" width="43" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Other:" id="aq0-9u-nDQ">
                                     <font key="font" metaFont="system"/>
@@ -4374,6 +4556,9 @@
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
+                                        <connections>
+                                            <action selector="switchNormOff:" target="S0H-kb-rFd" id="OIT-LD-acI"/>
+                                        </connections>
                                     </popUpButton>
                                     <button fixedFrame="YES" tag="45" translatesAutoresizingMaskIntoConstraints="NO" id="Gcm-bs-zbj">
                                         <rect key="frame" x="53" y="-2" width="64" height="18"/>
@@ -4457,6 +4642,9 @@
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
+                                        <connections>
+                                            <action selector="switchNormOff:" target="S0H-kb-rFd" id="IZ3-WJ-bcw"/>
+                                        </connections>
                                     </popUpButton>
                                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="50" translatesAutoresizingMaskIntoConstraints="NO" id="UVp-eJ-LWo">
                                         <rect key="frame" x="113" y="27" width="106" height="26"/>
@@ -4481,6 +4669,9 @@
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
+                                        <connections>
+                                            <action selector="switchNormOff:" target="S0H-kb-rFd" id="bhu-JX-aLU"/>
+                                        </connections>
                                     </popUpButton>
                                     <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="51" translatesAutoresizingMaskIntoConstraints="NO" id="AIM-fn-G6E">
                                         <rect key="frame" x="226" y="27" width="124" height="26"/>
@@ -4552,11 +4743,11 @@
                                 </subviews>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jt6-Mz-TOW">
-                                <rect key="frame" x="465" y="497" width="383" height="65"/>
+                                <rect key="frame" x="465" y="490" width="383" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="1002" translatesAutoresizingMaskIntoConstraints="NO" id="xhH-zU-hBW">
-                                        <rect key="frame" x="361" y="-1" width="22" height="19"/>
+                                        <rect key="frame" x="361" y="6" width="22" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="NSAddTemplate" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VUF-9C-qwZ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4567,7 +4758,7 @@
                                         </connections>
                                     </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bC-b8-YZV">
-                                        <rect key="frame" x="146" y="5" width="179" height="14"/>
+                                        <rect key="frame" x="146" y="12" width="179" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="65" translatesAutoresizingMaskIntoConstraints="NO" id="8uU-QQ-89i">
@@ -4634,7 +4825,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5G-4g-A5m">
-                                        <rect key="frame" x="0.0" y="-2" width="103" height="64"/>
+                                        <rect key="frame" x="0.0" y="5" width="103" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="54" translatesAutoresizingMaskIntoConstraints="NO" id="MxE-2k-avc">
@@ -4680,7 +4871,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOT-0F-NeW">
-                                        <rect key="frame" x="112" y="51" width="118" height="14"/>
+                                        <rect key="frame" x="112" y="58" width="118" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="57" translatesAutoresizingMaskIntoConstraints="NO" id="t0i-P3-4dQ">
@@ -4714,7 +4905,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGT-vN-j1l">
-                                        <rect key="frame" x="146" y="29" width="179" height="14"/>
+                                        <rect key="frame" x="146" y="36" width="179" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="59" translatesAutoresizingMaskIntoConstraints="NO" id="Zga-cb-jUV">
@@ -4781,7 +4972,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kKd-ui-YNo">
-                                        <rect key="frame" x="120" y="28" width="20" height="17"/>
+                                        <rect key="frame" x="120" y="35" width="20" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="L:" id="QSd-hV-mbn">
                                             <font key="font" metaFont="system"/>
@@ -4790,7 +4981,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Fw-rk-8Lc">
-                                        <rect key="frame" x="120" y="4" width="20" height="17"/>
+                                        <rect key="frame" x="120" y="11" width="20" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="R:" id="XjN-Eq-Myj">
                                             <font key="font" metaFont="system"/>
@@ -4801,11 +4992,11 @@
                                 </subviews>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FpN-Gz-wOd">
-                                <rect key="frame" x="465" y="254" width="383" height="88"/>
+                                <rect key="frame" x="465" y="244" width="383" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-es-8qI">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="88"/>
+                                        <rect key="frame" x="0.0" y="7" width="115" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="80" translatesAutoresizingMaskIntoConstraints="NO" id="TnV-TD-E1j">
@@ -4815,7 +5006,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="setPropertiesOfRelatedButtons:" target="S0H-kb-rFd" id="J0f-VZ-naI"/>
+                                                    <action selector="switchNormOff:" target="S0H-kb-rFd" id="sOV-JS-XNU"/>
                                                 </connections>
                                             </button>
                                             <button tag="81" translatesAutoresizingMaskIntoConstraints="NO" id="ycR-bl-6Dy">
@@ -4825,7 +5016,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="setPropertiesOfRelatedButtons:" target="S0H-kb-rFd" id="gVz-Ju-znA"/>
+                                                    <action selector="switchNormOff:" target="S0H-kb-rFd" id="sYW-Fh-p89"/>
                                                 </connections>
                                             </button>
                                             <button tag="82" translatesAutoresizingMaskIntoConstraints="NO" id="ur9-uM-dc3">
@@ -4863,7 +5054,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="1003" translatesAutoresizingMaskIntoConstraints="NO" id="6Vb-Id-wH6">
-                                        <rect key="frame" x="361" y="-1" width="22" height="19"/>
+                                        <rect key="frame" x="361" y="6" width="22" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="NSAddTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ihk-aJ-jOg">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4874,7 +5065,7 @@
                                         </connections>
                                     </button>
                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pIb-xB-BZm">
-                                        <rect key="frame" x="134" y="0.0" width="216" height="34"/>
+                                        <rect key="frame" x="134" y="7" width="216" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button fixedFrame="YES" tag="88" translatesAutoresizingMaskIntoConstraints="NO" id="ilo-1N-DGY">
@@ -4944,7 +5135,7 @@
                                         </subviews>
                                     </customView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKl-Ok-heW">
-                                        <rect key="frame" x="134" y="74" width="189" height="14"/>
+                                        <rect key="frame" x="134" y="81" width="189" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="92" translatesAutoresizingMaskIntoConstraints="NO" id="eXv-tY-rBc">
@@ -4990,7 +5181,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CeW-he-Ib9">
-                                        <rect key="frame" x="134" y="48" width="153" height="14"/>
+                                        <rect key="frame" x="134" y="55" width="153" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="95" translatesAutoresizingMaskIntoConstraints="NO" id="Ey3-5M-JJM">
@@ -5378,6 +5569,28 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-Tw-HBP">
+                                <rect key="frame" x="765" y="35" width="89" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Process" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Th9-6H-czb">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="processExtremitiesTab:" target="S0H-kb-rFd" id="QGf-Tf-1tb"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-fG-AcX">
+                                <rect key="frame" x="660" y="35" width="72" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Usk-mx-Ofw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clearTab:" target="S0H-kb-rFd" id="6Hn-gZ-VwD"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -5516,6 +5729,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="MSe-O1-gwm"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3v-uO-q0n">
                                             <rect key="frame" x="22" y="335" width="17" height="17"/>
@@ -5687,6 +5903,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="NdF-30-EcQ"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="12D-2G-5Re">
                                             <rect key="frame" x="150" y="42" width="67" height="18"/>
@@ -5695,6 +5914,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="Kel-yV-Qle"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="ojf-36-5Bf">
                                             <rect key="frame" x="320" y="67" width="50" height="18"/>
@@ -5791,6 +6013,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="BUf-JZ-ykU"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="And-d3-R6H">
                                             <rect key="frame" x="221" y="42" width="57" height="18"/>
@@ -5799,6 +6024,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="3Y6-5H-uBW"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="qMJ-cI-R4Q">
                                             <rect key="frame" x="161" y="67" width="62" height="18"/>
@@ -5824,6 +6052,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="0ba-n7-EUC"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -5876,6 +6107,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="F1n-Ne-uc9"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zxG-Rb-jTL">
                                             <rect key="frame" x="18" y="180" width="25" height="19"/>
@@ -5903,6 +6137,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="QRh-1I-28R"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="Zpj-J5-o7u">
                                             <rect key="frame" x="46" y="132" width="77" height="18"/>
@@ -5911,6 +6148,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="9Qr-rQ-JLV"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5kn-Jl-R7d">
                                             <rect key="frame" x="22" y="159" width="17" height="17"/>
@@ -5954,6 +6194,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="As6-v5-L10"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="iZm-1P-wUL">
                                             <rect key="frame" x="275" y="182" width="89" height="18"/>
@@ -6055,6 +6298,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="W4N-37-JsT"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="u6j-hY-v0g">
                                             <rect key="frame" x="262" y="118" width="54" height="18"/>
@@ -6071,6 +6317,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="6wA-CH-sPr"/>
+                                            </connections>
                                         </button>
                                         <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="jkh-JQ-xFz">
                                             <rect key="frame" x="46" y="92" width="90" height="18"/>
@@ -6125,7 +6374,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="t9Z-99-YQM" id="R6D-GY-YHb"/>
+                                                        <action selector="switchNormOff:" target="t9Z-99-YQM" id="4mC-Xc-lyU"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="18" translatesAutoresizingMaskIntoConstraints="NO" id="EKp-87-kX6">
@@ -6135,7 +6384,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="t9Z-99-YQM" id="iXB-zw-3MP"/>
+                                                        <action selector="switchNormOff:" target="t9Z-99-YQM" id="xoT-gf-EFd"/>
                                                     </connections>
                                                 </button>
                                                 <button tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="nh8-qQ-G13">
@@ -6145,7 +6394,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="selectOnlyOne:" target="t9Z-99-YQM" id="FxM-KB-Hbg"/>
+                                                        <action selector="switchNormOff:" target="t9Z-99-YQM" id="G5s-xB-xGg"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -6167,6 +6416,9 @@
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="switchNormOff:" target="t9Z-99-YQM" id="abP-Tk-O2q"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PRI-pD-sUR">
                                             <rect key="frame" x="119" y="49" width="92" height="17"/>
@@ -6281,6 +6533,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="nbY-gD-DQv"/>
+                                </connections>
                             </popUpButton>
                             <button fixedFrame="YES" tag="4004" translatesAutoresizingMaskIntoConstraints="NO" id="9II-e5-ZdP">
                                 <rect key="frame" x="597" y="381" width="20" height="31"/>
@@ -6289,6 +6544,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="QaS-Tx-Qiy"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="2207" translatesAutoresizingMaskIntoConstraints="NO" id="OkW-xv-V5X">
                                 <rect key="frame" x="146" y="290" width="73" height="26"/>
@@ -6327,6 +6585,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="X83-Yd-LjM"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-Mz-Rny">
                                 <rect key="frame" x="54" y="264" width="12" height="17"/>
@@ -6359,6 +6620,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="09m-jn-nwB"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="4108" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-iV-lJc">
                                 <rect key="frame" x="369" y="259" width="73" height="26"/>
@@ -6374,6 +6638,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="DqH-nd-aaF"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="3301" translatesAutoresizingMaskIntoConstraints="NO" id="ZWp-Vu-pCr">
                                 <rect key="frame" x="222" y="476" width="73" height="26"/>
@@ -6452,6 +6719,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="dy5-0c-HIs"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="5202" translatesAutoresizingMaskIntoConstraints="NO" id="raT-yE-cFC">
                                 <rect key="frame" x="445" y="445" width="73" height="26"/>
@@ -6505,6 +6775,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="9Ec-bo-K89"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" tag="4011" translatesAutoresizingMaskIntoConstraints="NO" id="N9v-S5-gaB">
                                 <rect key="frame" x="597" y="164" width="20" height="31"/>
@@ -6513,6 +6786,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="SMl-pP-b9c"/>
+                                </connections>
                             </button>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="4015" translatesAutoresizingMaskIntoConstraints="NO" id="0hY-rC-Wvi">
                                 <rect key="frame" x="692" y="391" width="113" height="26"/>
@@ -6608,6 +6884,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="du7-qB-8K7"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" tag="4006" translatesAutoresizingMaskIntoConstraints="NO" id="sKN-oq-TgW">
                                 <rect key="frame" x="597" y="319" width="20" height="31"/>
@@ -6616,6 +6895,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="vVY-0e-jCt"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y61-T2-EUJ">
                                 <rect key="frame" x="54" y="357" width="12" height="17"/>
@@ -6640,6 +6922,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="9SI-fO-Ueh"/>
+                                </connections>
                             </popUpButton>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="4014" translatesAutoresizingMaskIntoConstraints="NO" id="37b-x4-pTX">
                                 <rect key="frame" x="692" y="472" width="113" height="26"/>
@@ -6669,6 +6954,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="r0N-gZ-8aA"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="2212" translatesAutoresizingMaskIntoConstraints="NO" id="rXX-oa-YNL">
                                 <rect key="frame" x="146" y="135" width="73" height="26"/>
@@ -6707,6 +6995,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="7bg-cI-43D"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c19-fK-H14">
                                 <rect key="frame" x="22" y="534" width="17" height="17"/>
@@ -6731,6 +7022,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="0Vx-lh-YUm"/>
+                                </connections>
                             </popUpButton>
                             <button fixedFrame="YES" tag="1001" translatesAutoresizingMaskIntoConstraints="NO" id="CqY-aq-4Vu">
                                 <rect key="frame" x="298" y="474" width="20" height="31"/>
@@ -6739,6 +7033,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="wqa-PC-O5m"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="5208" translatesAutoresizingMaskIntoConstraints="NO" id="bVn-pt-xtI">
                                 <rect key="frame" x="445" y="259" width="73" height="26"/>
@@ -6836,6 +7133,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="hc3-rq-poY"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="2205" translatesAutoresizingMaskIntoConstraints="NO" id="efA-Bo-xO5">
                                 <rect key="frame" x="146" y="352" width="73" height="26"/>
@@ -6909,6 +7209,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="fWs-E8-3pf"/>
+                                </connections>
                             </popUpButton>
                             <button fixedFrame="YES" tag="1009" translatesAutoresizingMaskIntoConstraints="NO" id="VgR-hc-gt9">
                                 <rect key="frame" x="298" y="226" width="20" height="31"/>
@@ -6917,6 +7220,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="dY5-lE-pp5"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hjj-jY-atP">
                                 <rect key="frame" x="54" y="388" width="12" height="17"/>
@@ -6934,6 +7240,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="qaE-Yx-cUE"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deI-Ha-Pnl">
                                 <rect key="frame" x="645" y="477" width="41" height="17"/>
@@ -6958,6 +7267,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="95v-or-vFh"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="2211" translatesAutoresizingMaskIntoConstraints="NO" id="Mt3-Bu-YnL">
                                 <rect key="frame" x="146" y="166" width="73" height="26"/>
@@ -7005,6 +7317,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="npD-gh-4AR"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="1110" translatesAutoresizingMaskIntoConstraints="NO" id="FOV-L9-EJo">
                                 <rect key="frame" x="70" y="197" width="73" height="26"/>
@@ -7020,6 +7335,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="jRr-cp-VSD"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="5207" translatesAutoresizingMaskIntoConstraints="NO" id="RDX-qW-MQv">
                                 <rect key="frame" x="445" y="290" width="73" height="26"/>
@@ -7059,6 +7377,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="VUe-Ly-iHo"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="3305" translatesAutoresizingMaskIntoConstraints="NO" id="DLg-tW-ntW">
                                 <rect key="frame" x="222" y="352" width="73" height="26"/>
@@ -7082,6 +7403,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="H4t-5m-wiS"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-UL-C0v">
                                 <rect key="frame" x="488" y="528" width="68" height="25"/>
@@ -7090,6 +7414,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="9OS-sr-Sru"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M5j-mk-wt2">
                                 <rect key="frame" x="54" y="233" width="12" height="17"/>
@@ -7158,6 +7485,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="VDu-cH-u7V"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0yZ-YP-IhE">
                                 <rect key="frame" x="54" y="450" width="12" height="17"/>
@@ -7191,6 +7521,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="Upw-rn-mnv"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="2210" translatesAutoresizingMaskIntoConstraints="NO" id="tYE-OE-J9E">
                                 <rect key="frame" x="146" y="197" width="73" height="26"/>
@@ -7214,6 +7547,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="Cf5-u6-zC5"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="6307" translatesAutoresizingMaskIntoConstraints="NO" id="NXW-1j-H0y">
                                 <rect key="frame" x="521" y="290" width="73" height="26"/>
@@ -7237,6 +7573,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="x1F-T0-k9c"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQg-N2-bTL">
                                 <rect key="frame" x="98" y="508" width="17" height="18"/>
@@ -7307,6 +7646,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="nYq-Br-InG"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="4111" translatesAutoresizingMaskIntoConstraints="NO" id="weR-Qc-5Pe">
                                 <rect key="frame" x="369" y="166" width="73" height="26"/>
@@ -7322,6 +7664,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="r5D-oc-jnf"/>
+                                </connections>
                             </popUpButton>
                             <button fixedFrame="YES" tag="4005" translatesAutoresizingMaskIntoConstraints="NO" id="hSf-qq-TQh">
                                 <rect key="frame" x="597" y="350" width="20" height="31"/>
@@ -7330,6 +7675,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="NDf-Dy-gJS"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="3304" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-sq-cEc">
                                 <rect key="frame" x="222" y="383" width="73" height="26"/>
@@ -7371,6 +7719,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="Gxl-HQ-XRC"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ohC-Bv-v4H">
                                 <rect key="frame" x="357" y="533" width="39" height="18"/>
@@ -7425,6 +7776,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="u4q-uA-iU2"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="4104" translatesAutoresizingMaskIntoConstraints="NO" id="iZd-ln-ehT">
                                 <rect key="frame" x="369" y="383" width="73" height="26"/>
@@ -7440,6 +7794,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="bIe-Tg-hUu"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRo-Uw-mZ3">
                                 <rect key="frame" x="345" y="202" width="20" height="17"/>
@@ -7466,6 +7823,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="pBm-od-MbX"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="6306" translatesAutoresizingMaskIntoConstraints="NO" id="FNb-fL-YBH">
                                 <rect key="frame" x="521" y="321" width="73" height="26"/>
@@ -7528,6 +7888,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="5mN-dk-EY7"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttR-tD-4lt">
                                 <rect key="frame" x="46" y="171" width="20" height="17"/>
@@ -7545,6 +7908,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="ZOd-gf-LzQ"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="1108" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-Ha-Hg1">
                                 <rect key="frame" x="70" y="259" width="73" height="26"/>
@@ -7560,6 +7926,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="Qlq-3c-8EX"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="4101" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-oI-vOy">
                                 <rect key="frame" x="369" y="476" width="73" height="26"/>
@@ -7575,6 +7944,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="W73-sX-vss"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="4110" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-X8-UM7">
                                 <rect key="frame" x="369" y="197" width="73" height="26"/>
@@ -7590,6 +7962,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="jfS-FC-GG7"/>
+                                </connections>
                             </popUpButton>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="CCP-nX-8DS">
                                 <rect key="frame" x="647" y="244" width="155" height="118"/>
@@ -7653,6 +8028,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="oOC-zg-hPN"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" tag="4007" translatesAutoresizingMaskIntoConstraints="NO" id="9QL-ET-lqs">
                                 <rect key="frame" x="597" y="288" width="20" height="31"/>
@@ -7661,6 +8039,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="gLg-LI-H7k"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4sS-Hz-hag">
                                 <rect key="frame" x="54" y="326" width="12" height="17"/>
@@ -7747,6 +8128,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="kuT-Md-B3g"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbI-jt-rei">
                                 <rect key="frame" x="353" y="326" width="12" height="17"/>
@@ -7771,6 +8155,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="5H1-Xs-BUk"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJd-h2-1tH">
                                 <rect key="frame" x="645" y="370" width="43" height="17"/>
@@ -7795,6 +8182,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="Bsc-mp-dQ7"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDg-nR-PzX">
                                 <rect key="frame" x="353" y="264" width="12" height="17"/>
@@ -7827,6 +8217,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="WaL-pc-eea"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="6305" translatesAutoresizingMaskIntoConstraints="NO" id="V50-N8-LPo">
                                 <rect key="frame" x="521" y="352" width="73" height="26"/>
@@ -7912,6 +8305,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="P12-nP-BSF"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="4109" translatesAutoresizingMaskIntoConstraints="NO" id="0D5-jN-3UX">
                                 <rect key="frame" x="369" y="228" width="73" height="26"/>
@@ -7927,6 +8323,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="zEE-Go-H7q"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA7-2M-mjB">
                                 <rect key="frame" x="601" y="508" width="13" height="18"/>
@@ -7983,6 +8382,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="uBP-EX-qw2"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCb-2b-6te">
                                 <rect key="frame" x="54" y="419" width="12" height="17"/>
@@ -8024,6 +8426,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="VU0-br-4OV"/>
+                                </connections>
                             </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="5210" translatesAutoresizingMaskIntoConstraints="NO" id="MWs-be-HsS">
                                 <rect key="frame" x="445" y="197" width="73" height="26"/>
@@ -8047,6 +8452,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="switchNormOff:" target="u54-VP-SSG" id="WMJ-AU-lSr"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PpF-r3-gbG">
                                 <rect key="frame" x="688" y="531" width="75" height="17"/>

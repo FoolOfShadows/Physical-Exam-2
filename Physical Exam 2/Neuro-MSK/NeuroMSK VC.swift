@@ -225,6 +225,7 @@ class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 				}
 			}
 		}
+        switchNormOff()
 	}
 	
 	@IBAction func copySLRRight(_ sender: NSButton) {
@@ -232,6 +233,43 @@ class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 			lSLRCombo.stringValue = rSLRCombo.stringValue
 		}
 	}
+    
+    @IBAction func switchNormOff(_ sender: NSButton) {
+        let theButtons = self.view.getButtonsInView()
+        if sender.state == .on {
+            switch sender.tag {
+            case 25...29:
+                let dtrs = theButtons.filter({$0.tag == 4})[0]
+                dtrs.state = .off
+            case 35, 36:
+                let dtrs = theButtons.filter({$0.tag == 5})[0]
+                dtrs.state = .off
+            case 101:
+                let dtrs = theButtons.filter({$0.tag == 3})[1]
+                dtrs.state = .off
+            case 102:
+                let dtrs = theButtons.filter({$0.tag == 4})[1]
+                dtrs.state = .off
+            default: return
+            }
+        }
+        
+    }
+    
+    private func switchNormOff() {
+        let theButtons = self.view.getButtonsInView()
+        let activeButtons = theButtons.filter {$0.state == .on}
+        for button in activeButtons {
+            switch button.tag {
+            case 15...18:
+                let dtrs = theButtons.filter({$0.tag == 2})[0]
+                dtrs.state = .off
+            default: continue
+            }
+        }
+        
+    }
+    
 	@IBAction func copyDTRRight(_ sender: NSButton) {
 		if !rDTRCombo.stringValue.isEmpty {
 			lDTRCombo.stringValue = rDTRCombo.stringValue

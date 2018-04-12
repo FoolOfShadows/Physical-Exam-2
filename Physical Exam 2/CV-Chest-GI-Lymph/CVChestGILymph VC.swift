@@ -95,7 +95,58 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 				}
 			}
 		}
+        switchNormOff(sender)
 	}
+    
+    @IBAction func switchNormOff(_ sender: NSButton) {
+        let sendingBox = (sender as NSView).getContainingBox()
+        guard let sendingBoxTitle = sendingBox?.title else { return }
+        print(sendingBoxTitle)
+        guard let theButtons = sendingBox?.getButtonsInView() else { return }
+        
+        if sender.state == .on {
+            switch sendingBoxTitle {
+            case "CV":
+                switch sender.tag {
+                case 9...12:
+                    theButtons.filter({$0.tag == 1})[0].state = .off
+                case 13, 14:
+                    theButtons.filter({$0.tag == 3})[0].state = .off
+                case 21:
+                    theButtons.filter({$0.tag == 2})[0].state = .off
+                default: return
+                }
+            case "Chest":
+                switch sender.tag {
+                case 100:
+                    theButtons.filter({$0.tag == 1})[0].state = .off
+                default: return
+                }
+            case "GI":
+                switch sender.tag {
+                case 30...32:
+                    theButtons.filter({$0.tag == 7})[0].state = .off
+                case 8:
+                    theButtons.filter({$0.tag == 4})[0].state = .off
+                default: return
+                }
+            case "Lymph":
+                switch sender.tag {
+                case 10...12:
+                    theButtons.filter({$0.tag == 2})[0].state = .off
+                case 13...15:
+                    theButtons.filter({$0.tag == 3})[0].state = .off
+                case 16...18:
+                    theButtons.filter({$0.tag == 4})[0].state = .off
+                case 19...27:
+                    theButtons.filter({$0.tag == 1})[0].state = .off
+                default: return
+                }
+            default: return
+            }
+        }
+        
+    }
 	
 	@IBAction func giTakeTTP(_ sender: NSComboBox) {
 		let currentView = giTTPView.stringValue

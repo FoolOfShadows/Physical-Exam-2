@@ -77,7 +77,68 @@ class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
 				}
 			}
 		}
+        switchNormOff(sender)
 	}
+    
+    @IBAction func switchNormOff(_ sender: NSButton) {
+        let sendingBox = (sender as NSView).getContainingBox()
+        guard let sendingBoxTitle = sendingBox?.title else { return }
+        print(sendingBoxTitle)
+        guard let theButtons = sendingBox?.getButtonsInView() else { return }
+        
+        if sender.state == .on {
+            switch sendingBoxTitle {
+            case "Gyn":
+                switch sender.tag {
+                case 15:
+                    let dtrs = theButtons.filter({$0.tag == 3})[0]
+                    dtrs.state = .off
+                case 12:
+                    let dtrs = theButtons.filter({$0.tag == 4})[0]
+                    dtrs.state = .off
+                case 16:
+                    let dtrs = theButtons.filter({$0.tag == 2})[0]
+                    dtrs.state = .off
+                case 17...19:
+                    let dtrs = theButtons.filter({$0.tag == 5})[0]
+                    dtrs.state = .off
+                default: return
+                }
+            case "Skin":
+                switch sender.tag {
+                case 6:
+                    let dtrs = theButtons.filter({$0.tag == 5})[0]
+                    dtrs.state = .off
+                default: return
+                }
+            case "GU":
+                switch sender.tag {
+                case 6...8:
+                    let dtrs = theButtons.filter({$0.tag == 5})[0]
+                    dtrs.state = .off
+                case 9, 10:
+                    let dtrs = theButtons.filter({$0.tag == 4})[0]
+                    dtrs.state = .off
+                default: return
+                }
+            case "DRE":
+                switch sender.tag {
+                case 5, 6:
+                    let dtrs = theButtons.filter({$0.tag == 3})[0]
+                    dtrs.state = .off
+                case 9:
+                    let dtrs = theButtons.filter({$0.tag == 1})[0]
+                    dtrs.state = .off
+                case 8:
+                    let dtrs = theButtons.filter({$0.tag == 4})[0]
+                    dtrs.state = .off
+                default: return
+                }
+            default: return
+            }
+        }
+        
+    }
     
     @objc func selectAllNormsInView() {
         let normButtons = self.view.getNormalButtonsInView()

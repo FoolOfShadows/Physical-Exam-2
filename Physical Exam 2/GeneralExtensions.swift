@@ -152,6 +152,22 @@ extension NSView {
 		}
 		return results
 	}
+    
+    func getContainingBox() -> NSBox? {
+        var theView:NSView?
+        
+        if self is NSBox {
+            return self as? NSBox
+        } else {
+            theView = self.superview?.getContainingBox()
+        }
+        
+        return theView as? NSBox
+    }
+}
+
+extension NSButton {
+    
 }
 
 extension NSTextView {

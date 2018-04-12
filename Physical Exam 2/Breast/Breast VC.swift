@@ -42,6 +42,22 @@ class Breast_VC: NSViewController, ProcessTabProtocol {
 		self.view.clearControllers()
 		self.view.populateSelectionsInViewUsing(Breast())
 	}
+    
+    @IBAction func switchNormOff(_ sender: NSButton) {
+        let theButtons = selfView.getButtonsInView()
+        
+        if sender.state != .off {
+            switch sender.tag {
+            case 1101...1112, 4001...4013:
+                theButtons.filter ({$0.tag == 1})[0].state = .off
+            case 1001...1013, 4101...4112:
+                theButtons.filter ({$0.tag == 4})[0].state = .off
+            case 7, 12:
+                theButtons.filter ({$0.tag == 3})[0].state = .off
+            default: return
+            }
+        }
+    }
 	
 	@IBAction func selectNorms(_ sender: NSButton) {
 		func normalButtonRangesForSection(_ section:String) -> [Int] {
