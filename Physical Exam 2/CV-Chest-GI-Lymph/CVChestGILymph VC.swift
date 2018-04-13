@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtocol {
+class CVChestGILymph_VC: NSViewController, NSTextFieldDelegate, ProcessTabProtocol {
 	var selfView = NSView()
 	
 
@@ -31,6 +31,10 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
         super.viewDidLoad()
 		loadedViewControllers.append(self)
 		selfView = self.view
+        
+        giTTPView.delegate = self
+        giMassView.delegate = self
+        
         clearCV()
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
@@ -98,13 +102,30 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
         switchNormOff(sender)
 	}
     
+    fileprivate func textSwitchNormOff() {
+        if !giTTPView.stringValue.isEmpty {
+            let theButtons = giBox.getButtonsInView()
+            theButtons.filter({$0.tag == 2})[0].state = .off
+        }
+        if !giMassView.stringValue.isEmpty {
+            let theButtons = giBox.getButtonsInView()
+            theButtons.filter({$0.tag == 6})[0].state = .off
+        }
+    }
+    
+    override func controlTextDidChange(_ obj: Notification) {
+        print("text change message sent")
+        textSwitchNormOff()
+    }
+    
     @IBAction func switchNormOff(_ sender: NSButton) {
-        let sendingBox = (sender as NSView).getContainingBox()
-        guard let sendingBoxTitle = sendingBox?.title else { return }
-        print(sendingBoxTitle)
-        guard let theButtons = sendingBox?.getButtonsInView() else { return }
-        
         if sender.state == .on {
+            
+            let sendingBox = (sender as NSView).getContainingBox()
+            guard let sendingBoxTitle = sendingBox?.title else { return }
+            print(sendingBoxTitle)
+            guard let theButtons = sendingBox?.getButtonsInView() else { return }
+            
             switch sendingBoxTitle {
             case "CV":
                 switch sender.tag {
@@ -147,6 +168,44 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
         }
         
     }
+    
+    @IBAction func comboSwitchNormOff(_ sender: NSComboBox) {
+        if !sender.stringValue.isEmpty {
+            
+            let sendingBox = (sender as NSView).getContainingBox()
+            guard let sendingBoxTitle = sendingBox?.title else { return }
+            print(sendingBoxTitle)
+            guard let theButtons = sendingBox?.getButtonsInView() else { return }
+            
+            switch sendingBoxTitle {
+            case "CV":
+                switch sender.tag {
+                case 20, 22:
+                    theButtons.filter ({$0.tag == 2})[0].state = .off
+                default: return
+                }
+            case "Chest":
+                switch sender.tag {
+                case 10:
+                    theButtons.filter ({$0.tag == 3})[0].state = .off
+                    theButtons.filter ({$0.tag == 2})[0].state = .off
+                case 11:
+                    theButtons.filter ({$0.tag == 4})[0].state = .off
+                    theButtons.filter ({$0.tag == 2})[0].state = .off
+                case 12:
+                    theButtons.filter ({$0.tag == 5})[0].state = .off
+                    theButtons.filter ({$0.tag == 2})[0].state = .off
+                case 13:
+                    theButtons.filter ({$0.tag == 7})[0].state = .off
+                    theButtons.filter ({$0.tag == 2})[0].state = .off
+                default: return
+                }
+            default: return
+            }
+            
+        }
+        
+    }
 	
 	@IBAction func giTakeTTP(_ sender: NSComboBox) {
 		let currentView = giTTPView.stringValue
@@ -157,6 +216,7 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 				giTTPView.stringValue = sender.stringValue
 			}
 			sender.selectItem(at: 0)
+            textSwitchNormOff()
 		}
 	}
 	
@@ -169,6 +229,7 @@ class CVChestGILymph_VC: NSViewController, NSComboBoxDelegate, ProcessTabProtoco
 				giMassView.stringValue = sender.stringValue
 			}
 			sender.selectItem(at: 0)
+            textSwitchNormOff()
 		}
 	}
     

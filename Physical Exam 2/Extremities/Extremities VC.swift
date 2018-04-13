@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Extremities_VC: NSViewController, ProcessTabProtocol/*, NSSpeechRecognizerDelegate*/ {
+class Extremities_VC: NSViewController, ProcessTabProtocol, NSTextFieldDelegate/*, NSSpeechRecognizerDelegate*/ {
 	var selfView = NSView()
 	
 
@@ -51,6 +51,9 @@ class Extremities_VC: NSViewController, ProcessTabProtocol/*, NSSpeechRecognizer
         nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
         nc.addObserver(self, selector: #selector(heardCommand), name: NSNotification.Name(rawValue: "callus right"), object: nil)
         
+        (lCRCombo as NSTextField).delegate = self
+        (rCRCombo as NSTextField).delegate = self
+        
        //recognizer.delegate = self
        //recognizer.commands = commands
     
@@ -59,6 +62,15 @@ class Extremities_VC: NSViewController, ProcessTabProtocol/*, NSSpeechRecognizer
     
     override func viewDidAppear() {
         //recognizer.startListening()
+    }
+    
+
+    override func controlTextDidChange(_ notification: Notification) {
+        if !lCRCombo.stringValue.isEmpty || !rCRCombo.stringValue.isEmpty {
+            print("One of these fields has info")
+            let theButtons = selfView.getButtonsInView()
+            theButtons.filter ({$0.tag == 5})[0].state = .off
+        }
     }
 
 	
@@ -112,9 +124,9 @@ class Extremities_VC: NSViewController, ProcessTabProtocol/*, NSSpeechRecognizer
 	}
     
     @IBAction func switchNormOff(_ sender: NSButton) {
-        let theButtons = selfView.getButtonsInView()
         
         if sender.state != .off {
+            let theButtons = selfView.getButtonsInView()
             switch sender.tag {
             case 40:
                 theButtons.filter ({$0.tag == 3})[0].state = .off
@@ -133,7 +145,20 @@ class Extremities_VC: NSViewController, ProcessTabProtocol/*, NSSpeechRecognizer
         }
     }
 	
-	@IBAction func selectNorms(_ sender: NSButton) {
+    @IBAction func comboSwitchNormOff(_ sender: NSComboBox) {
+        if !sender.stringValue.isEmpty {
+            let theButtons = selfView.getButtonsInView()
+            switch sender.tag {
+            case 24, 25:
+                theButtons.filter ({$0.tag == 5})[0].state = .off
+            default: return
+            }
+            
+        }
+        
+    }
+    
+    @IBAction func selectNorms(_ sender: NSButton) {
 		func normalButtonRangesForSection(_ section:String) -> [Int] {
 			switch section {
 			case "n:":

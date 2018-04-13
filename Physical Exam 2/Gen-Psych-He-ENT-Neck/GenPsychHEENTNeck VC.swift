@@ -90,12 +90,13 @@ class GenPsychHEENTNeck_VC: NSViewController, ProcessTabProtocol {
     }
     
     @IBAction func switchNormOff(_ sender: NSButton) {
-        let sendingBox = (sender as NSView).getContainingBox()
-        guard let sendingBoxTitle = sendingBox?.title else { return }
-        print(sendingBoxTitle)
-        guard let theButtons = sendingBox?.getButtonsInView() else { return }
-        
         if sender.state != .off {
+            
+            let sendingBox = (sender as NSView).getContainingBox()
+            guard let sendingBoxTitle = sendingBox?.title else { return }
+            print(sendingBoxTitle)
+            guard let theButtons = sendingBox?.getButtonsInView() else { return }
+            
             switch sendingBoxTitle {
             case "Gen":
                 switch sender.tag {

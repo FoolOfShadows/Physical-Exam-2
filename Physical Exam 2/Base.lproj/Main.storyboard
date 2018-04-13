@@ -3101,6 +3101,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="comboSwitchNormOff:" target="pbw-BM-arC" id="thw-Wa-TaD"/>
+                                            </connections>
                                         </comboBox>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrl-Wp-m3n">
                                             <rect key="frame" x="22" y="80" width="17" height="17"/>
@@ -3292,6 +3295,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="comboSwitchNormOff:" target="pbw-BM-arC" id="Nc1-c0-R90"/>
+                                            </connections>
                                         </comboBox>
                                     </subviews>
                                 </view>
@@ -3370,6 +3376,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="comboSwitchNormOff:" target="pbw-BM-arC" id="D9v-fn-vaY"/>
+                                            </connections>
                                         </comboBox>
                                         <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="n0a-ot-5mo">
                                             <rect key="frame" x="254" y="74" width="84" height="26"/>
@@ -3379,6 +3388,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="comboSwitchNormOff:" target="pbw-BM-arC" id="KTi-Db-0uV"/>
+                                            </connections>
                                         </comboBox>
                                         <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="24c-L0-WQc">
                                             <rect key="frame" x="44" y="104" width="54" height="18"/>
@@ -3404,6 +3416,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="comboSwitchNormOff:" target="pbw-BM-arC" id="GW2-Hk-H7d"/>
+                                            </connections>
                                         </comboBox>
                                         <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="ToC-QB-i73">
                                             <rect key="frame" x="241" y="123" width="43" height="18"/>
@@ -3421,6 +3436,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="comboSwitchNormOff:" target="pbw-BM-arC" id="bL0-2z-zZM"/>
+                                            </connections>
                                         </comboBox>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QIb-K7-mpt">
                                             <rect key="frame" x="18" y="79" width="17" height="17"/>
@@ -4231,7 +4249,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="pu7-Vg-r59">
-                                <rect key="frame" x="46" y="547" width="53" height="18"/>
+                                <rect key="frame" x="46" y="558" width="53" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Cyan" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Lcm-hY-xE4">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4239,7 +4257,7 @@
                                 </buttonCell>
                             </button>
                             <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="uVb-59-uPG">
-                                <rect key="frame" x="103" y="547" width="50" height="18"/>
+                                <rect key="frame" x="103" y="558" width="50" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Club" bezelStyle="regularSquare" imagePosition="left" inset="2" id="OFI-kk-aTV">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4247,7 +4265,7 @@
                                 </buttonCell>
                             </button>
                             <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="gQ3-LL-YVr">
-                                <rect key="frame" x="157" y="547" width="64" height="18"/>
+                                <rect key="frame" x="157" y="558" width="64" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Edema" bezelStyle="regularSquare" imagePosition="left" inset="2" id="8jY-nm-FZa">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4255,7 +4273,7 @@
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abn-dy-ynt">
-                                <rect key="frame" x="20" y="545" width="25" height="25"/>
+                                <rect key="frame" x="20" y="556" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="N:" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gW0-Av-Y0a">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -4266,7 +4284,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIt-yF-xxh">
-                                <rect key="frame" x="24" y="498" width="17" height="17"/>
+                                <rect key="frame" x="24" y="509" width="17" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="A:" id="lBL-Dr-Mo9">
                                     <font key="font" metaFont="system"/>
@@ -4275,7 +4293,7 @@
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="enZ-GN-kSm">
-                                <rect key="frame" x="294" y="547" width="42" height="18"/>
+                                <rect key="frame" x="294" y="558" width="42" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="CR" bezelStyle="regularSquare" imagePosition="left" inset="2" id="2xs-ma-ZHU">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4283,7 +4301,7 @@
                                 </buttonCell>
                             </button>
                             <button fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="cKv-rX-gsD">
-                                <rect key="frame" x="225" y="547" width="63" height="18"/>
+                                <rect key="frame" x="225" y="558" width="63" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Pulses" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ugf-Kp-Eqs">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4291,7 +4309,7 @@
                                 </buttonCell>
                             </button>
                             <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZrD-nA-yNH">
-                                <rect key="frame" x="46" y="527" width="49" height="18"/>
+                                <rect key="frame" x="46" y="538" width="49" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Vibe" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kBZ-eq-lJV">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -4299,15 +4317,37 @@
                                 </buttonCell>
                             </button>
                             <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="Fg4-29-FIj">
-                                <rect key="frame" x="100" y="527" width="68" height="18"/>
+                                <rect key="frame" x="100" y="538" width="68" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Monofil" bezelStyle="regularSquare" imagePosition="left" inset="2" id="u0M-HX-6qt">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-Tw-HBP">
+                                <rect key="frame" x="765" y="46" width="89" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Process" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Th9-6H-czb">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="processExtremitiesTab:" target="S0H-kb-rFd" id="QGf-Tf-1tb"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-fG-AcX">
+                                <rect key="frame" x="660" y="46" width="72" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Usk-mx-Ofw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="clearTab:" target="S0H-kb-rFd" id="6Hn-gZ-VwD"/>
+                                </connections>
+                            </button>
                             <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrT-yO-e5o">
-                                <rect key="frame" x="465" y="347" width="383" height="135"/>
+                                <rect key="frame" x="465" y="358" width="383" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="YWq-MY-jbX">
                                     <rect key="frame" x="1" y="1" width="366" height="133"/>
@@ -4334,7 +4374,7 @@
                                 </scroller>
                             </scrollView>
                             <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRO-Nd-OoO">
-                                <rect key="frame" x="465" y="101" width="383" height="135"/>
+                                <rect key="frame" x="465" y="112" width="383" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="lyL-8u-wsl">
                                     <rect key="frame" x="1" y="1" width="366" height="133"/>
@@ -4361,7 +4401,7 @@
                                 </scroller>
                             </scrollView>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1x-US-x7u">
-                                <rect key="frame" x="512" y="71" width="336" height="22"/>
+                                <rect key="frame" x="512" y="82" width="336" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OT2-nA-wXg">
                                     <font key="font" metaFont="system"/>
@@ -4370,7 +4410,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5zh-Ip-bWT">
-                                <rect key="frame" x="463" y="74" width="43" height="17"/>
+                                <rect key="frame" x="463" y="85" width="43" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Other:" id="aq0-9u-nDQ">
                                     <font key="font" metaFont="system"/>
@@ -4379,7 +4419,7 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCH-dr-N4J">
-                                <rect key="frame" x="48" y="374" width="377" height="88"/>
+                                <rect key="frame" x="48" y="385" width="377" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="fVN-M0-x3y">
                                     <rect key="frame" x="1" y="1" width="360" height="86"/>
@@ -4406,7 +4446,7 @@
                                 </scroller>
                             </scrollView>
                             <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXq-6n-NmK">
-                                <rect key="frame" x="48" y="209" width="377" height="98"/>
+                                <rect key="frame" x="48" y="220" width="377" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="OEs-ST-joo">
                                     <rect key="frame" x="1" y="1" width="360" height="96"/>
@@ -4433,7 +4473,7 @@
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7dt-7W-2TG">
-                                <rect key="frame" x="200" y="180" width="22" height="19"/>
+                                <rect key="frame" x="200" y="191" width="22" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundRect" title="&gt;" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="acl-xT-0Ub">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -4444,7 +4484,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Oe-wJ-suS">
-                                <rect key="frame" x="46" y="182" width="24" height="17"/>
+                                <rect key="frame" x="46" y="193" width="24" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CR" id="Fqw-dt-eTG">
                                     <font key="font" metaFont="system"/>
@@ -4453,25 +4493,31 @@
                                 </textFieldCell>
                             </textField>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="25" translatesAutoresizingMaskIntoConstraints="NO" id="ssJ-AM-7jN">
-                                <rect key="frame" x="240" y="177" width="103" height="26"/>
+                                <rect key="frame" x="240" y="188" width="103" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="Efd-gq-Qbn">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
+                                <connections>
+                                    <action selector="comboSwitchNormOff:" target="S0H-kb-rFd" id="oeK-nf-1fN"/>
+                                </connections>
                             </comboBox>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="24" translatesAutoresizingMaskIntoConstraints="NO" id="40D-gV-FUF">
-                                <rect key="frame" x="76" y="177" width="103" height="26"/>
+                                <rect key="frame" x="76" y="188" width="103" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="WX8-6Y-tpz">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
+                                <connections>
+                                    <action selector="comboSwitchNormOff:" target="S0H-kb-rFd" id="7dj-ev-YYn"/>
+                                </connections>
                             </comboBox>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ux5-Dt-1y9">
-                                <rect key="frame" x="48" y="470" width="377" height="46"/>
+                                <rect key="frame" x="48" y="481" width="377" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="42" translatesAutoresizingMaskIntoConstraints="NO" id="0zf-hZ-582">
@@ -4616,7 +4662,7 @@
                                 </subviews>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wez-kg-7gk">
-                                <rect key="frame" x="48" y="315" width="377" height="51"/>
+                                <rect key="frame" x="48" y="326" width="377" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="52" translatesAutoresizingMaskIntoConstraints="NO" id="WZb-Ie-NIM">
@@ -4743,7 +4789,7 @@
                                 </subviews>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jt6-Mz-TOW">
-                                <rect key="frame" x="465" y="490" width="383" height="72"/>
+                                <rect key="frame" x="465" y="501" width="383" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" tag="1002" translatesAutoresizingMaskIntoConstraints="NO" id="xhH-zU-hBW">
@@ -4992,7 +5038,7 @@
                                 </subviews>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FpN-Gz-wOd">
-                                <rect key="frame" x="465" y="244" width="383" height="95"/>
+                                <rect key="frame" x="465" y="255" width="383" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-es-8qI">
@@ -5217,7 +5263,7 @@
                                 </subviews>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2QJ-Ad-8rO">
-                                <rect key="frame" x="46" y="136" width="60" height="17"/>
+                                <rect key="frame" x="46" y="147" width="60" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Clubbing:" id="cKK-Li-byG">
                                     <font key="font" metaFont="system"/>
@@ -5226,7 +5272,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-b8-mXN">
-                                <rect key="frame" x="48" y="91" width="32" height="17"/>
+                                <rect key="frame" x="48" y="102" width="32" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bun:" id="NFx-lo-EoR">
                                     <font key="font" metaFont="system"/>
@@ -5235,7 +5281,7 @@
                                 </textFieldCell>
                             </textField>
                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvy-U8-Ils">
-                                <rect key="frame" x="50" y="46" width="238" height="17"/>
+                                <rect key="frame" x="50" y="57" width="238" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EYs-cc-sIl">
@@ -5302,7 +5348,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3au-57-joq">
-                                <rect key="frame" x="167" y="118" width="156" height="34"/>
+                                <rect key="frame" x="167" y="129" width="156" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zpm-sp-Eiq">
@@ -5406,7 +5452,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="trailing" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Np-jV-0LM">
-                                <rect key="frame" x="112" y="117" width="49" height="36"/>
+                                <rect key="frame" x="112" y="128" width="49" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0b6-6B-FQX">
@@ -5436,7 +5482,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQ2-lc-nzt">
-                                <rect key="frame" x="152" y="73" width="189" height="34"/>
+                                <rect key="frame" x="152" y="84" width="189" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LlM-eB-1VQ">
@@ -5540,7 +5586,7 @@
                                 </customSpacing>
                             </stackView>
                             <stackView distribution="fill" orientation="vertical" alignment="trailing" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IdN-Ca-TcS">
-                                <rect key="frame" x="98" y="71" width="46" height="36"/>
+                                <rect key="frame" x="98" y="82" width="46" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMk-P6-u0n">
@@ -5569,28 +5615,6 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cy-Tw-HBP">
-                                <rect key="frame" x="765" y="35" width="89" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Process" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Th9-6H-czb">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="processExtremitiesTab:" target="S0H-kb-rFd" id="QGf-Tf-1tb"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rs1-fG-AcX">
-                                <rect key="frame" x="660" y="35" width="72" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Usk-mx-Ofw">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="clearTab:" target="S0H-kb-rFd" id="6Hn-gZ-VwD"/>
-                                </connections>
-                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -5721,6 +5745,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="textSwitchNormOff:" target="t9Z-99-YQM" id="RKq-FM-Hnj"/>
+                                            </connections>
                                         </textField>
                                         <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-4U-a4U">
                                             <rect key="frame" x="46" y="334" width="49" height="18"/>
@@ -5750,6 +5777,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="textSwitchNormOff:" target="t9Z-99-YQM" id="yKn-if-tjg"/>
+                                            </connections>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvF-O4-w0a">
                                             <rect key="frame" x="46" y="23" width="39" height="17"/>
@@ -5768,6 +5798,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="textSwitchNormOff:" target="t9Z-99-YQM" id="VaC-hr-5nq"/>
+                                            </connections>
                                         </textField>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WWS-xn-W3f">
                                             <rect key="frame" x="18" y="356" width="25" height="19"/>
@@ -5815,6 +5848,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="textSwitchNormOff:" target="t9Z-99-YQM" id="n1P-Fb-81f"/>
+                                            </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="gz0-E2-hle">
                                             <rect key="frame" x="76" y="148" width="278" height="22"/>
@@ -5885,6 +5921,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="textSwitchNormOff:" target="t9Z-99-YQM" id="o13-jL-Fyk"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                 </view>
@@ -6083,6 +6122,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="textSwitchNormOff:" target="t9Z-99-YQM" id="c68-yl-XKD"/>
+                                            </connections>
                                         </textField>
                                         <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="x1L-V7-ssb">
                                             <rect key="frame" x="183" y="182" width="87" height="18"/>
@@ -6939,6 +6981,9 @@
                                         <string>Item 3</string>
                                     </objectValues>
                                 </comboBoxCell>
+                                <connections>
+                                    <action selector="comboSwitchNormOff:" target="u54-VP-SSG" id="bCU-8w-QyU"/>
+                                </connections>
                             </comboBox>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="4107" translatesAutoresizingMaskIntoConstraints="NO" id="av7-FO-Uvw">
                                 <rect key="frame" x="369" y="290" width="73" height="26"/>
@@ -7599,6 +7644,9 @@
                                         <string>Item 3</string>
                                     </objectValues>
                                 </comboBoxCell>
+                                <connections>
+                                    <action selector="comboSwitchNormOff:" target="u54-VP-SSG" id="NkG-My-gBK"/>
+                                </connections>
                             </comboBox>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJO-6R-S71">
                                 <rect key="frame" x="353" y="450" width="12" height="17"/>

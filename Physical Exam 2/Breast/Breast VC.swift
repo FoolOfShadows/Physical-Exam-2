@@ -44,9 +44,8 @@ class Breast_VC: NSViewController, ProcessTabProtocol {
 	}
     
     @IBAction func switchNormOff(_ sender: NSButton) {
-        let theButtons = selfView.getButtonsInView()
-        
         if sender.state != .off {
+            let theButtons = selfView.getButtonsInView()
             switch sender.tag {
             case 1101...1112, 4001...4013:
                 theButtons.filter ({$0.tag == 1})[0].state = .off
@@ -57,6 +56,19 @@ class Breast_VC: NSViewController, ProcessTabProtocol {
             default: return
             }
         }
+    }
+    
+    @IBAction func comboSwitchNormOff(_ sender: NSComboBox) {
+        if !sender.stringValue.isEmpty {
+            let theButtons = selfView.getButtonsInView()
+            switch sender.tag {
+            case 1014, 4014:
+                theButtons.filter ({$0.tag == 4})[0].state = .off
+            default: return
+            }
+            
+        }
+        
     }
 	
 	@IBAction func selectNorms(_ sender: NSButton) {

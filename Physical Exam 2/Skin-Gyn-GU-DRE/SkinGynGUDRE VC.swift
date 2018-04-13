@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
+class SkinGynGUDRE_VC: NSViewController, NSTextFieldDelegate, ProcessTabProtocol {
 	var selfView = NSView()
 	
 	
@@ -22,6 +22,8 @@ class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
         super.viewDidLoad()
 		loadedViewControllers.append(self)
 		selfView = self.view
+        
+        
         clearSkin()
         let nc = NotificationCenter.default
         nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
@@ -81,12 +83,12 @@ class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
 	}
     
     @IBAction func switchNormOff(_ sender: NSButton) {
-        let sendingBox = (sender as NSView).getContainingBox()
-        guard let sendingBoxTitle = sendingBox?.title else { return }
-        print(sendingBoxTitle)
-        guard let theButtons = sendingBox?.getButtonsInView() else { return }
-        
         if sender.state == .on {
+            let sendingBox = (sender as NSView).getContainingBox()
+            guard let sendingBoxTitle = sendingBox?.title else { return }
+            print(sendingBoxTitle)
+            guard let theButtons = sendingBox?.getButtonsInView() else { return }
+            
             switch sendingBoxTitle {
             case "Gyn":
                 switch sender.tag {
@@ -138,6 +140,36 @@ class SkinGynGUDRE_VC: NSViewController, ProcessTabProtocol {
             }
         }
         
+    }
+    
+    @IBAction func textSwitchNormOff(_ sender: NSTextField) {
+        if !sender.stringValue.isEmpty {
+        let sendingBox = (sender as NSView).getContainingBox()
+        guard let sendingBoxTitle = sendingBox?.title else { return }
+        print(sendingBoxTitle)
+        guard let theButtons = sendingBox?.getButtonsInView() else { return }
+            
+            switch sendingBoxTitle {
+            case "Skin":
+                switch sender.tag {
+                case 11:
+                    let dtrs = theButtons.filter({$0.tag == 3})[0]
+                    dtrs.state = .off
+                case 12, 13, 16:
+                    let dtrs = theButtons.filter({$0.tag == 4})[0]
+                    dtrs.state = .off
+                default: return
+                }
+            case "DRE":
+                switch sender.tag {
+                case 15:
+                    let dtrs = theButtons.filter({$0.tag == 2})[0]
+                    dtrs.state = .off
+                default: return
+                }
+            default: return
+            }
+        }
     }
     
     @objc func selectAllNormsInView() {
