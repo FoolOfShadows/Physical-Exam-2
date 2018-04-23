@@ -57,8 +57,10 @@ class SkinGynGUDRE_VC: NSViewController, NSTextFieldDelegate, ProcessTabProtocol
 	@IBAction func selectNorms(_ sender: NSButton) {
 		func normalButtonRangesForSection(_ section:String) -> [Int] {
 			switch section {
-			case "skin", "gyn", "gu":
+			case "skin", "gyn":
 				return [Int](1...5)
+            case "gu":
+                return [Int](2...5)
 			case "dre":
 				return [Int](1...4)
 			default:
@@ -173,7 +175,7 @@ class SkinGynGUDRE_VC: NSViewController, NSTextFieldDelegate, ProcessTabProtocol
     }
     
     @objc func selectAllNormsInView() {
-        let normButtons = self.view.getNormalButtonsInView()
+        let normButtons = skinBox.getButtonsInView() /*self.view.getNormalButtonsInView()*/
         for button in normButtons {
             button.state = .on
             selectNorms(button)

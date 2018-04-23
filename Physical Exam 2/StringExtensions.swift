@@ -60,7 +60,7 @@ extension String {
     //A basic regular expression search function
     func simpleRegExMatch(_ theExpression: String) -> String {
         var theResult = ""
-        let regEx = try! NSRegularExpression(pattern: theExpression, options: [])
+        let regEx = try! NSRegularExpression(pattern: theExpression, options: [.anchorsMatchLines])
         let length = self.count
         
         if let match = regEx.firstMatch(in: self, options: [], range: NSRange(location: 0, length: length)) {

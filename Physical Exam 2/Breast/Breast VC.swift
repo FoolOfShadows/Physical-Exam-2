@@ -18,8 +18,8 @@ class Breast_VC: NSViewController, ProcessTabProtocol {
         loadedViewControllers.append(self)
         selfView = self.view
         clearBreast()
-        let nc = NotificationCenter.default
-        nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
+//        let nc = NotificationCenter.default
+//        nc.addObserver(self, selector: #selector(selectAllNormsInView), name: NSNotification.Name(rawValue: "SetAllToNorm"), object: nil)
     }
     
     @IBAction func processBreastTab(_ sender: Any) {
