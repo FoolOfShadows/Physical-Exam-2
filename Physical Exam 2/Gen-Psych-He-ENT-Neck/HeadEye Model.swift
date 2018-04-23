@@ -40,10 +40,10 @@ struct HeadEye {
 		}
 		
 		if !rightEyeArray.isEmpty {
-			eyeArray.insert("Right eye: \(rightEyeArray.joined(separator: ", "))", at: 0)
+			eyeArray.insert("Right eye conjunctiva: \(rightEyeArray.joined(separator: ", "))", at: 0)
 		}
 		if !leftEyeArray.isEmpty {
-			eyeArray.insert("Left eye: " + (leftEyeArray.joined(separator: ", ")), at: 0)
+			eyeArray.insert("Left eye conjunctiva: " + (leftEyeArray.joined(separator: ", ")), at: 0)
 		}
 		
 		if !headArray.isEmpty {

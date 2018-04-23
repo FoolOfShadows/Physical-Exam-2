@@ -40,33 +40,33 @@ class DigitAssessment {
 		func whereDoesItGo(_ item: String, forLeftSide left:Bool, andAll all:Bool) {
 			switch (left, all) {
 			case (true, false): switch (sectionHeading, appendage) {
-			case ("Oncomyosis", "finger(s)"): filterAllOutOf(&oncResults.leftFingers, andAppend: item)
+			case ("Onychomycosis", "finger(s)"): filterAllOutOf(&oncResults.leftFingers, andAppend: item)
 			case ("Cyanosis", "finger(s)"): filterAllOutOf(&cyanResults.leftFingers, andAppend: item)
-			case ("Oncomyosis", "toe(s)"): filterAllOutOf(&oncResults.leftToes, andAppend: item)
+			case ("Onychomycosis", "toe(s)"): filterAllOutOf(&oncResults.leftToes, andAppend: item)
 			case ("Cyanosis", "toe(s)"): filterAllOutOf(&cyanResults.leftToes, andAppend: item)
 			case ("Hammer Toes", "toe(s)"): filterAllOutOf(&hammerResults.leftToes, andAppend: item)
 			default: ""
 				}
 			case (false, false): switch (sectionHeading, appendage) {
-			case ("Oncomyosis", "finger(s)"): filterAllOutOf(&oncResults.rightFingers, andAppend: item)
+			case ("Onychomycosis", "finger(s)"): filterAllOutOf(&oncResults.rightFingers, andAppend: item)
 			case ("Cyanosis", "finger(s)"): filterAllOutOf(&cyanResults.rightFingers, andAppend: item)
-			case ("Oncomyosis", "toe(s)"): filterAllOutOf(&oncResults.rightToes, andAppend: item)
+			case ("Onychomycosis", "toe(s)"): filterAllOutOf(&oncResults.rightToes, andAppend: item)
 			case ("Cyanosis", "toe(s)"): filterAllOutOf(&cyanResults.rightToes, andAppend: item)
 			case ("Hammer Toes", "toe(s)"): filterAllOutOf(&hammerResults.rightToes, andAppend: item)
 			default: ""
 				}
 			case (true, true): switch (sectionHeading, appendage) {
-			case ("Oncomyosis", "finger(s)"): oncResults.leftFingers = [item]
+			case ("Onychomycosis", "finger(s)"): oncResults.leftFingers = [item]
 			case ("Cyanosis", "finger(s)"): cyanResults.leftFingers = [item]
-			case ("Oncomyosis", "toe(s)"): oncResults.leftToes = [item]
+			case ("Onychomycosis", "toe(s)"): oncResults.leftToes = [item]
 			case ("Cyanosis", "toe(s)"): cyanResults.leftToes = [item]
 			case ("Hammer Toes", "toe(s)"): hammerResults.leftToes = [item]
 			default: ""
 				}
 			case (false, true): switch (sectionHeading, appendage) {
-			case ("Oncomyosis", "finger(s)"): oncResults.rightFingers = [item]
+			case ("Onychomycosis", "finger(s)"): oncResults.rightFingers = [item]
 			case ("Cyanosis", "finger(s)"): cyanResults.rightFingers = [item]
-			case ("Oncomyosis", "toe(s)"): oncResults.rightToes = [item]
+			case ("Onychomycosis", "toe(s)"): oncResults.rightToes = [item]
 			case ("Cyanosis", "toe(s)"): cyanResults.rightToes = [item]
 			case ("Hammer Toes", "toe(s)"): hammerResults.rightToes = [item]
 			default: ""
@@ -93,7 +93,7 @@ class DigitAssessment {
 		}
 		
 		if !oncResults.digitOutput().isEmpty {
-			resultArray.append("Oncomyosis: \(oncResults.digitOutput())")
+			resultArray.append("Onychomycosis: \(oncResults.digitOutput())")
 		}
 		if !cyanResults.digitOutput().isEmpty {
 			resultArray.append("Cyanosis: \(cyanResults.digitOutput())")

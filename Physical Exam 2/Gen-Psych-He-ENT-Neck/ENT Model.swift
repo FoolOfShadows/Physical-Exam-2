@@ -13,9 +13,11 @@ struct ENT {
 		var resultArray = [String]()
 		var earResults = [String]()
 		var noseResults = [String]()
+        var nareResults = [String]()
 		var throatResults = [String]()
 		
-		
+		//The ~= operator in the following closures is checking to see if the
+        //presented range contains the variable
 		earResults.append(processENTSubSectionsFrom(data.filter {1...9 ~= $0.0}.map {$0.0}))
 		
 		let ltmResults = data.filter {13...15 ~= $0.0}.map {$0.0}
@@ -40,25 +42,29 @@ struct ENT {
 		noseResults.append(processENTSubSectionsFrom(data.filter {20...24 ~= $0.0}.map {$0.0}))
 		let rnarResults = data.filter {26...30 ~= $0.0}.map {$0.0}
 		if !rnarResults.isEmpty {
-			noseResults.append("Nare R: \(processENTSubSectionsFrom(rnarResults))")
+			nareResults.append("Nare R: \(processENTSubSectionsFrom(rnarResults))")
 		}
 		let lnarResults = data.filter {31...35 ~= $0.0}.map {$0.0}
 		if !lnarResults.isEmpty {
-			noseResults.append("Nare L: \(processENTSubSectionsFrom(lnarResults))")
+			nareResults.append("Nare L: \(processENTSubSectionsFrom(lnarResults))")
 		}
+        if !nareResults.isEmpty {
+            noseResults.append("Nasal mucosa: \(nareResults.joined(separator: ", "))")
+        }
 		noseResults = noseResults.filter {!$0.isEmpty}
 		if !noseResults.isEmpty {
 			resultArray.append("NOSE: \(noseResults.joined(separator: "\n"))")
 		}
 		
-		throatResults.append(processENTSubSectionsFrom(data.filter {40...45 ~= $0.0}.map {$0.0}))
+		//throatResults.append(processENTSubSectionsFrom(data.filter {40...45 ~= $0.0}.map {$0.0}))
 		let opResults = data.filter {50...54 ~= $0.0}.map {$0.0}
 		if !opResults.isEmpty {
 			throatResults.append("Oropharynx: \(processENTSubSectionsFrom(opResults))")
 		}
+        throatResults.append(processENTSubSectionsFrom(data.filter {40...45 ~= $0.0}.map {$0.0}))
 		throatResults = throatResults.filter {!$0.isEmpty}
 		if !throatResults.isEmpty {
-			resultArray.append("THROAT: \(throatResults.joined(separator: "\n"))")
+            resultArray.append("THROAT: \(throatResults.joined(separator: "; "))")
 		}
 		
 		let other = data.filter {$0.0 == 60}

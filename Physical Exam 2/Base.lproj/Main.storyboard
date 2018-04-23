@@ -4871,12 +4871,12 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5G-4g-A5m">
-                                        <rect key="frame" x="0.0" y="5" width="103" height="64"/>
+                                        <rect key="frame" x="0.0" y="5" width="115" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="54" translatesAutoresizingMaskIntoConstraints="NO" id="MxE-2k-avc">
-                                                <rect key="frame" x="-1" y="47" width="97" height="18"/>
-                                                <buttonCell key="cell" type="radio" title="Oncomyosis" bezelStyle="regularSquare" imagePosition="left" inset="2" id="1e1-AZ-fDJ">
+                                                <rect key="frame" x="-1" y="47" width="118" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="Onychomycosis" bezelStyle="regularSquare" imagePosition="left" inset="2" id="1e1-AZ-fDJ">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -4917,7 +4917,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOT-0F-NeW">
-                                        <rect key="frame" x="112" y="58" width="118" height="14"/>
+                                        <rect key="frame" x="138" y="58" width="118" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button tag="57" translatesAutoresizingMaskIntoConstraints="NO" id="t0i-P3-4dQ">

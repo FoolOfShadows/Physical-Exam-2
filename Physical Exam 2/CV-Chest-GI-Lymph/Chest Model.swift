@@ -30,12 +30,12 @@ struct Chest:PopulateComboBoxProtocol {
 			case 4: resultArray.append("no crackles")
 			case 5: resultArray.append("no rhonchi")
 			case 6: resultArray.append("normal fremitus")
-			case 7: resultArray.append("no egophany")
+			case 7: resultArray.append("no egophony")
 			case 8: resultArray.append("breathing non labored")
 			case 10: resultArray.append("wheezes \(item.1!)")
 			case 11: resultArray.append("crackles \(item.1!)")
 			case 12: resultArray.append("rhonchi \(item.1!)")
-			case 13: resultArray.append("egophany \(item.1!)")
+			case 13: resultArray.append("egophony \(item.1!)")
 			case 20: resultArray.append(item.1!)
 			default: continue
 			}
