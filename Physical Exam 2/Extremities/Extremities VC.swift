@@ -188,9 +188,19 @@ class Extremities_VC: NSViewController, ProcessTabProtocol, NSTextFieldDelegate/
 		sender.superview?.populateSelectionsInViewUsing(Extremities())
 	}
 	
-	@IBAction func setPropertiesOfRelatedButtons(_ sender:NSButton) {
-		setPropertiesOfButtonsBasedOnTag(sender.tag)
-	}
+    @IBAction func setPropertiesOfRelatedButtons(_ sender:NSButton) {
+        setPropertiesOfButtonsBasedOnTag(sender.tag)
+        if sender.state != .off {
+            let theButtons = selfView.getButtonsInView()
+            switch sender.tag {
+            case 80:
+                theButtons.filter ({$0.tag == 6})[0].state = .off
+            case 81:
+                theButtons.filter ({$0.tag == 7})[0].state = .off
+            default: return
+            }
+        }
+    }
 	
 	func setPropertiesOfButtonsBasedOnTag(_ tag:Int) {
 		

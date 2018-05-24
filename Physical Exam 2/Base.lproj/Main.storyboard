@@ -5052,7 +5052,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="switchNormOff:" target="S0H-kb-rFd" id="sOV-JS-XNU"/>
+                                                    <action selector="setPropertiesOfRelatedButtons:" target="S0H-kb-rFd" id="Uee-Gr-0rs"/>
                                                 </connections>
                                             </button>
                                             <button tag="81" translatesAutoresizingMaskIntoConstraints="NO" id="ycR-bl-6Dy">
@@ -5062,7 +5062,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="switchNormOff:" target="S0H-kb-rFd" id="sYW-Fh-p89"/>
+                                                    <action selector="setPropertiesOfRelatedButtons:" target="S0H-kb-rFd" id="TOq-Sl-Phv"/>
                                                 </connections>
                                             </button>
                                             <button tag="82" translatesAutoresizingMaskIntoConstraints="NO" id="ur9-uM-dc3">

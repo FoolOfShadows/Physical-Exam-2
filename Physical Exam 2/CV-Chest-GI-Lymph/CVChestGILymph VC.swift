@@ -234,7 +234,10 @@ class CVChestGILymph_VC: NSViewController, NSTextFieldDelegate, ProcessTabProtoc
 	}
     
     @objc func selectAllNormsInView() {
-        let normButtons = self.view.getNormalButtonsInView()
+        //Don't turn on lymph norms
+        var normButtons = cvBox.getNormalButtonsInView()
+        normButtons += chestBox.getNormalButtonsInView()
+        normButtons += giBox.getNormalButtonsInView()
         for button in normButtons {
             button.state = .on
             selectNorms(button)

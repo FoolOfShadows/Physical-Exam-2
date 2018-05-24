@@ -145,33 +145,13 @@ extension String {
         }
         return result
     }
+    
+    func toDate(withFormat format:String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        return dateFormatter.date(from: self)!
+    }
 }
 
-//extension NSView {
-//	func clearControllers() {
-//		func clearChecksTextfields(theView: NSView) {
-//			for item in theView.subviews {
-//				switch item {
-//				case is NSButton: let checkbox = item as? NSButton
-//				checkbox?.state = .off
-//				case is NSTextField: let textfield = item as? NSTextField
-//				if (textfield?.isEditable)!{
-//					textfield?.stringValue = ""
-//					}
-//				case is NSTextView: let textview = item as? NSTextView
-//				if (textview?.isEditable)! {
-//					textview?.string = ""
-//					}
-//				case is NSTabView: let tabView = item as? NSTabView
-//				for tabItem in (tabView?.tabViewItems)! {
-//					clearChecksTextfields(theView: tabItem.view!)
-//					}
-//				case is NSView: clearChecksTextfields(theView: item)
-//    default: continue
-//				}
-//			}
-//		}
-//		clearChecksTextfields(theView: self)
-//	}
-//}
 

@@ -204,7 +204,7 @@ class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 		func normalButtonRangesForSection(_ section:String) -> [Int] {
 			switch section {
 			case "neuro":
-				return [Int](1...6)
+				return [Int](3...6)
 			case "msk":
 				return [Int](1...4)
 			default:
@@ -277,7 +277,9 @@ class NeuroMSK_VC: NSViewController, ProcessTabProtocol {
 	}
     
     @objc func selectAllNormsInView() {
-        let normButtons = self.view.getNormalButtonsInView()
+        //CNs OK button and DTRs button need to stay off
+        var normButtons = self.view.getNormalButtonsInView()
+        
         for button in normButtons {
             button.state = .on
             selectNorms(button)
